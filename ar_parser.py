@@ -80,7 +80,7 @@ class Parser:
           ar_line = ''
         if not en_line:
           en_line = ''
-        outstr = '<div class="row"><div class="col-sm-auto">'+ar_out_str+'</div>'
-        outstr += '<div class="col-sm-auto"><span class="text-start" lang="en" dir="ltr">'+en_line+'</span></div></div>\n'
+        outstr = '<div class="row justify-content-around"><div class="col-auto">'+ar_out_str+'</div>'
+        outstr += '<div class="col" lang="en" dir="ltr">'+en_line+'</div></div>\n'
         fout.write(outstr)
       fout.write("</div></body></html>")
