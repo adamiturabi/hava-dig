@@ -140,6 +140,7 @@ def build_str(cons_list):
       retval += x.cons
     if add_post_str:
       retval += x.post_cons_str
+  retval = retval.replace(A+hamza_above+a+A+hamza_above+o, A+maddah_above)
   return retval
 
 def hamzate(instr):
