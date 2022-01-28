@@ -15,15 +15,21 @@ def write_html_pre(fout):
             max-width: 400px;
           }
         </style>
-        <title>Hava's Arabic Dictionary</title>
+        <title>Hava: Arabic-English Dictionary</title>
     </head>
     <body>
-        <h1>Hava's Arabic Dictionary</h1><!-- Optional JavaScript; choose one of the two! --><!-- Option 1: Bootstrap Bundle with Popper -->
+        <!--<h1>Hava's Arabic Dictionary</h1>-->
+        <!-- Optional JavaScript; choose one of the two! -->
+        <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <!-- Option 2: Separate Popper and Bootstrap JS -->
         <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
         <div class="container">
+          <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en"><h1>Arabic-English dictionary for the use of students</h1></div></div>
+          <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">by</div></div>
+          <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en"><h3>J.G. Hava</h3></div></div>
+          <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">(Digitization project. Work in progress.)</div></div>
 """
   fout.write(outstr)

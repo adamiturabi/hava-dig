@@ -124,7 +124,7 @@ def conj(root, form, past_vowel="a", pres_vowel="a"):
     verb_pair = conj_tri(root, form, past_vowel, pres_vowel)
     #print(verb_pair[0])
     #print(bw_to_ar(verb_pair[1]))
-    pret =   '('+form+') '+verb_pair[0]
+    pret =   form+' '+verb_pair[0]
   return pret
 
 

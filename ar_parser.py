@@ -22,7 +22,7 @@ class Parser:
       import translit_to_ar
       if word[0] == '#':
         self.curr_root = word[1:]
-        out_str = 'qwerty('+self.curr_root+')'
+        out_str = 'qwerty<b>«'+translit_to_ar.translit_to_ar(self.curr_root)+'»</b>'
       elif word[0] in { 'I', 'V', 'X' }:
         #out_str += get_pret(word, self.curr_root)
         import conj
