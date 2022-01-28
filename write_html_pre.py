@@ -11,6 +11,9 @@ def write_html_pre(fout):
           :lang(ar) {
             font-family: Amiri, serif;
           }
+          .container {
+            max-width: 400px;
+          }
         </style>
         <title>Hava's Arabic Dictionary</title>
     </head>
