@@ -227,7 +227,7 @@ def hamzate(instr):
             else:
               x.hamza = A+hamza_above
 
-  apply_tatweel = True
+  apply_tatweel = False
   if apply_tatweel:
     for index in range(1, len(cons_list)-1):
       x = cons_list[index]
@@ -251,6 +251,6 @@ if do_test:
   for x in word_list:
     print(hamzate(x))
 
-import sys
-print(hamzate(sys.argv[1]))
+#import sys
+#print(hamzate(sys.argv[1]))
 

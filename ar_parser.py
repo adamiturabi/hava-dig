@@ -24,23 +24,37 @@ class Parser:
         self.curr_root = word[1:]
         out_str = 'qwerty<b>«'+translit_to_ar.translit_to_ar(self.curr_root)+'»</b>'
       elif word[0] in { 'I', 'V', 'X' }:
+        out_str += word
+        if word != 'I': # for irregular verbs add: and word[-1] != 'x':
+          import conj
+          form = word
+          enverb = conj.conj(self.curr_root, form, 'a', 'a')
+          arverb = translit_to_ar.translit_to_ar(enverb)
+          import hamzater
+          out_str += hamzater.hamzate(arverb)
+      elif len(word) == 1 and word in {'A', '!', 'O', 'U' }:
         #out_str += get_pret(word, self.curr_root)
         import conj
-        form = word
-        vowel = 'a'
-        if word[-1] in {'a', 'i', 'o', 'u' }:
-          form = word[:-1]
-          vowel = word[-1]
-          if vowel == 'o':
-            vowel = 'u'
-        enverb = conj.conj(self.curr_root, form, vowel, 'a')
+        form = 'I'
+        vowel = word
+        if vowel == 'O':
+          vowel = 'U'
+        elif vowel == '!':
+          vowel = 'I'
+        enverb = conj.conj(self.curr_root, form, vowel.lower(), "pret")
         arverb = translit_to_ar.translit_to_ar(enverb)
-        out_str += arverb
+        import hamzater
+        out_str += hamzater.hamzate(arverb)
       elif len(word) == 1 and word in {'a', 'i', 'o', 'u' }:
-        if word == 'o':
-          out_str += 'u'
-        else:
-          out_str += word
+        import conj
+        form = 'I'
+        vowel = word
+        if vowel == 'o':
+          vowel = 'u'
+        enverb = conj.conj(self.curr_root, form, vowel, "ao")
+        arverb = translit_to_ar.translit_to_ar(enverb)
+        import hamzater
+        out_str += hamzater.hamzate(arverb)
       elif len(word) == 1 and word in delims:
         if word == ',':
           out_str += '،'
@@ -52,7 +66,9 @@ class Parser:
           out_str += word
       elif ord(word[0]) >= ord('1') and ord(word[0]) <= ord('9'):
         import num2word
-        out_str += translit_to_ar.translit_to_ar(num2word.num2word(word, self.curr_root))
+        temp = translit_to_ar.translit_to_ar(num2word.num2word(word, self.curr_root))
+        import hamzater
+        out_str += hamzater.hamzate(temp)
       elif word[0] in translit_to_ar.translit_map:
         out_str += translit_to_ar.translit_to_ar(word)
       else:

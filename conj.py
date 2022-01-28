@@ -118,13 +118,17 @@ def conj_tri(root, form, past_vowel, pres_vowel):
     return conj_tri_form1(root, form, past_vowel, pres_vowel)
   else:
     return ('', '')
-def conj(root, form, past_vowel="a", pres_vowel="a"):
+def conj(root, form, vowel="a", tense="pret"):
   pret = form
+  if len(root) == 2:
+    root = root + root[1]
   if len(root) == 3:
-    verb_pair = conj_tri(root, form, past_vowel, pres_vowel)
+    verb_pair = conj_tri(root, form, vowel, vowel)
     #print(verb_pair[0])
     #print(bw_to_ar(verb_pair[1]))
-    pret =   form+' '+verb_pair[0]
-  return pret
+    verb = verb_pair[0]
+    if tense == "ao":
+      verb = verb_pair[1]
+  return verb
 
 
