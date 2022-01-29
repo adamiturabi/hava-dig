@@ -24,8 +24,12 @@ class Parser:
         self.curr_root = word[1:]
         out_str = 'qwerty<b>«'+translit_to_ar.translit_to_ar(self.curr_root)+'»</b>'
       elif word[0] in { 'I', 'V', 'X' }:
-        out_str += word
-        if word != 'I': # for irregular verbs add: and word[-1] != 'x':
+        if word[-1] == 'x':
+          out_str += word[:-1]
+        else:
+          out_str += word
+        do_conj = word[-1] != 'x' and word != 'I'
+        if do_conj:
           import conj
           form = word
           enverb = conj.conj(self.curr_root, form, 'a', 'a')
