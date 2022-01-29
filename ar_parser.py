@@ -65,6 +65,12 @@ class Parser:
           out_str += ')'
         else:
           out_str += word
+      elif word == '--':
+        out_str += '—'
+      elif word == '=':
+        out_str += chr(int('0x25a1', 16))
+      elif word == '+':
+        out_str += chr(int('0x2727', 16))
       elif ord(word[0]) >= ord('1') and ord(word[0]) <= ord('9'):
         import num2word
         temp = translit_to_ar.translit_to_ar(num2word.num2word(word, self.curr_root))

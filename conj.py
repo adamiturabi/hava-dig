@@ -104,7 +104,10 @@ def conj_tri_form4(root):
     past_verb = E + a + r1 + o + r2 + a + Y + dagA 
     pres_verb = "yu" + r1 + o + r2 + i + y
   elif r2 == r3:
-    past_verb = E + a + r1 + a + r2 + ss + a
+    if r1 == E:
+      past_verb = E + a + A + r2 + ss + a
+    else:
+      past_verb = E + a + r1 + a + r2 + ss + a
     pres_verb = "yu" + r1 + i + r2 + ss + u
   return (past_verb, pres_verb)
 
