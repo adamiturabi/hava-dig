@@ -25,8 +25,8 @@ V
 أَبَدًا، أَبَد الأبَدِين، أَبَد الأَبَد
 على الأَبَد، إلى الأَبَد
 21t j_. 41
-4iy , mu&ab~ad
-4iyt
+4yi , mu&ab~ad
+4yit
 @Ebr
 I A i o (1 , 23) h
 I A o i (1 , 23t) h_
@@ -60,8 +60,8 @@ I A i o (1 , 23) <ilY
 I ! a (4) , A o (22t)
 -- o i (4 , 27) , ! (1)
 8 j_. 38 , 25
-25 , 25y , >ayobuliy~ j_. 38 , 3
-23 , <ib~aAlaO
+25 , 25yi , >ayobuliy~ j_. 38 , 3
+23t , <ib~aAlaO
 70
 17t
 @Ebn
@@ -81,7 +81,7 @@ V elY
 I A o (23t , 13 , 13t)
 II h
 V h
->abu (ewD Abw) j_. 38
+>abu (ewD Abw) j_. 38.--E
 >abuw , + buw
 Al|b
 >abati , yaA >abati , yaA >abatu , yaA >abataAh!
@@ -115,16 +115,16 @@ X
 kaAn HimaArFA faAsota>otan
 31 j_. 10 , 70
 @Etw
-I A o (1 , 23)
+I A o (1 , 23.--E)
 1
-23
+23.--E
 23t j_. 22ya
 @Ety
 I A i (34 , 1 , >utiy~ , 34t , ma>otaAO) h , h_
 >ataY ely
 -- b
 -- h b
-II (ta>otiyaO , ta>otK) h_
+II (ta>otiyaO , ta>at~K) h_
 III (mu&aAtaAO) h elY
 -- h
 IV (<iytaAE) h h_
