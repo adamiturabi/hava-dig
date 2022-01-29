@@ -36,10 +36,16 @@ def num2word(numstr_in, root_in):
   basestr = ''
   if basenum == 1:
     basestr = r1 + a + r2 + o + r3
+    if r2 == r3:
+      basestr = r1 + a + r2 + ss
   elif basenum == 2:
     basestr = r1 + i + r2 + o + r3
+    if r2 == r3:
+      basestr = r1 + i + r2 + ss
   elif basenum == 3:
     basestr = r1 + u + r2 + o + r3
+    if r2 == r3:
+      basestr = r1 + u + r2 + ss
   elif basenum == 4:
     basestr = r1 + a + r2 + a + r3
   elif basenum == 5:
@@ -174,6 +180,20 @@ def num2word(numstr_in, root_in):
     pass
   elif basenum == 70:
     pass
-  printstr = 'input='+numstr_in+',root='+root_in+',out='+basestr
+  #printstr = 'input='+numstr_in+',root='+root_in+',out='+basestr
   #print(printstr)
-  return basestr
+
+  outstr = basestr
+  if suffix_str != '':
+    if basestr[-1] == 'u':
+      basestr = basestr[:-1]
+  if suffix_str == 't':
+    outstr = basestr + a + O
+  elif suffix_str == 'ya':
+    outstr = basestr + a + Y + dagA
+  elif suffix_str == 'yi':
+    outstr = basestr + i + y + ss
+  elif suffix_str == 'yit':
+    outstr = basestr + i + y + ss + a + O
+
+  return outstr
