@@ -1,51 +1,6 @@
-def bw_to_ar(inval):
-  bw_dict = {
-    "A": "ا",
-    "b": "ب",
-    "t": "ت",
-    "v": "ث",
-    "j": "ج",
-    "H": "ح",
-    "x": "خ",
-    "d": "د",
-    "*": "ذ",
-    "r": "ر",
-    "z": "ز",
-    "s": "ي",
-    "$": "س",
-    "S": "ص",
-    "D": "ض",
-    "T": "ط",
-    "Z": "ظ",
-    "E": "ع",
-    "g": "غ",
-    "f": "ف",
-    "q": "ق",
-    "k": "ك",
-    "l": "ا",
-    "m": "م",
-    "n": "ن",
-    "h": "ه",
-    "w": "و",
-    "y": "ي",
-    "Y": "ى",
-    "'": "ء",
-    "F": chr(0x064b),
-    "N": chr(0x064c),
-    "K": chr(0x064d),
-    "a": chr(0x064e),
-    "u": chr(0x064f),
-    "i": chr(0x0650),
-    "~": chr(0x0651),
-    "o": chr(0x0652),
-    "`": chr(0x0670)
-  }
-  out_str = ""
-  for idx in range(0, len(inval)):
-    out_str += bw_dict[inval[idx]]
-  return out_str
-  
-def conj_tri_form1(root, form, past_vowel, pres_vowel):
+from translit import *
+
+def conj_tri_form1(root, past_vowel, pres_vowel):
   r1 = root[0]
   r2 = root[1]
   r3 = root[2]
@@ -113,9 +68,142 @@ def conj_tri_form1(root, form, past_vowel, pres_vowel):
     past_verb = r1 + "a" + r2 + "~a"
     pres_verb = "ya" + r1 + pres_vowel + r3 + "~u"
   return (past_verb, pres_verb)
+
+def conj_tri_form2(root):
+  r1 = root[0]
+  r2 = root[1]
+  r3 = root[2]
+  past_verb = r1 + a + r2 + ss + a + r3 + a
+  pres_verb = "yu" + r1 + "a" + r2 + ss + i + r3 + u
+  if r3 == y or r3 == w:
+    past_verb = r1 + a + r2 + ss + a + Y + dagA; 
+    pres_verb =  y + u + r1 + a + r2 + ss + i + y;
+  return (past_verb, pres_verb)
+
+def conj_tri_form3(root):
+  r1 = root[0]
+  r2 = root[1]
+  r3 = root[2]
+  past_verb = r1 + a + A + r2 + a + r3 + a
+  pres_verb = "yu" + r1 + "aA" + r2 + i + r3 + u
+  if r3 == y or r3 == w:
+    past_verb = r1 + a + A + r2 + a + Y + dagA; 
+    pres_verb =  y + u + r1 + a + A + r2 + i + y;
+  elif r2 == r3:
+    past_verb = r1 + a + A + r2 + ss + a
+    pres_verb =  y + u + r1 + a + A + r2 + ss + u
+  return (past_verb, pres_verb)
+
+def conj_tri_form4(root):
+  r1 = root[0]
+  r2 = root[1]
+  r3 = root[2]
+  past_verb = E + a + r1 + o + r2 + a + r3 + a
+  pres_verb = "yu" + r1 + o + r2 + i + r3 + u
+  if r3 == y or r3 == w:
+    past_verb = E + a + r1 + o + r2 + a + Y + dagA 
+    pres_verb = "yu" + r1 + o + r2 + i + y
+  elif r2 == r3:
+    past_verb = E + a + r1 + a + r2 + ss + a
+    pres_verb = "yu" + r1 + i + r2 + ss + u
+  return (past_verb, pres_verb)
+
+def conj_tri_form5(root):
+  r1 = root[0]
+  r2 = root[1]
+  r3 = root[2]
+  past_verb = t + a + r1 + a + r2 + ss + a + r3 + a
+  pres_verb = "yata" + r1 + a + r2 + ss + a + r3 + u
+  if r3 == y or r3 == w:
+    past_verb = t + a + r1 + a + r2 + ss + a + Y + dagA 
+    pres_verb = "yata" + r1 + a + r2 + ss + a + Y + dagA 
+  return (past_verb, pres_verb)
+
+def conj_tri_form6(root):
+  r1 = root[0]
+  r2 = root[1]
+  r3 = root[2]
+  past_verb = t + a + r1 + a + A + r2 + a + r3 + a
+  pres_verb = "yata" + r1 + "aA" + r2 + a + r3 + u
+  if r3 == y or r3 == w:
+    past_verb = t + a + r1 + a + A + r2 + a + Y + dagA 
+    pres_verb = "yata" + r1 + "aA" + r2 + a + Y + dagA 
+  elif r2 == r3:
+    past_verb = t + a + r1 + a + A + r2 + ss + a
+    pres_verb = "yata" + r1 + "aA" + r2 + ss + u
+  return (past_verb, pres_verb)
+
+def conj_tri_form7(root):
+  r1 = root[0]
+  r2 = root[1]
+  r3 = root[2]
+  past_verb = '{ino' + r1 + a + r2 + a + r3 + a
+  pres_verb = "yano" + r1 + a + r2 + i + r3 + u
+  if r3 == y or r3 == w:
+    past_verb = '{ino' + r1 + a + r2 + a + Y + dagA 
+    pres_verb = "yano" + r1 + a + r2 + i + y
+  elif r2 == r3:
+    past_verb = '{ino' + r1 + a + r2 + ss + a
+    pres_verb = "yano" + r1 + a + r2 + ss + u
+  return (past_verb, pres_verb)
+
+def conj_tri_form8(root):
+  r1 = root[0]
+  r2 = root[1]
+  r3 = root[2]
+  past_verb = '{i' + r1 + 'ota' + r2 + a + r3 + a
+  pres_verb = "ya" + r1 + 'ota' + r2 + i + r3 + u
+  if r3 == y or r3 == w:
+    past_verb = '{i' + r1 + 'ota' + r2 + a + Y + dagA 
+    pres_verb = "ya" + r1 + 'ota' + r2 + i + y
+  elif r2 == r3:
+    past_verb = '{i' + r1 + 'ota' + r2 + ss + a
+    pres_verb = "ya" + r1 + 'ota' + r2 + ss + u
+  return (past_verb, pres_verb)
+
+def conj_tri_form9(root):
+  r1 = root[0]
+  r2 = root[1]
+  r3 = root[2]
+  past_verb = '{i' + r1 + 'o' + r2 + a + r3 + ss + a
+  pres_verb = "ya" + r1 + 'o' + r2 + a + r3 + ss + u
+  return (past_verb, pres_verb)
+
+def conj_tri_form10(root):
+  r1 = root[0]
+  r2 = root[1]
+  r3 = root[2]
+  past_verb = '{isota' + r1 + o + r2 + a + r3 + a
+  pres_verb = "yasota" + r1 + o + r2 + i + r3 + u
+  if r3 == y or r3 == w:
+    past_verb = '{isota' + r1 + o + r2 + a + y + dagA
+    pres_verb = "yasota" + r1 + o + r2 + i + y
+  elif r2 == r3:
+    past_verb = '{isota' + r1 + a + r2 + ss + a
+    pres_verb = "yasota" + r1 + i + r2 + ss + u
+  return (past_verb, pres_verb)
+
 def conj_tri(root, form, past_vowel, pres_vowel):
   if form == 'I':
-    return conj_tri_form1(root, form, past_vowel, pres_vowel)
+    return conj_tri_form1(root, past_vowel, pres_vowel)
+  elif form =="II":
+    return conj_tri_form2(root)
+  elif form =="III":
+    return conj_tri_form3(root)
+  elif form =="IV":
+    return conj_tri_form4(root)
+  elif form =="V":
+    return conj_tri_form5(root)
+  elif form =="VI":
+    return conj_tri_form6(root)
+  elif form =="VII":
+    return conj_tri_form7(root)
+  elif form =="VIII":
+    return conj_tri_form8(root)
+  elif form =="IX":
+    return conj_tri_form9(root)
+  elif form =="X":
+    return conj_tri_form10(root)
   else:
     return ('', '')
 def conj(root, form, vowel="a", tense="pret"):
@@ -128,7 +216,15 @@ def conj(root, form, vowel="a", tense="pret"):
     #print(bw_to_ar(verb_pair[1]))
     verb = verb_pair[0]
     if tense == "ao":
-      verb = verb_pair[1]
+      #verb = verb_pair[1]
+      arvowel = ''
+      if vowel == 'a':
+        arvowel = a
+      elif vowel == 'i':
+        arvowel = i
+      elif vowel == 'o' or vowel == 'u':
+        arvowel = u
+      verb = chr(int('0x25cc', 16)) + arvowel
   return verb
 
 

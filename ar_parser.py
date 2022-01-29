@@ -20,7 +20,7 @@ class Parser:
     out_str = ''
     for word in words:
       import translit_to_ar
-      if word[0] == '#':
+      if word[0] == '@':
         self.curr_root = word[1:]
         out_str = 'qwerty<b>«'+translit_to_ar.translit_to_ar(self.curr_root)+'»</b>'
       elif word[0] in { 'I', 'V', 'X' }:
@@ -31,7 +31,7 @@ class Parser:
           enverb = conj.conj(self.curr_root, form, 'a', 'a')
           arverb = translit_to_ar.translit_to_ar(enverb)
           import hamzater
-          out_str += hamzater.hamzate(arverb)
+          out_str += ' ' + hamzater.hamzate(arverb)
       elif len(word) == 1 and word in {'A', '!', 'O', 'U' }:
         #out_str += get_pret(word, self.curr_root)
         import conj
@@ -53,8 +53,9 @@ class Parser:
           vowel = 'u'
         enverb = conj.conj(self.curr_root, form, vowel, "ao")
         arverb = translit_to_ar.translit_to_ar(enverb)
-        import hamzater
-        out_str += hamzater.hamzate(arverb)
+        #import hamzater
+        #out_str += hamzater.hamzate(arverb)
+        out_str += arverb
       elif len(word) == 1 and word in delims:
         if word == ',':
           out_str += '،'

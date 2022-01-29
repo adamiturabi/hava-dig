@@ -113,7 +113,7 @@ def num2word(numstr_in, root_in):
   elif basenum == 36:
     basestr = r1 + a + r2 + a + r3 + a + A + n
   elif basenum == 37:
-    basestr = E + a + r1 + a + A + r2 + i + r3 + u
+    basestr = r1 + a + A + r2 + i + r3 + u
   elif basenum == 38:
     basestr = E + a + r1 + o + r2 + a + A + r3
   elif basenum == 39:
@@ -121,7 +121,7 @@ def num2word(numstr_in, root_in):
   elif basenum == 40:
     basestr = r1 + a + A + r2 + u + w + r3
   elif basenum == 41:
-    basestr = r1 + a + w + a + A + r2 + i + w + r3
+    basestr = r1 + a + w + a + A + r2 + i + r3
   elif basenum == 42:
     basestr = r1 + a + r2 + o + r3 + a + A + E + u
   elif basenum == 43:

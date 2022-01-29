@@ -1,31 +1,61 @@
-#E
+@E
 >a
 >alamo w>alaA
 >alam~aA
-#Eb
-I A u (1, 22t, 23t) <ilY
--- i u (1, 25, 22, 22t) l
+@Eb
+I A u (1 , 22t , 23t) <ilY
+-- i u (1 , 25 , 22 , 22t) l
 1 j_. >a&ub~
 25
-#Ebt
-I A u i, ! a (1, 27)
-21, 5, 1
-#Ebv
-I A i (1) h, elY
-#Ebjd
+@Ebt
+I A u i , ! a (1 , 27)
+21 , 5 , 1
+@Ebv
+I A i (1) h , elY
+@Ebjd
 أَبْجَدْ، الحُرُوف الأَبْجَدِيَّة
-#Ebd
+@Ebd
 I A i (27)
 -- b
 -- o i (27)
 I A a (4) elY
-II h_, h
+II h_ , h
 V
-4 j_. 38, 27
+4 j_. 38 , 27
 أَبَدًا، أَبَد الأبَدِين، أَبَد الأَبَد
 على الأَبَد، إلى الأَبَد
 21t j_. 41
-4iy, mu&ab~ad
+4iy , mu&ab~ad
 4iyt
-#Ebr
-I A i o (1, 23) h
+@Ebr
+I A i o (1 , 23) h
+I A o i (1 , 23t) h_
+2t j_. 7
+20 , 45
+20t j_. 44
+ma>obuwr
+@Ebz
+I A i (1 , 27)
+-- b (1)
+@Ebs
+I A i 1 , II h
+@Ebc
+I A o (1) , II h_
+24t
+@EbD
+I A o i (1) , V h
+23 j_. 10
+3 j_. 38 , 18 j_. 44
+@EbT
+2 j_. 38 , + baAT baATaAt
+V h_
+تَأَبَّطَ شَرًّا
+23
+jaealotuhu <ibaATFA
+@Ebq
+I A i o (1 , 23) <ilY
+4
+37 , 26 j_. 11 , 29
+@Ebl
+I ! a (4) , A o (22t)
+-- o i (4 , 27) , ! (1)
