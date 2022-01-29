@@ -24,8 +24,8 @@ V
 4 j_. 38 , 27
 أَبَدًا، أَبَد الأبَدِين، أَبَد الأَبَد
 على الأَبَد، إلى الأَبَد
-21t j_. 41
-4yi , mu&ab~ad
+101t j_. 41
+4yi , 202
 4yit
 @Ebr
 I A i o (1 , 23) h
@@ -33,7 +33,7 @@ I A o i (1 , 23t) h_
 2t j_. 7
 20 , 45
 20t j_. 44
-ma>obuwr
+102
 @Ebz
 I A i (1 , 27)
 -- b (1)
@@ -69,7 +69,7 @@ I A i o (1) h b
 II h
 <ib~aAn
 3t j_. 9
-ma>obuwn
+102
 @Ebh
 I A a (1) b , l
 laA yu&obahu lahu
@@ -96,12 +96,12 @@ Al|b
 I A a i (23.--E , 23t.--E) , V h_ , ean
 -- h elY
 23.--E
-|bK
+101
 >abiy~
 @Etb
 2 j_. 38 , 23
 V biAlo<itob
-mu&at~ab AlP~ufor
+202 AlP~ufor
 @Etd
 23 j_. 21t , 10
 |tacojiy j_. |tacojiy~aO
@@ -131,7 +131,7 @@ IV (<iytaAE) h h_
 V min , ean
 -- l
 X h
-|tK m_. |tiyaO
+101 m_. 101t
 Alo|tiy
 ma>otFY
 @Ev
@@ -140,7 +140,7 @@ II h_
 V
 22
 1 , 25
-mu&av~av
+202
 @Evr
 I A o i (1 , 22t) h_
 I ! a (4)
@@ -148,7 +148,7 @@ I ! a (4)
 -- elY
 -- elY >aSoHaAbihi
 II fy
-IV (<iyvaAr) h_
+IV (403) h_
 -- h elY
 V , VIII h
 -- , VIII b , min
@@ -162,12 +162,12 @@ Al|vaAru AlqadiymaO
 = 4yit
 4t
 25 j_. 43
-ta>oviyr
+203
 17t , 19t j_. 44
-ma>ovuwr
-ma&av~ir
+102
+201
 @Evf
-II (ta>oviyf) h_
+II (203) h_
 3yit j_. 22yi
 @Evl
 I A i (27) , U u (22t)
@@ -180,7 +180,7 @@ V
 @Evm
 I ! a (2 , 4 , 17)
 II h
-IV (<iyvaAm) h
+IV (403) h
 V min
 2 j_. 38
 25 j_. 43 , 21 j_. 4t
@@ -205,8 +205,8 @@ I A o i (1 , 23t) h elY
 I A o (1 , 22 , 27)
 >ujirato yaduhu
 II h_
-III (mu&aAjaraO) h elY , fy
-IV (<iyjaAr) h
+III (303) h elY , fy
+IV (403) h
 -- h , h_
 VIII
 X h , h_ b
@@ -217,8 +217,8 @@ X h , h_ b
 <ij~aAr , <ij~aAraO j_. 70
 <iyjaAr
 25 j_. 43 , + >ujariy~
-musota>ojir
-musota>ojar
+1001
+1002
 @Ejz
 X
 @EjS
@@ -240,5 +240,5 @@ min >ajolik
 Alo|jil , Alo|jilaO
 |jilFA >awo eaAjilFA
 17 AlmaAE j_. 44
-mu&aj~al
+202
 
