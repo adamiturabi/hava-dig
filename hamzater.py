@@ -45,7 +45,7 @@ dagA              = chr(0x0670);
 Awasl             = chr(0x0671);
 
 harakaat_and_sukoon = { a, u, i, shaddah, o, F, N, K }
-letters = {A, b, p, t, v, j, H, x, d, dh, r, z, s, sh, S, D, T, Z, E, g, f, q, k, l, m, n, h, w, Y, y , hamza }
+letters = {A, b, p, t, v, j, H, x, d, dh, r, z, s, sh, S, D, T, Z, E, g, f, q, k, l, m, n, h, w, Y, y , hamza, Awasl}
 
 
 class ConsonantInfo:
@@ -62,7 +62,9 @@ def build_cons_list(instr):
   cons_list = []
   index = 0
   while index < len(instr):
-    assert instr[index] in letters
+    if instr[index] not in letters:
+      print(index)
+      assert(False)
     cons_info = ConsonantInfo()
     cons_info.cons = instr[index]
     index += 1

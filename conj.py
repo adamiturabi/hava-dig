@@ -176,7 +176,7 @@ def conj_tri_form10(root):
   past_verb = '{isota' + r1 + o + r2 + a + r3 + a
   pres_verb = "yasota" + r1 + o + r2 + i + r3 + u
   if r3 == y or r3 == w:
-    past_verb = '{isota' + r1 + o + r2 + a + y + dagA
+    past_verb = '{isota' + r1 + o + r2 + a + Y + dagA
     pres_verb = "yasota" + r1 + o + r2 + i + y
   elif r2 == r3:
     past_verb = '{isota' + r1 + a + r2 + ss + a
