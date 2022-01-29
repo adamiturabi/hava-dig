@@ -113,7 +113,7 @@ def num2word(numstr_in, root_in):
   elif basenum == 36:
     basestr = r1 + a + r2 + a + r3 + a + A + n
   elif basenum == 37:
-    basestr = r1 + a + A + r2 + i + r3 + u
+    basestr = E + a + r1 + a + A + r2 + i + r3 + u
   elif basenum == 38:
     basestr = E + a + r1 + o + r2 + a + A + r3
   elif basenum == 39:
@@ -133,53 +133,53 @@ def num2word(numstr_in, root_in):
   elif basenum == 46:
     basestr = r1 + a + r2 + a + A + E + i + r3 + u
   elif basenum == 47:
-    pass
+    basestr = r1 + a + r2 + a + A + r3 + i + r4 + u
   elif basenum == 48:
-    pass
+    basestr = r1 + a + r2 + o + r3 + a + A + r4
   elif basenum == 49:
-    pass
+    basestr = r1 + i + r2 + o + r3 + a + A + r4
   elif basenum == 50:
-    pass
+    basestr = r1 + u + r2 + o + r3 + a + A + r4
   elif basenum == 51:
-    pass
+    basestr = r1 + a + r2 + o + r3 + a + r4
   elif basenum == 52:
-    pass
+    basestr = r1 + i + r2 + o + r3 + a + r4
   elif basenum == 53:
-    pass
+    basestr = r1 + i + r2 + o + r3 + i + r4
   elif basenum == 54:
-    pass
+    basestr = r1 + u + r2 + o + r3 + u + r4
   elif basenum == 55:
-    pass
+    basestr = r1 + u + r2 + a + r3 + i + r4
   elif basenum == 56:
-    pass
+    basestr = r1 + a + r2 + a + r3 + ss + a + r4
   elif basenum == 57:
-    pass
+    basestr = r1 + u + r2 + a + r3 + ss + a + r4
   elif basenum == 58:
-    pass
+    basestr = r1 + i + r2 + o + r3 + a + r4 + ss
   elif basenum == 59:
-    pass
+    basestr = r1 + a + r2 + o + r3 + a + r4 + i + r4
   elif basenum == 60:
-    pass
+    basestr = r1 + a + r2 + o + r3 + u + w + t
   elif basenum == 61:
-    pass
+    basestr = t + a + r1 + a + r2 + o + r3 + u + r4
   elif basenum == 62:
-    pass
+    basestr = t + a + r1 + o + r2 + a + A + r3
   elif basenum == 63:
-    pass
+    basestr = t + a + r1 + a + A + r2 + i + r3
   elif basenum == 64:
-    pass
+    basestr = t + a + r1 + a + A + r2 + i + y + r3
   elif basenum == 65:
-    pass
+    basestr = m + a + r1 + a + A + r2 + i + y + r3 + u
   elif basenum == 66:
-    pass
+    basestr = r1 + a + w + a + A + r2 + i + y + r3 + u
   elif basenum == 67:
-    pass
+    basestr = r1 + a + r2 + a + A + r3 + i + y + r4 + u
   elif basenum == 68:
-    pass
+    basestr = E + a + r1 + o + r2 + i + r3 + a + A + E + u
   elif basenum == 69:
-    pass
+    basestr = E + a + r1 + a + A + r2 + i + y + r3 + u
   elif basenum == 70:
-    pass
+    basestr = r1 + a + r2 + a + A + r2 + i + y + r3 + u
   #printstr = 'input='+numstr_in+',root='+root_in+',out='+basestr
   #print(printstr)
 
