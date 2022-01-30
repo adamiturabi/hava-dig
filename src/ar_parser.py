@@ -19,7 +19,7 @@ class Parser:
     #print(words)
     out_str = ''
     for word in words:
-      import translit_to_ar
+      from src import translit_to_ar
       if word[0] == '@':
         self.curr_root = word[1:]
         out_str = 'qwerty<b>«'+translit_to_ar.translit_to_ar(self.curr_root)+'»</b>'
@@ -30,15 +30,15 @@ class Parser:
           out_str += word
         do_conj = word[-1] != 'x' and word != 'I'
         if do_conj:
-          import conj
+          from src import conj
           form = word
           enverb = conj.conj(self.curr_root, form, 'a', 'a')
           arverb = translit_to_ar.translit_to_ar(enverb)
-          import hamzater
+          from src import hamzater
           out_str += ' ' + hamzater.hamzate(arverb)
       elif len(word) == 1 and word in {'A', '!', 'O', 'U' }:
         #out_str += get_pret(word, self.curr_root)
-        import conj
+        from src import conj
         form = 'I'
         vowel = word
         if vowel == 'O':
@@ -47,10 +47,10 @@ class Parser:
           vowel = 'I'
         enverb = conj.conj(self.curr_root, form, vowel.lower(), "pret")
         arverb = translit_to_ar.translit_to_ar(enverb)
-        import hamzater
+        from src import hamzater
         out_str += hamzater.hamzate(arverb)
       elif len(word) == 1 and word in {'a', 'i', 'o', 'u' }:
-        import conj
+        from src import conj
         form = 'I'
         vowel = word
         if vowel == 'o':
@@ -76,9 +76,9 @@ class Parser:
       elif word == '+':
         out_str += chr(int('0x2727', 16))
       elif ord(word[0]) >= ord('1') and ord(word[0]) <= ord('9'):
-        import num2word
+        from src import num2word
         temp = translit_to_ar.translit_to_ar(num2word.num2word(word, self.curr_root))
-        import hamzater
+        from src import hamzater
         out_str += hamzater.hamzate(temp)
       elif word[0] in translit_to_ar.translit_map:
         out_str += translit_to_ar.translit_to_ar(word)
@@ -87,12 +87,18 @@ class Parser:
 
     return out_str
   
-  def parse_file(self, ar_text_filename, en_text_filename, htmlout_filename):
+  def parse_file(self, letter_index, ar_text_filename, en_text_filename, htmlout_filename):
     lines = ''
     
     with open(htmlout_filename, 'w') as fout, open(ar_text_filename) as fin_ar, open(en_text_filename) as fin_en:
-      import write_html_pre
+      from src import write_html_pre
       write_html_pre.write_html_pre(fout)
+      outstr = '<div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">'
+      outstr += '<p>Go to: <a href="index.html">Index page</a></p>\n'
+      from src import index2letter
+      outstr +='<p>Roots beginning with ' + index2letter.index2letter(letter_index) + ':</p>\n'
+      outstr += '</div></div>\n'
+      fout.write(outstr)
       while True:
         ar_line = fin_ar.readline()
         ar_out_str = self.parse_line(ar_line)

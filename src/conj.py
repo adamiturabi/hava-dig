@@ -1,4 +1,4 @@
-from translit import *
+from src.translit import *
 
 def conj_tri_form1(root, past_vowel, pres_vowel):
   r1 = root[0]

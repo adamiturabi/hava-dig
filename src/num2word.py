@@ -1,4 +1,4 @@
-from translit import *
+from src.translit import *
 def num2word(numstr_in, root_in):
   numstr = numstr_in
   dot_index = numstr_in.find('.')

@@ -8,8 +8,26 @@ def write_html_pre(fout):
         <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
         <style> 
+          @font-face {
+              font-family: AmiriWeb;
+              font-style: normal;
+              font-weight: 400;
+              src: url('./fonts/Amiri-Regular.woff2') format('woff2'),
+                   url('./fonts/Amiri-Regular.woff') format('woff');
+          }
           :lang(ar) {
-            font-family: "Amiri", serif;
+            -moz-font-feature-settings:"calt=1, liga=1, clig=1, kern=1";
+            -moz-font-feature-settings:"calt", "liga", "clig", "kern";
+            -ms-font-feature-settings:"calt", "liga", "clig", "kern";
+            -webkit-font-feature-settings:"calt", "liga", "clig", "kern";
+            font-feature-settings:"calt", "liga", "clig", "kern";
+            text-rendering: optimizeLegibility;
+            font-family: "AmiriWeb", serif;
+            font-size: 1.0em;
+            line-height: 170%;
+          }
+          :lang(en) {
+            font-family: "AmiriWeb", serif;
           }
           .container {
             max-width: 400px;
