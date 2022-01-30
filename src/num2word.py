@@ -226,6 +226,8 @@ def num2word(numstr_in, root_in):
     basestr = m + u + r1 + a + A + r2 + a + r3 + a + O
     if r2 == r3:
       basestr = m + u + r1 + a + A + r2 + ss + a + O
+    elif r3 == w or r3 == y:
+      basestr = m + u + r1 + a + A + r2 + a + A + O
   elif basenum == 401:
     basestr = m + u + r1 + o + r2 + i + r3
     if r3 == w or r3 == y:

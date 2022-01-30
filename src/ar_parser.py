@@ -67,6 +67,8 @@ class Parser:
           out_str += '('
         elif word == ')':
           out_str += ')'
+        elif word == ';':
+          out_str += '؛'
         else:
           out_str += word
       elif word == '--':
