@@ -48,6 +48,11 @@ def write_html_pre(fout):
           <div class="row justify-content-center"><div class="col-auto text-center" dir="ltr" lang="en"><h1>Arabic-English Dictionary for the Use of Students</h1></div></div>
           <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">by</div></div>
           <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en"><h3>J.G. Hava</h3></div></div>
-          <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">(Digitization project. Work in progress.)</div></div>
+          <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">
+          (Digitization project. Work in progress.)
+          </div></div>
+          <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">
+          <a href="https://github.com/adamiturabi/hava-dig">Github development page</a>
+          </div></div>
 """
   fout.write(outstr)

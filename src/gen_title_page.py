@@ -11,7 +11,6 @@ def gen_title_page(num_letters):
           <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">(Digitization project. Work in progress.)</div></div>
           -->
           <div class="row justify-content-end"><div class="col-auto" dir="ltr" lang="en">
-            <p><a href="https://github.com/adamiturabi/hava-dig">Github development page</a></p>
 """
     for i in range(1, num_letters+1):
       from src import index2letter

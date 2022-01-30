@@ -96,7 +96,7 @@ class Parser:
       outstr = '<div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">'
       outstr += '<p>Go to: <a href="index.html">Index page</a></p>\n'
       from src import index2letter
-      outstr +='<p>Roots beginning with ' + index2letter.index2letter(letter_index) + ':</p>\n'
+      outstr +='<p><h4>Roots beginning with ' + index2letter.index2letter(letter_index) + ':</h4></p>\n'
       outstr += '</div></div>\n'
       fout.write(outstr)
       while True:
