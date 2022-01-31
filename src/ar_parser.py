@@ -72,7 +72,7 @@ class Parser:
         else:
           out_str += word
       elif word == '\\n':
-        out_str += '<br><br>'
+        out_str += '<br><br>&nbsp;&nbsp;&nbsp;&nbsp;'
       elif word == '--':
         out_str += '—'
       elif word == '=':
