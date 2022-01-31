@@ -182,16 +182,21 @@ def num2word(numstr_in, root_in):
     basestr = r1 + a + r2 + a + A + r2 + i + y + r3 + u
   elif basenum == 101:
     basestr = r1 + a + A + r2 + i + r3
-    if r1 == E:
-      basestr = E + a + A + r2 + i + r3
-    if r2 == r3:
-      basestr = r1 + a + A + r2 + ss
-    if r1 == E and r2 == r3:
-      basestr = E + a + A + r2 + ss
-    if r3 == w or r3 == y:
-      basestr = r1 + a + A + r2 + K
     if r1 == E and (r3 == w or r3 == y):
       basestr = E + a + A + r2 + K
+    elif r3 == w or r3 == y:
+      basestr = r1 + a + A + r2 + K
+    elif r1 == E and r2 == r3:
+      basestr = E + a + A + r2 + ss
+    elif r2 == w or r2 == y:
+      if r1 == E:
+        basestr = E + a + A + E + i + r3
+      else:
+        basestr = r1 + a + A + E + i + r3
+    elif r1 == E:
+      basestr = E + a + A + r2 + i + r3
+    elif r2 == r3:
+      basestr = r1 + a + A + r2 + ss
   elif basenum == 102:
     basestr = m + a + r1 + o + r2 + u + w + r3
     if r3 == w:
