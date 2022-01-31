@@ -566,7 +566,7 @@ V
 201
 202 elY
 @Est
-2
+{isot
 @EstAn
 >alo<isotaAnaO Alealiy~aO
 @Esd
@@ -618,7 +618,7 @@ I A i o (1 , 27) , ! a (4) , V
 @Esw
 I A o (1 , >asFA) h_ , h
 -- bayon
-II (203) h
+II (204.--y) h
 III (303)
 V
 -- , VIII b
@@ -627,3 +627,9 @@ VI
 >asuw~ , 23.--E j_. 101t.--y
 101 j_. 23.--E , >usaAO
 101t j_. |siyaAt , >awaAsK
+@Esy
+I A i (1) min l
+|siy~
+101t j_. >awaAsK
+I ! a >asFY elY
+>asFY , >asFA
