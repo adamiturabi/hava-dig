@@ -10,7 +10,7 @@ def gen_title_page(num_letters):
           <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en"><h3>J.G. Hava</h3></div></div>
           <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">(Digitization project. Work in progress.)</div></div>
           -->
-          <div class="row justify-content-end"><div class="col-auto" dir="ltr" lang="en">
+          <div class="row pt-4 justify-content-end"><div class="col-auto" dir="ltr" lang="en">
 """
     for i in range(1, num_letters+1):
       from src import index2letter

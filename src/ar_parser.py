@@ -3,7 +3,7 @@ class Parser:
     self.curr_root = ''
   def parse_line(self, line):
     line = line[0:-1]
-    delims = {' ', ',', '(', ')', '+', '='}
+    delims = {' ', ',', '(', ')', '+', '=', ';'}
     words = []
     curr_word = ''
     for index in range(0, len(line)):
@@ -71,6 +71,8 @@ class Parser:
           out_str += '؛'
         else:
           out_str += word
+      elif word == '\\n':
+        out_str += '<br><br>'
       elif word == '--':
         out_str += '—'
       elif word == '=':
@@ -96,9 +98,11 @@ class Parser:
       from src import write_html_pre
       write_html_pre.write_html_pre(fout)
       outstr = '<div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">'
-      outstr += '<p>Go to: <a href="index.html">Index page</a></p>\n'
+      outstr += 'Go to: <a href="index.html">Index page</a>\n'
+      outstr += '</div></div>\n'
       from src import index2letter
-      outstr +='<p><h4>Roots beginning with ' + index2letter.index2letter(letter_index) + ':</h4></p>\n'
+      outstr = '<div class="row pt-4 justify-content-center"><div class="col-auto" dir="ltr" lang="en">'
+      outstr +='<h4>Roots beginning with ' + index2letter.index2letter(letter_index) + ':</h4>\n'
       outstr += '</div></div>\n'
       fout.write(outstr)
       while True:
@@ -115,7 +119,7 @@ class Parser:
           ar_line = ''
         if not en_line:
           en_line = ''
-        outstr = '<div class="row justify-content-around"><div class="col-auto">'+ar_out_str+'</div>'
+        outstr = '<div class="row py-2 justify-content-around"><div class="col-auto">'+ar_out_str+'</div>'
         outstr += '<div class="col" lang="en" dir="ltr">'+en_line+'</div></div>\n'
         fout.write(outstr)
       fout.write("</div></body></html>")

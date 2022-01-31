@@ -120,7 +120,7 @@ I A o (1 , 23.--E)
 23.--E
 23t j_. 22ya
 @Ety
-I A i (34 , 1 , >utiy~ , 34t , ma>otaAO) h , h_
+I A i (34 , 1 , >utiy~ ,\n 34t , ma>otaAO) h , h_
 >ataY ely
 -- b
 -- h b
