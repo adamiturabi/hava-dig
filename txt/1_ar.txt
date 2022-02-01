@@ -450,7 +450,7 @@ I A i o , ! a (1 , 27)
 @Ers
 I A i (3)
 30
--- , 25 j_. <ir~iysuwn , >ariysuwn , >araArisu , 70 , >araArisaO
+-- , 25 j_. <ir~iysuwn , >ariysuwn ,\n >araArisu , 70 , >araArisaO
 @Erc
 1
 II bayon
