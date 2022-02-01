@@ -200,7 +200,7 @@ V , VIII , VI
 24
 26
 25 AlmaAE
-##H ya>ojuwj wla>ojuwj
+[H]{.fbr} ya>ojuwj wla>ojuwj
 @Ejr
 I A o i (1 , 23t) h elY
 I A o (1 , 22 , 27)
@@ -299,7 +299,7 @@ V , X
 101t j_. 41
 Alo|xir , Alo|xiraO , Alo>uxraY
 >uxorawiy~
-##P 26 , + yaAxuwr
+[P]{.fbr} 26 , + yaAxuwr
 >amiyr 26
 fy Alo|xir
 ean |xirihim
@@ -322,7 +322,7 @@ V h
 >axiy~aO , |xiy~aO j_. >awaAxiy~ , >awaAxK
 4yi
 + 4yit
-##G >uxoyuwn
+[G]{.fbr} >uxoyuwn
 @Ed
 I A o i (1) h
 V
@@ -382,8 +382,8 @@ X h elY
 <ipo , <ip pAka
 <ipaA
 <ipFA , <ipan
-##S |paAr , >apaAr
-##P |paroyuwn
+[S]{.fbr} |paAr , >apaAr
+[P]{.fbr} |paroyuwn
 @Epn
 I ! a (4) <ilY
 -- l (2) fy
@@ -517,7 +517,7 @@ II h_
 @EzH
 I A i (27) , V
 26
-##P |zaAdiraxot , >azodiraxot
+[P]{.fbr} |zaAdiraxot , >azodiraxot
 @Ezp
 22
 @Ezr
@@ -567,7 +567,7 @@ V
 202 elY
 @Est
 {isot
-##P >alo<isotaAnaO Alealiy~aO
+[P]{.fbr} >alo<isotaAnaO Alealiy~aO
 @Esd
 I A i (1) , II , IV (403) h
 V , X
@@ -588,7 +588,7 @@ bihi 3 min Albawol
 -- (ewD yasaAr)
 25 j_. 43 , 22ya , 1ya
 102t j_. 65.w--
-##H <isoraA}iyl
+[H]{.fbr} <isoraA}iyl
 @Esf
 I ! a (4) elY
 IV (403) h
@@ -610,7 +610,7 @@ V >abaAhu
 @Esm
 {isom j_. >asomaAE , >asaAmK
 24t
-##H <isomaeiyl
+[H]{.fbr} <isomaeiyl
 @Esn
 I A i o (1 , 27) ,\n ! a (4) , V
 101
@@ -719,7 +719,7 @@ I ! a (4)
 @Efr
 I A i (1 , 27)
 28 , 20
-##G <ifosantiyn
+[G]{.fbr} <ifosantiyn
 @Efq
 I A i (1) h_
 I ! a (4)
@@ -1184,7 +1184,7 @@ I A o (1 , 23.-y-) min
 II , >ay~aba ean
 II , III (303)
 V , VIII h_ , h
-|b
+[S]{.fbr} |b
 1 , 1t , 23.-y-
 1
 min kul~ 1
@@ -1208,6 +1208,8 @@ qaw~am 4 fulaAn
 1t j_. >awodaAt
 @Ewr
 24 j_. >uwr
+@Ewz
+<iwaz~aO j_. <iwaz~
 @Ews
 I A o (1 , 23.-y-) h
 1
@@ -1242,13 +1244,16 @@ Alo|laO AlHadobaAE
 |liy~
 >aw~alu j_. 46 , >awaAlK
 >aw~alFA , fy Alo>aw~al , fy >aw~al Alo>amor
+>aw~alFA fa>aw~alFA
+>aw~al j_. >aw~aluwn m_. >uwlY j_. 9 , >uwlayaAt
 >aw~al AlbaAriHaO
 {al>aw~aluwn wAlo|xiruwn
 >aw~aliy~ m_.  >aw~aliy~aO
+>aw~aliy~aO
 203
 23t.-y- j_. <iyaAlaAt
 >ay~al , <iy~al , >uy~al j_. >ayaA}ilu
-##S >ayoluwl
+[S]{.fbr} >ayoluwl
 ma|l
 @Ewm
 I A o (1)
@@ -1262,7 +1267,7 @@ I A o (1) elY nafosihi
 {lo|n
 min Alo|n wSAeidFA
 <ilY Alo|n
-##P <iywaAn j_. <iywaAnaAt , >awaAwiyn ; + liywaAn j_. lawaAwiyn
+[P]{.fbr} <iywaAn j_. <iywaAnaAt , >awaAwiyn ; + liywaAn j_. lawaAwiyn
 @Ewh
 I A o (1) , II , V
 28
@@ -1308,7 +1313,7 @@ ta>oyiydFA l
 mu&oyid j_. 44.wE- , ma|widu
 @Eyr
 >ayor j_. 27 , 38
-##S 28
+[S]{.fbr} 28
 @Eys
 I ! a (23) min
 II , IV (23) h min
