@@ -783,7 +783,7 @@ VIII
 28 , 25 , 26
 17  j_. 44
 20t
-45 j. 65
+45 j_. 65
 102 j_. 65 , ma>okuwlaAt
 @Ekm
 4t j_. 4 , >akamaAt , 23 , 10 , 38
@@ -866,7 +866,7 @@ II h
 V
 -- h
 X
-<il_`h j. |lihaO
+<il_`h j_. |lihaO
 All~`h
 All~`hum~a
 23t
