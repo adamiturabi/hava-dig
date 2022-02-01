@@ -6,7 +6,7 @@
 I A u (1 , 22t , 23t) <ilY
 -- i u (1 , 25 , 22 , 22t) l
 1 j_. >a&ub~
-##Ce 25
+[Ce]{.fbr} 25
 @Ebt
 I A u i , ! a (1 , 27)
 21 , 5 , 1
@@ -104,7 +104,7 @@ V biAlo<itob
 202 AlP~ufor
 @Etd
 23 j_. 21t , 10
-##Te |tacojiy j_. |tacojiy~aO
+[Te]{.fbr} |tacojiy j_. |tacojiy~aO
 @Etl
 I A i (1 , 36)
 @Etm
@@ -808,8 +808,8 @@ I A o (1) , V <ilY
 I A o i (1) , II h
 II h elY
 hum ealay~a <ilobN waAHid
-##Ts <ilojiy~ j_. <ilojiy~aO
-##Te Ald~iwaAn
+[Ts]{.fbr} <ilojiy~ j_. <ilojiy~aO
+[Te]{.fbr} Ald~iwaAn
 @Elp
 {al~apiy j_. {al~apiyn + <iliy
 {al~atiy j_. {ll~awaAtiy , {ll~aAEiy
@@ -1200,8 +1200,8 @@ I A o (1 , 23.-y-) h
 |s
 |s bar~iy
 @EwD
-##Ts >uwDaO j_. 9
-##Ts >wDajiy
+[Ts]{.fbr} >uwDaO j_. 9
+[Ts]{.fbr} >wDajiy
 @Ewf
 I A o (1) h , h_
 4t j_. 38

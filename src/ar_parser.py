@@ -13,6 +13,8 @@ class Parser:
     text = instr[1:(classcode_beg_idx-1)]
     if classcode == 'latin':
       outstr = '<span lang="en" dir="ltr">'+text+'</span>'
+    elif classcode == 'fbr':
+      outstr = '<span class="foreignborrowing" lang="en" dir="ltr">'+text+'</span>'
     else:
       outstr = "NOT FOUND: " + classcode
     return outstr
@@ -55,8 +57,8 @@ class Parser:
       if word[0] == '@':
         self.curr_root = word[1:]
         out_str = 'qwerty<b>«'+translit_to_ar.translit_to_ar(self.curr_root)+'»</b>'
-      elif word[0:2] == '##':
-        out_str += '<span class="foreignborrowing">' + word[2:] + '</span>'
+      #elif word[0:2] == '##':
+      #  out_str += '<span class="foreignborrowing">' + word[2:] + '</span>'
       elif word[0] == '[':
         out_str += self.process_span(word)
       elif word[0] in { 'I', 'V', 'X' }:
