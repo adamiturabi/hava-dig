@@ -668,7 +668,7 @@ Edible,  eatable.  Victuals.
 Hill,  hillock.  Rising  ground.
 The  (<i>article</i>).  
 To  hurry.  To  be  restless.  To  be  clear  and  bright  (colour). 
-To  strike  a.  0.  with  a  spear.  
+To  strike  a.  o.  with  a  spear.  
 To  moan  (sick  person).
 To  be  decayed  (tooth). 
 To  sharpen  the  point  of.  
@@ -737,7 +737,7 @@ To  adore  a.  o. ;  to  worship.
 To  be  like  God.  
 A  god.  Deity.  
 God  (the  true  and  only  one).  
-0  my  God !  Good  God !  
+O  my  God !  Good  God !  
 Goddess.  
 The  goddess  of  poetry; muse. 
 Deification,  apotheosis.  
@@ -782,7 +782,7 @@ To  adopt  as  a  mother.
 To  imitate  a.  o.  
 To  follow  a  o.  as  a  leader.
 Mother.  Source, principle,  prototype. 
-0  my  mother!  Mother!
+O  my  mother!  Mother!
 Fire. <i>lit.</i>  :  the  mother  of hospitality. 
 Mecca, <i>lit.</i>  :  the  mother  of the  towns. 
 + The  Virgin  Mary <i>lit.</i> : the mother  of  light. 
@@ -794,4 +794,76 @@ Before,  in  front  of.
 Imam.  Leader.  President, Highway.  String-course  (<i>arch.</i>). 
 Dignity,  rank  of  an  imam.
 People.  Nation.
+The  gentiles,  idolaters.  
+Motherly.  Ignorant,  illiterate.
+Gentile,  idolater. 
+Maternity.  
+Wounded  in  the  brain. 
+A  <i>conj.  part.</i>  Either,  or.
+Is  (he,  .she,  it)..,  not? 
+But;  as  to... 
+When.  If. 
+Either....  or.  Whether....  or. 
+To  conjecture, to  determine  a.  th. 
+Weakness.  Emptiness,  inequality.  Doubt. 
+To  be  thirsty.  
+Very  hot  summer.  
+Extreme  point.  Starting-place  or  goal  in  a  race.  Anger. 
+Eternally.  
+To  become  irritated with  a.  o. 
+To  show  the  limit  of.  
+Laden  ship,  Amida  (town).
+To  command  a.  th.  to  a.  o.  
+To become  a  prince,  chief,  amir. 
+To  be  in  good  quantity (th.)  To  have  numerous  flocks. 
+To  invest  a.  o.  with  power.  
+To  consult  a.  o.  on.
+To  command  a.  th.  To  a.  o.;  to  order.  To  render  a.  o.  wealthy (God ). 
+To  be  invested  with  power;  to reign. 
+To  make  a  common  deliberation ;  to  consult  e.  o.  To  plot. 
+To  consult  a.  o.  on.
+To  be  actively  engaged,  busied about.  To  conform  to  a  command. 
+To  consult  a.  o.  
+Commandment,  order, decree.  Power,  authority. 
+Thing,  business,  subject.
+Sign,  indication.  
+Opened,  trodden  road.
+Prefecture,  power,  empire.  
+Foolish,  silly.  
+He  does  not  possess a  farthing. 
+Serious,  painful  affair.  
+Soul.  Vital  spirits.  The heart's  blood. 
+Convent  of  monks.  
+Man.  
+Chief.  Prince,  amir.  
+Civil  title  equal  to  that of  a  colonel. 
+The  Commander  of  the faithful,  the  Caliph. 
+Admiral.  
++  Colonel.  
+Belonging  to  a  prince.  Public    treasury.   Duty    paid    to    a prince. 
+Passions.  
+Trustee,  attorney,  plenipotentiary. 
+Congress.  Council.  Conference.
+Commanded:  proxy.  +  Public officer. 
+Mission,  power  of  attorney.  Office  in  the  government.  
+Yesterday.
+Lately,  time  not  long  past. 
+Silly.  Parasite. 
+To  hope a.  th. 
+To  trust  in,  to  set  o.'s  hope  on.
+To  meditate,  to  reflect  on a.  th.  To  consider,  to  contemplate. 
+Hope,  expectation.
+Meditation,  reflection.
+Who  hopes.  
+Hope,  expectation.  
+Hope,  that  which  is  hoped.  
+To  be  true,  loyal,  faithful.
+To  be  in security,  in  safety. 
+To  be  in  safety  against. 
+To  trust  to,  to  confide  in 
+To  intrust  a.  o.  with,  to commit  a.  th.  to. 
+To  put  o.'s  self  under  a.  o.'s protection,  safekeeping. 
+To  intrust  a.  o.  with.
+
+
 
