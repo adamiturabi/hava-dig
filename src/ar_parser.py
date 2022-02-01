@@ -1,4 +1,9 @@
 class Parser:
+  special_chars = {
+    "indent": '&ldca;&nbsp;&nbsp;&nbsp;',
+    "square": '&square',
+    "4star": chr(int('0x2727', 16))
+  }
   def __init__(self):
     self.curr_root = ''
   def parse_line(self, line):
@@ -69,16 +74,17 @@ class Parser:
           out_str += ')'
         elif word == ';':
           out_str += '؛'
+        elif word == '=':
+          #out_str += chr(int('0x25a1', 16))
+          out_str += self.special_chars["square"]
+        elif word == '+':
+          out_str += self.special_chars["4star"]
         else:
           out_str += word
       elif word == '\\n':
-        out_str += '<br><br>&nbsp;&nbsp;&nbsp;&nbsp;'
+        out_str += '<br><br>' + self.special_chars["indent"]
       elif word == '--':
         out_str += '—'
-      elif word == '=':
-        out_str += chr(int('0x25a1', 16))
-      elif word == '+':
-        out_str += chr(int('0x2727', 16))
       elif ord(word[0]) >= ord('1') and ord(word[0]) <= ord('9'):
         from src import num2word
         temp = translit_to_ar.translit_to_ar(num2word.num2word(word, self.curr_root))
@@ -91,6 +97,17 @@ class Parser:
 
     return out_str
   
+  def process_en_line(self, en_line):
+    out_str = ''
+    for x in en_line:
+      if x == '+':
+        out_str += self.special_chars["4star"]
+      elif x == '=':
+        out_str += self.special_chars["square"]
+      else:
+        out_str += x
+    return out_str
+
   def parse_file(self, letter_index, ar_text_filename, en_text_filename, htmlout_filename):
     lines = ''
     
@@ -113,6 +130,7 @@ class Parser:
           ar_out_str = ar_out_str[6:]
         else:
           en_line = fin_en.readline()
+          en_line = self.process_en_line(en_line)
         if not ar_line and not en_line:
           break
         if not ar_line:
