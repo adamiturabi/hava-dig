@@ -1,24 +1,51 @@
 class Parser:
   special_chars = {
     "indent": '&ldca;&nbsp;&nbsp;&nbsp;',
-    "square": '&square',
+    "square": '&square;',
     "4star": chr(int('0x2727', 16))
   }
   def __init__(self):
     self.curr_root = ''
+  def process_span(self, instr):
+    outstr = ''
+    classcode_beg_idx = instr.find('{')
+    classcode = instr[(classcode_beg_idx+2):-1]
+    text = instr[1:(classcode_beg_idx-1)]
+    if classcode == 'latin':
+      outstr = '<span lang="en" dir="ltr">'+text+'</span>'
+    else:
+      outstr = "NOT FOUND: " + classcode
+    return outstr
+
   def parse_line(self, line):
     line = line[0:-1]
     delims = {' ', ',', '(', ')', '+', '=', ';'}
     words = []
     curr_word = ''
-    for index in range(0, len(line)):
-      if line[index] in delims:
+    index = 0
+    #for index in range(0, len(line)):
+    while index < len(line):
+      if line[index] == '[': #[some text]{.classcode}
+        if curr_word != '':
+          words.append(curr_word)
+        curr_word = ''
+        for index2 in range(index, len(line)):
+          if line[index2] == '}':
+            curr_word += '}'
+            words.append(curr_word)
+            index = index2
+            curr_word = ''
+            break
+          else:
+            curr_word += line[index2]
+      elif line[index] in delims:
         if curr_word != '':
           words.append(curr_word)
           curr_word = ''
         words.append(line[index])
       else:
         curr_word += line[index]
+      index += 1
     if curr_word != '':
       words.append(curr_word)
     #print(words)
@@ -28,6 +55,10 @@ class Parser:
       if word[0] == '@':
         self.curr_root = word[1:]
         out_str = 'qwerty<b>«'+translit_to_ar.translit_to_ar(self.curr_root)+'»</b>'
+      elif word[0:2] == '##':
+        out_str += '<span class="foreignborrowing">' + word[2:] + '</span>'
+      elif word[0] == '[':
+        out_str += self.process_span(word)
       elif word[0] in { 'I', 'V', 'X' }:
         if word[-1] == 'x':
           out_str += word[:-1]

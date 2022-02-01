@@ -29,6 +29,9 @@ def write_html_pre(fout):
           :lang(en) {
             font-family: "AmiriWeb", serif;
           }
+          .foreignborrowing {
+            font-variant: small-caps;
+          }
           .container {
             max-width: 400px;
           }

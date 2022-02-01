@@ -6,7 +6,7 @@
 I A u (1 , 22t , 23t) <ilY
 -- i u (1 , 25 , 22 , 22t) l
 1 j_. >a&ub~
-25
+##Ce 25
 @Ebt
 I A u i , ! a (1 , 27)
 21 , 5 , 1
@@ -104,7 +104,7 @@ V biAlo<itob
 202 AlP~ufor
 @Etd
 23 j_. 21t , 10
-|tacojiy j_. |tacojiy~aO
+##Te |tacojiy j_. |tacojiy~aO
 @Etl
 I A i (1 , 36)
 @Etm
@@ -200,7 +200,7 @@ V , VIII , VI
 24
 26
 25 AlmaAE
-ya>ojuwj wla>ojuwj
+##H ya>ojuwj wla>ojuwj
 @Ejr
 I A o i (1 , 23t) h elY
 I A o (1 , 22 , 27)
@@ -299,7 +299,7 @@ V , X
 101t j_. 41
 Alo|xir , Alo|xiraO , Alo>uxraY
 >uxorawiy~
-26 , + yaAxuwr
+##P 26 , + yaAxuwr
 >amiyr 26
 fy Alo|xir
 ean |xirihim
@@ -322,7 +322,7 @@ V h
 >axiy~aO , |xiy~aO j_. >awaAxiy~ , >awaAxK
 4yi
 + 4yit
->uxoyuwn
+##G >uxoyuwn
 @Ed
 I A o i (1) h
 V
@@ -382,8 +382,8 @@ X h elY
 <ipo , <ip pAka
 <ipaA
 <ipFA , <ipan
-|paAr , >apaAr
-|paroyuwn
+##S |paAr , >apaAr
+##P |paroyuwn
 @Epn
 I ! a (4) <ilY
 -- l (2) fy
@@ -517,8 +517,7 @@ II h_
 @EzH
 I A i (27) , V
 26
-@EAzAdrxt
-|zaAdiraxot , >azodiraxot
+##P |zaAdiraxot , >azodiraxot
 @Ezp
 22
 @Ezr
@@ -568,8 +567,7 @@ V
 202 elY
 @Est
 {isot
-@EstAn
->alo<isotaAnaO Alealiy~aO
+##P >alo<isotaAnaO Alealiy~aO
 @Esd
 I A i (1) , II , IV (403) h
 V , X
@@ -590,7 +588,7 @@ bihi 3 min Albawol
 -- (ewD yasaAr)
 25 j_. 43 , 22ya , 1ya
 102t j_. 65.w--
-<isoraA}iyl
+##H <isoraA}iyl
 @Esf
 I ! a (4) elY
 IV (403) h
@@ -612,7 +610,7 @@ V >abaAhu
 @Esm
 {isom j_. >asomaAE , >asaAmK
 24t
-<isoma`eiyl
+##H <isomaeiyl
 @Esn
 I A i o (1 , 27) ,\n ! a (4) , V
 101
@@ -721,7 +719,7 @@ I ! a (4)
 @Efr
 I A i (1 , 27)
 28 , 20
-<ifosantiyn
+##G <ifosantiyn
 @Efq
 I A i (1) h_
 I ! a (4)
@@ -810,8 +808,8 @@ I A o (1) , V <ilY
 I A o i (1) , II h
 II h elY
 hum ealay~a <ilobN waAHid
-<ilojiy~ j_. <ilojiy~aO
-Ald~iwaAn
+##Ts <ilojiy~ j_. <ilojiy~aO
+##Te Ald~iwaAn
 @Elp
 {al~apiy j_. {al~apiyn + <iliy
 {al~atiy j_. {ll~awaAtiy , {ll~aAEiy
@@ -894,8 +892,8 @@ IV (403) , V , VIII
 @Ely
 I ! a (1)
 1t j_. >alaAyaA , >alayaAt
->ulaY , >uwlaY , >uwlaAEi
->uwl_`}ik , >uwlaA}ik
+>ulaY , >uwlaY , >uwlaAEi [(<i>m.f.</i>).]{.latin}
+>uwl_`}ik , >uwlaA}ik [(<i>m.f.</i>).]{.latin}
 2 , <ilFY j_. |laAE
 >alaAE , >alaY
 33 , |laY m_. 33t , >aloyaAE j_. 3
@@ -1047,7 +1045,7 @@ maA >afoealuhu maA >an~a najom fy Als~amaAE
 II h
 @Ent
 >anota j_. >anotum m_. >anoti j_. >anotun~a
->anotumaA
+>anotumaA [(<i>dual</i>).]{.latin}
 @Ent
 I A i (25)
 -- h_ , h
@@ -1202,8 +1200,8 @@ I A o (1 , 23.-y-) h
 |s
 |s bar~iy
 @EwD
->uwDaO j_. 9
->wDajiy
+##Ts >uwDaO j_. 9
+##Ts >wDajiy
 @Ewf
 I A o (1) h , h_
 4t j_. 38
@@ -1235,7 +1233,7 @@ Alo|laO AlHadobaAE
 203
 23t.-y- j_. <iyaAlaAt
 >ay~al , <iy~al , >uy~al j_. >ayaA}ilu
->ayoluwl
+##S >ayoluwl
 ma|l
 @Ewm
 I A o (1)
@@ -1249,7 +1247,7 @@ I A o (1) elY nafosihi
 {lo|n
 min Alo|n wSAeidFA
 <ilY Alo|n
-<iywaAn j_. <iywaAnaAt , >awaAwiyn ; + liywaAn j_. lawaAwiyn
+##P <iywaAn j_. <iywaAnaAt , >awaAwiyn ; + liywaAn j_. lawaAwiyn
 @Ewh
 I A o (1) , II , V
 28
@@ -1295,7 +1293,7 @@ ta>oyiydFA l
 mu&oyid j_. 44.wE- , ma|widu
 @Eyr
 >ayor j_. 27 , 38
-28
+##S 28
 @Eys
 I ! a (23) min
 II , IV (23) h min
