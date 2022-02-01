@@ -147,11 +147,11 @@ class Parser:
     with open(htmlout_filename, 'w') as fout, open(ar_text_filename) as fin_ar, open(en_text_filename) as fin_en:
       from src import write_html_pre
       write_html_pre.write_html_pre(fout)
-      outstr = '<div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">'
-      outstr += 'Go to: <a href="index.html">Index page</a>\n'
+      outstr = '<div class="row py-2 justify-content-center"><div class="col-auto" dir="ltr" lang="en">'
+      outstr += '<a href="index.html">Index page</a>\n'
       outstr += '</div></div>\n'
       from src import index2letter
-      outstr = '<div class="row pt-4 justify-content-center"><div class="col-auto" dir="ltr" lang="en">'
+      outstr += '<div class="row py-2 justify-content-center"><div class="col-auto" dir="ltr" lang="en">'
       outstr +='<h4>Roots beginning with ' + index2letter.index2letter(letter_index) + ':</h4>\n'
       outstr += '</div></div>\n'
       fout.write(outstr)
