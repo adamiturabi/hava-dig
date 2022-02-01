@@ -614,7 +614,7 @@ V >abaAhu
 24t
 <isoma`eiyl
 @Esn
-I A i o (1 , 27) , ! a (4) , V
+I A i o (1 , 27) ,\n ! a (4) , V
 101
 @Esw
 I A o (1 , >asFA) h_ , h
@@ -649,6 +649,7 @@ I A i (1) h_
 -- i (1) , II h_
 = >ac~ar
 3t j_. 9 , 3
+20
 45 j_. 65 , 65.w--
 @Ecn
 3t
