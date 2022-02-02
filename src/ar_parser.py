@@ -128,7 +128,9 @@ class Parser:
       else:
         out_str += word
 
-    return out_str
+    alef_wasla = 'ٱ'
+    alef = 'ا'
+    return out_str.replace(alef_wasla, alef)
   
   def process_en_line(self, en_line):
     out_str = ''

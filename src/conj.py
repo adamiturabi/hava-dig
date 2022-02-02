@@ -237,6 +237,6 @@ def conj(root, form, vowel="a", tense="pret"):
       elif vowel == 'o' or vowel == 'u':
         arvowel = u
       verb = chr(int('0x25cc', 16)) + arvowel
-  return verb
+  return verb.replace('{', 'A')
 
 

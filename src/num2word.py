@@ -376,4 +376,5 @@ def num2word(numstr_in, root_in):
   elif suffix_str == 'yit':
     outstr = basestr + i + y + ss + a + O
 
-  return outstr
+  #remove alef wasla
+  return outstr.replace('{', 'A')
