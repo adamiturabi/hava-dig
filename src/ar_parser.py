@@ -66,7 +66,7 @@ class Parser:
           out_str += word[:-1]
         else:
           out_str += word
-        do_conj = word[-1] != 'x' and word != 'I'
+        do_conj = word[-1] != 'x' and not (word == 'I' and len(self.curr_root) == 3)
         if do_conj:
           from src import conj
           form = word
@@ -163,6 +163,7 @@ class Parser:
         en_line = ''
         if ar_out_str[:6] == 'qwerty':
           this_root = ar_out_str[6:]
+          this_root = this_root.replace('ء', 'أ')
           ar_out_str = '<span id="'+this_root+'"><b>«'+this_root+'»</b></span>'
         else:
           en_line = fin_en.readline()

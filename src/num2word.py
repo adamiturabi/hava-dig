@@ -375,6 +375,12 @@ def num2word(numstr_in, root_in):
     outstr = basestr + i + y + ss
   elif suffix_str == 'yit':
     outstr = basestr + i + y + ss + a + O
+  elif suffix_str == 'At':
+    if outstr[-1] == O:
+      outstr = outstr[:-1]
+    outstr = basestr + a + A + t
+  elif suffix_str == 'uwn':
+    outstr = basestr + u + w + n
 
   #remove alef wasla
   return outstr.replace('{', 'A')

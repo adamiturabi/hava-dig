@@ -2,8 +2,8 @@ function normalize(instr) {
   let outstr = '';
   for (let i = 0; i < instr.length; i++) {
     let x = instr.charAt(i);
-    if (x == 'ء' || x == 'أ' || x == 'a' || x == '\'' || x == 'إ' || x == 'ؤ' || x == 'ئ' || x == 'ا' || x == 'A') {
-      outstr += 'ء';
+    if (x == 'ء' || x == 'أ' || x == 'a' || x == '\'' || x == 'إ' || x == 'ؤ' || x == 'ئ' || x == 'ا' || x == 'A' || x == '>' || x == '<' || x == '&' || x == '}') {
+      outstr += 'أ';
     } else if (x == 'ب' || x == 'b') {
       outstr += 'ب';
     } else if (x == 'ت' || x == 't') {
@@ -44,7 +44,7 @@ function normalize(instr) {
       outstr += 'ف';
     } else if (x == 'ق' || x == 'q') {
       outstr += 'ق';
-    } else if (x == 'ك' || x == 'k') {
+    } else if (x == 'ك' || x == 'k' || x == 'ک') {
       outstr += 'ك';
     } else if (x == 'ل' || x == 'l') {
       outstr += 'ل';
@@ -67,7 +67,7 @@ function searchRoot() {
   let normalized_root = normalize(searched_root);
   let filename = '';
   let first_char = normalized_root.charAt(0);
-  if (first_char === 'ء') {
+  if (first_char === 'أ') {
     filename = '1.html';
   } else if (first_char === 'ب') {
     filename = '2.html';

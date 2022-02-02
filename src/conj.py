@@ -218,6 +218,17 @@ def conj_tri(root, form, past_vowel, pres_vowel):
     return conj_tri_form10(root)
   else:
     return ('', '')
+def conj_quad(root, form):
+  r1 = root[0]
+  r2 = root[1]
+  r3 = root[2]
+  r4 = root[3]
+  if form == 'I':
+    return r1 + a + r2 + o + r3 + a + r4 + a
+  elif form == 'II':
+    return t + a + r1 + a + r2 + o + r3 + a + r4 + a
+  else:
+    return ''
 def conj(root, form, vowel="a", tense="pret"):
   pret = form
   if len(root) == 2:
@@ -237,6 +248,8 @@ def conj(root, form, vowel="a", tense="pret"):
       elif vowel == 'o' or vowel == 'u':
         arvowel = u
       verb = chr(int('0x25cc', 16)) + arvowel
+  if len(root) == 4:
+    return conj_quad(root, form)
   return verb.replace('{', 'A')
 
 
