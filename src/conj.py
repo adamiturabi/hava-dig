@@ -45,7 +45,10 @@ def conj_tri_form1(root, past_vowel, pres_vowel):
       pres_verb = "ya" + r1 + "o" + r2 + "iy"
   elif r3 == "w":
     if past_vowel == "a":
-      past_verb = r1 + "a" + r2 + "a" + "A"
+      if r2 == E:
+        past_verb = r1 + "a" + r2 + "a" + "Y"
+      else:
+        past_verb = r1 + "a" + r2 + "a" + "A"
     if pres_vowel == "u":
       pres_verb = "ya" + r1 + "o" + r2 + "uw"
   elif r2 == "w":
