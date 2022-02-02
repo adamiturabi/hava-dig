@@ -56,7 +56,7 @@ class Parser:
       from src import translit_to_ar
       if word[0] == '@':
         self.curr_root = word[1:]
-        out_str = 'qwerty<b>«'+translit_to_ar.translit_to_ar(self.curr_root)+'»</b>'
+        out_str = 'qwerty'+translit_to_ar.translit_to_ar(self.curr_root)
       #elif word[0:2] == '##':
       #  out_str += '<span class="foreignborrowing">' + word[2:] + '</span>'
       elif word[0] == '[':
@@ -160,7 +160,8 @@ class Parser:
         ar_out_str = self.parse_line(ar_line)
         en_line = ''
         if ar_out_str[:6] == 'qwerty':
-          ar_out_str = ar_out_str[6:]
+          this_root = ar_out_str[6:]
+          ar_out_str = '<span id="'+this_root+'"><b>«'+this_root+'»</b></span>'
         else:
           en_line = fin_en.readline()
           en_line = self.process_en_line(en_line)

@@ -36,6 +36,7 @@
           }
         </style>
         <title>Hava: Arabic-English Dictionary</title>
+        <script src="searchroot.js"/>
     </head>
     <body>
         <!--<h1>Hava's Arabic Dictionary</h1>-->
@@ -56,18 +57,24 @@
           <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">
           <a href="https://github.com/adamiturabi/hava-dig">Github development page</a>
           </div></div>
+          <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">
+          <input type="text" id="textinput" placeholder="Search for root (Buckwalter or Unicode Arabic)"/>
+          <!--<input type="button" id="btn" value="Submit" onClick="javascript: window.open('1.html#' + document.getElementById('text').value);" />-->
+          <button type="button" id="btn2" onclick="searchRoot()">Search</button>
+          <p id=outputsearched></p>
+          </div></div>
 <div class="row py-2 justify-content-center"><div class="col-auto" dir="ltr" lang="en"><a href="index.html">Index page</a>
 </div></div>
 <div class="row py-2 justify-content-center"><div class="col-auto" dir="ltr" lang="en"><h4>Roots beginning with ء:</h4>
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ء»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ء"><b>«ء»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَ</div><div class="col" lang="en" dir="ltr">Hey, <i>interr. part.</i>, I say, is it?
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَلَمْ وأَلَا</div><div class="col" lang="en" dir="ltr">Is (he, she, it)... not?
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَلَمَّا</div><div class="col" lang="en" dir="ltr">Is (he, she, it)... not... yet?
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءب»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءب"><b>«ءب»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَبَّ ◌ُ (أَبّ ، أَبَابَة ، إِبَابَة) إِلى</div><div class="col" lang="en" dir="ltr">To desire a.th.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— ◌ِ ◌ُ (أَبّ ، أَبِيب ، أَبَاب ، أَبَابَة) ل</div><div class="col" lang="en" dir="ltr">To prepare oneself to, for.
@@ -76,18 +83,18 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto"><span class="foreignborrowing" lang="en" dir="ltr">Ce</span> أَبِيب</div><div class="col" lang="en" dir="ltr">Eleventh month of the Coptic year. July.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءبت»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءبت"><b>«ءبت»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَبَتَ ◌ُ ◌ِ ، أَبِتَ ◌َ (أَبْت ، أُبُوت)</div><div class="col" lang="en" dir="ltr">To be burning hot (day).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">آبِت ، أَبِت ، أَبْت</div><div class="col" lang="en" dir="ltr">Burning, hot (day).
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءبث»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءبث"><b>«ءبث»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَبَثَ ◌ِ (أَبْث) ه ، على</div><div class="col" lang="en" dir="ltr">To speak ill of, to slander.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءبجد»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءبجد"><b>«ءبجد»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَبْجَدْ، الحُرُوف الأَبْجَدِيَّة</div><div class="col" lang="en" dir="ltr">The alphabet.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءبد»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءبد"><b>«ءبد»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَبَدَ ◌ِ (أُبُود)</div><div class="col" lang="en" dir="ltr">To last.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— ب</div><div class="col" lang="en" dir="ltr">To settle, to abide in a place.
@@ -112,7 +119,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَبَدِيَّة</div><div class="col" lang="en" dir="ltr">Perpetuity; eternity.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءبر»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءبر"><b>«ءبر»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَبَرَ ◌ِ ◌ُ (أَبْر ، إِبَار) ه</div><div class="col" lang="en" dir="ltr">To prick a.o. with a needle. To spur. To give to a.o. to eat a needle in his food. To backbite.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَبَرَ ◌ُ ◌ِ (أَبْر ، إِبَارَة) هـ</div><div class="col" lang="en" dir="ltr">To fecundate; to graft (a palm-tree). etc.
@@ -125,27 +132,27 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مَأْبُور</div><div class="col" lang="en" dir="ltr">Pricked; grafted. Sharp-pointed.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءبز»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءبز"><b>«ءبز»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَبَزَ ◌ِ (أَبْز ، أُبُوز)</div><div class="col" lang="en" dir="ltr">To dart forth, to rush, to leap (gazelle).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— ب (أَبْز)</div><div class="col" lang="en" dir="ltr">To insult a.o.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءبس»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءبس"><b>«ءبس»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَبَسَ ◌ِ أَبْس ، II أَبَّسَ ه</div><div class="col" lang="en" dir="ltr">To reprove, to despise, to humiliate a.o.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءبش»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءبش"><b>«ءبش»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَبَشَ ◌ُ (أَبْش) ، II أَبَّشَ هـ</div><div class="col" lang="en" dir="ltr">To pick up, to gather a.th.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُبَاشَة</div><div class="col" lang="en" dir="ltr">Crowd.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءبض»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءبض"><b>«ءبض»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَبَضَ ◌ُ ◌ِ (أَبْض) ، V تَأَبَّضَ ه</div><div class="col" lang="en" dir="ltr">To fasten the foot of a camel to (his thigh).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِبَاض جـ. أُبُض</div><div class="col" lang="en" dir="ltr">Rope for fastening the foot of a camel. Hock, hamstring.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُبْض جـ. آبَاض ، مَأْبِض جـ. مَآبِضُ</div><div class="col" lang="en" dir="ltr">Man's and camel's ham.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءبط»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءبط"><b>«ءبط»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِبْط جـ. آبَاط ، ✧ بَاط بَاطَات</div><div class="col" lang="en" dir="ltr">Armpit.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">V تَأَبَّطَ هـ</div><div class="col" lang="en" dir="ltr">To carry a.th. under the armpit.
@@ -156,14 +163,14 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">جَعَلْتُهُ إِبَاطًا</div><div class="col" lang="en" dir="ltr">I put it beneath my armpit.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءبق»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءبق"><b>«ءبق»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَبَقَ ◌ِ ◌ُ (أَبْق ، إِبَاق) إِلى</div><div class="col" lang="en" dir="ltr">To run away, to flee, to take flight (slave).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَبَق</div><div class="col" lang="en" dir="ltr">Flax.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">آبِق ، أَبُوق جـ. أُبَّق ، أُبَّاق</div><div class="col" lang="en" dir="ltr">Who has run away, who has fled.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءبل»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءبل"><b>«ءبل»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَبِلَ ◌َ (أَبَل) ، أَبَلَ ◌ُ (أَبَالَة)</div><div class="col" lang="en" dir="ltr">To be a skilled manager of (camels).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— ◌ُ ◌ِ (أَبَل ، أُبُول) ، أَبِلَ (أَبْل)</div><div class="col" lang="en" dir="ltr">To go from the water to a fresh pasturage (cattle).
@@ -178,7 +185,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مَأْبَلَة</div><div class="col" lang="en" dir="ltr">A place full of camels, where many camels are to be found.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءبن»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءبن"><b>«ءبن»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَبَنَ ◌ِ ◌ُ (أَبْن) ه ب</div><div class="col" lang="en" dir="ltr">To accuse, to charge a.o. with a fault.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَبَّنَ ه</div><div class="col" lang="en" dir="ltr">To compose the elegy of, to praise a dead person.
@@ -189,7 +196,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مَأْبُون</div><div class="col" lang="en" dir="ltr">Blameworthy. Suspicious. Unmanly, effeminate.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءبه»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءبه"><b>«ءبه»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَبَهَ ◌َ (أَبْه) ب ، ل</div><div class="col" lang="en" dir="ltr">To remember a.th.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">لَا يُؤْبَهُ لَهُ</div><div class="col" lang="en" dir="ltr">No one pays attention to it, unheeded.
@@ -202,7 +209,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُبَّهَة</div><div class="col" lang="en" dir="ltr">Beauty, brightness. Pride.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءبو»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءبو"><b>«ءبو»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَبَا ◌ُ (إِبَاوَة ، أُبُوّ ، أُبُوَّة)</div><div class="col" lang="en" dir="ltr">To be a father.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَبَّى ه</div><div class="col" lang="en" dir="ltr">To swear by one's father, to say: (بِأَبِي أَنْت) May I ransom thee with my father.
@@ -231,7 +238,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَبَوِيَّة</div><div class="col" lang="en" dir="ltr">Fatherly. ✧ Paternity.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءبي»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءبي"><b>«ءبي»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَبَىٰ ◌َ ◌ِ (إِبَاء ، إِبَاءَة) ، V تَأَبَّى هـ ، عَن</div><div class="col" lang="en" dir="ltr">To refuse, to disdain a.th.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— ه على</div><div class="col" lang="en" dir="ltr">To refuse a.th. to a.o.
@@ -242,25 +249,25 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَبِيّ</div><div class="col" lang="en" dir="ltr">Haughty,
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءتب»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءتب"><b>«ءتب»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِتْب جـ. آتَاب ، إِتَاب</div><div class="col" lang="en" dir="ltr">Shirt. Shift. Coat of mail.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">V تَأَتَّبَ بِالْإِتْب</div><div class="col" lang="en" dir="ltr">To put on a shift, a coat of mail.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مُؤَتَّب الظُّفْر</div><div class="col" lang="en" dir="ltr">Having crooked nails.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءتد»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءتد"><b>«ءتد»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِتَاد جـ. آتِدَة ، أُتُد</div><div class="col" lang="en" dir="ltr">Rope to fasten the feet of a cow, when milked.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto"><span class="foreignborrowing" lang="en" dir="ltr">Te</span> آتَشْجِي جـ. آتَشْجِيَّة</div><div class="col" lang="en" dir="ltr">Stoker.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءتل»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءتل"><b>«ءتل»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَتَلَ ◌ِ (أَتْل ، أَتَلَان)</div><div class="col" lang="en" dir="ltr">To walk at a quick pace.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءتم»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءتم"><b>«ءتم»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مَأْتَم جـ. مَآتِمُ</div><div class="col" lang="en" dir="ltr">Meeting at a dead person's house, funeral meeting.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءتن»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءتن"><b>«ءتن»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَتَان جـ. أُتُن ، آتُن ، أُتْن</div><div class="col" lang="en" dir="ltr">She-ass.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">X ٱِسْتَأْتَنَ</div><div class="col" lang="en" dir="ltr">To buy a she-ass. To fall, to decline.
@@ -269,7 +276,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَتُّون جـ. أُتُن ، أَتَاتِينُ</div><div class="col" lang="en" dir="ltr">Lime kiln, brick kiln. Furnace.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءتو»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءتو"><b>«ءتو»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَتَا ◌ُ (أَتْو ، إِتَاء)</div><div class="col" lang="en" dir="ltr">To produce (ground). To grow up abundantly (corn).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَتْو</div><div class="col" lang="en" dir="ltr"><i>N. of. act.</i> Straight path. Manner.
@@ -278,7 +285,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِتَاوَة جـ. أَتَاوَىٰ</div><div class="col" lang="en" dir="ltr">Tribute, tax. Bribe.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءتي»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءتي"><b>«ءتي»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَتَىٰ ◌ِ (إِتْيَان ، أَتْي ، أُتِيّ ،<br><br>&ldca;&nbsp;&nbsp;&nbsp; إِتْيَانَة ، مَأْتَاة) ه ، هـ</div><div class="col" lang="en" dir="ltr">To come to a.o.'s house or to a place. To happen to a.o. To give as a gift. To undertake a thing, to make it.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَتَى علي</div><div class="col" lang="en" dir="ltr">To ruin a.o. (fate). To accomplish.
@@ -307,7 +314,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مَأْتًى</div><div class="col" lang="en" dir="ltr">Front, opposite side. Place to which one goes or comes from.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءث»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءث"><b>«ءث»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَثَّ ◌َ ◌ِ ◌ُ (أَثَاث ، أُثُوث ، أَثَاثَة)</div><div class="col" lang="en" dir="ltr">To be thick, close (hair, grass).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَثَّثَ هـ</div><div class="col" lang="en" dir="ltr">✧To furnish a house.
@@ -320,7 +327,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مُؤَثَّث</div><div class="col" lang="en" dir="ltr">✧Furnished, supplied with furniture.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءثر»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءثر"><b>«ءثر»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَثَرَ ◌ُ ◌ِ (أَثْر ، أَثَارَة) هـ</div><div class="col" lang="en" dir="ltr">To relate (a fact).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَثِرَ ◌َ (أَثَر)</div><div class="col" lang="en" dir="ltr">To begin a.th. To choose.
@@ -369,12 +376,12 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مُؤَثِّر</div><div class="col" lang="en" dir="ltr">Moving, pathetic.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءثف»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءثف"><b>«ءثف»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَثَّفَ (تَأْثِيف) هـ</div><div class="col" lang="en" dir="ltr">To prop a pot on a trivet.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُثْفِيَّة جـ. أَثَافِيّ</div><div class="col" lang="en" dir="ltr">Support of a pot.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءثل»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءثل"><b>«ءثل»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَثَلَ ◌ِ (أُثُول) ، أَثُلَ ◌ُ (أَثَالَة)</div><div class="col" lang="en" dir="ltr">To take root.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَثَّلَ ، V تَأَثَّلَ مَالَهُ</div><div class="col" lang="en" dir="ltr">To become wealthy.
@@ -391,7 +398,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَثِيل ، مُؤَثَّل</div><div class="col" lang="en" dir="ltr">Rooted. Noble.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءثم»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءثم"><b>«ءثم»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَثِمَ ◌َ (إِثْم ، أَثَم ، مَأْثَم)</div><div class="col" lang="en" dir="ltr">To commit a sin, a crime.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَثَّمَ ه</div><div class="col" lang="en" dir="ltr">To accuse a.o. of a crime.
@@ -406,12 +413,12 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مَأْثَمَة ، مَأْثَم جـ. مَآثِمُ</div><div class="col" lang="en" dir="ltr">Sin, crime.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءثو»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءثو"><b>«ءثو»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَثَا ◌ُ (أَثْو ، إِثَاوَة) ، أَثَى ◌ِ (أَثْي ، إِثَاوَة) ب</div><div class="col" lang="en" dir="ltr">To slander, to backbite a.o.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مَأْثِيَة ، مَأْثَاة</div><div class="col" lang="en" dir="ltr">Slander.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءج»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءج"><b>«ءج»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَجَّ ◌ُ (أَجِيج)</div><div class="col" lang="en" dir="ltr">To burn, to blaze (fire).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— ◌ُ ◌ِ (أَجِيج)</div><div class="col" lang="en" dir="ltr">To run (ostrich).
@@ -434,7 +441,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto"><span class="foreignborrowing" lang="en" dir="ltr">H</span> يَأْجُوج ولَأْجُوج</div><div class="col" lang="en" dir="ltr">Two powerful nations mentionned in the Bible.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءجر»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءجر"><b>«ءجر»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَجَرَ ◌ُ ◌ِ (أَجْر ، إِجَارَة) ه على</div><div class="col" lang="en" dir="ltr">To reward, to hire a.o.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَجَرَ ◌ُ (أَجْر ، أَجَار ، أُجُور)</div><div class="col" lang="en" dir="ltr">To be set (bone).
@@ -471,16 +478,16 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مُسْتَأْجَر</div><div class="col" lang="en" dir="ltr">Workman, hireling, hired labourer. Hired (house).
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءجز»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءجز"><b>«ءجز»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">X ٱِسْتَأْجَزَ</div><div class="col" lang="en" dir="ltr">To recline on a pillow without leaning the back.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءجص»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءجص"><b>«ءجص»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِجَّاص ، ✧ إِنْجَاص</div><div class="col" lang="en" dir="ltr">Plum. ✧ Pear.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءجط»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءجط"><b>«ءجط»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِجْطِ</div><div class="col" lang="en" dir="ltr">Cry for chiding (sheep).
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءجل»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءجل"><b>«ءجل»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَجِلَ ◌َ (أَجَل)</div><div class="col" lang="en" dir="ltr">To be delayed, postponed.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَجَلَ ◌ُ هـ على</div><div class="col" lang="en" dir="ltr">To cause (evil) to a.o.
@@ -511,7 +518,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مُؤَجَّل</div><div class="col" lang="en" dir="ltr">That has a fixed limit.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءجم»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءجم"><b>«ءجم»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَجَمَ ◌ِ (أَجْم ، أَجِيم) ، V تَأَجَّمَ</div><div class="col" lang="en" dir="ltr">To be violent, intense (fire). To become tainted (water). To be hot (day). To be disgusted with a food.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">V تَأَجَّمَ على</div><div class="col" lang="en" dir="ltr">To be angry with a.o.
@@ -522,7 +529,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُجُم جـ. آجَام</div><div class="col" lang="en" dir="ltr">Asylum, stronghold, fort.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءجن»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءجن"><b>«ءجن»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَجَنَ ◌ُ ◌ِ (أَجْن ، أُجُون) ، أَجِنَ ◌َ (أَجَن)</div><div class="col" lang="en" dir="ltr">To become corrupted, tainted (water).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">آجَنَ (أَجْن)</div><div class="col" lang="en" dir="ltr">To beat cloth (dyer).
@@ -531,29 +538,29 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مِئْجَنَة جـ. مَآجِنُ</div><div class="col" lang="en" dir="ltr">Dyer's mallet.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءح»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءح"><b>«ءح»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَحَّ ◌ُ (أَحّ)</div><div class="col" lang="en" dir="ltr">To cough.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُحَاح</div><div class="col" lang="en" dir="ltr">Thirst. Anger.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُحَاح ، أَحِيح ، أَحِيحَة</div><div class="col" lang="en" dir="ltr">Shriek of pain.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءحد»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءحد"><b>«ءحد»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَحَد</div><div class="col" lang="en" dir="ltr">See وحد
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءحن»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءحن"><b>«ءحن»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَحِنَ ◌َ (أَحْن) على</div><div class="col" lang="en" dir="ltr">To hate a.o.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِحْنَة جـ. إِحَن</div><div class="col" lang="en" dir="ltr">Anger. Inveterate hatred.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءخ»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءخ"><b>«ءخ»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَخُّ ، ✧ آخْ</div><div class="col" lang="en" dir="ltr"><i>Interj. expressing disgust, sorrow.</i> Alas! poh!
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَخُّ ، إِخُّ</div><div class="col" lang="en" dir="ltr">Dirt.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَخِيخَة</div><div class="col" lang="en" dir="ltr">Flour mixed with butter or oil.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءخذ»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءخذ"><b>«ءخذ»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَخَذَ ◌ُ (أَخْذ ، تَأْخَاذ) هـ ، ب مِن</div><div class="col" lang="en" dir="ltr">To take a.th. from a.o.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَخَذَ على خَاطِرِهِ</div><div class="col" lang="en" dir="ltr">✧ To be offended, grieved.
@@ -594,7 +601,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مَأْخُوذ</div><div class="col" lang="en" dir="ltr">Taken, seized. Drawn, extracted.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءخر»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءخر"><b>«ءخر»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَخَّرَ (تَأْخِير) هـ</div><div class="col" lang="en" dir="ltr">To delay. To put at the end. To leave behind, to abandon a.th.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">V تَأَخَّرَ ، X ٱِسْتَأْخَرَ</div><div class="col" lang="en" dir="ltr">To remain behind, to be late. To be in bad business.
@@ -637,7 +644,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">نَخلَة مِئْخَار جـ. مَآخِيرُ</div><div class="col" lang="en" dir="ltr">Palm-tree that keeps its fruit till winter.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءخو»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءخو"><b>«ءخو»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَخَا ◌ُ (أُخُوَّة) ه</div><div class="col" lang="en" dir="ltr">To fraternise.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَخَّى ه</div><div class="col" lang="en" dir="ltr">To tie up (an animal).
@@ -664,7 +671,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto"><span class="foreignborrowing" lang="en" dir="ltr">G</span> أُخْيُون</div><div class="col" lang="en" dir="ltr">Viper's bugloss.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءد»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءد"><b>«ءد»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَدَّ ◌ُ ◌ِ (أَدّ) ه</div><div class="col" lang="en" dir="ltr">To happen unexpectediy, to overwhelm a.o. (evil).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">V تَأَدَّدَ</div><div class="col" lang="en" dir="ltr">To behave resolutely.
@@ -673,7 +680,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَدِيد</div><div class="col" lang="en" dir="ltr">Difficult, serious (affair).
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءدب»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءدب"><b>«ءدب»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَدُبَ ◌ُ (أَدَب)</div><div class="col" lang="en" dir="ltr">To be well brought up, to be or become civilized.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَدَبَ ◌ِ (أَدْب) ، IV آدَبَ (إِيدَاب) ه</div><div class="col" lang="en" dir="ltr">To invite a.o. to a banquet. To prepare a banquet.
@@ -704,19 +711,19 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مُؤَدِّب</div><div class="col" lang="en" dir="ltr">Tutor, teacher.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءدر»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءدر"><b>«ءدر»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَدِرَ ◌َ (أَدَر)</div><div class="col" lang="en" dir="ltr">To have a rupture, a hernia.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَدَرَة ، أُدْرَة</div><div class="col" lang="en" dir="ltr">Hernia, rupture.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءدل»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءدل"><b>«ءدل»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَدَلَ ◌ِ (أَدْل)</div><div class="col" lang="en" dir="ltr">To heal (wound).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— هـ</div><div class="col" lang="en" dir="ltr">To beat (milk).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِدْل</div><div class="col" lang="en" dir="ltr">Beaten (milk).
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءدم»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءدم"><b>«ءدم»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَدَمَ ◌ِ (أَدْم) ، VIII ٱِئْتَدَمَ</div><div class="col" lang="en" dir="ltr">To season the bread with.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَدَمَ ، IV آدَمَ (إِيدَام) بَيْن</div><div class="col" lang="en" dir="ltr">To reconcile a.o.
@@ -743,7 +750,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِيدَامَة جـ. أَيَادِيمُ</div><div class="col" lang="en" dir="ltr">A hard, stoneless ground.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءدو»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءدو"><b>«ءدو»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَدَا ◌ُ (أُدُوّ)</div><div class="col" lang="en" dir="ltr">To ripen.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— لِفُلَانٍ (أَدْو)</div><div class="col" lang="en" dir="ltr">To lay in ambush for a.o.
@@ -752,7 +759,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَدَاة جـ. أَدَوَات</div><div class="col" lang="en" dir="ltr">Tool, implement, instrument. Particle (<i>gram.</i>).
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءدي»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءدي"><b>«ءدي»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَدَىٰ ◌ِ (أُدِيّ) ، II أَدَّى (تَأْدِيَة) هـ إِلى</div><div class="col" lang="en" dir="ltr">To transmit a.th. to a.o.; to pay, to restitute.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">IV آدَى (إِيدَاء) ه على</div><div class="col" lang="en" dir="ltr">To help, to assist a.o. against.
@@ -767,7 +774,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَدَاء</div><div class="col" lang="en" dir="ltr">Payment of a debt. Performance of a duty.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءذ»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءذ"><b>«ءذ»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِذْ ، إِذ ذاكَ</div><div class="col" lang="en" dir="ltr">Then, at that time, when, as, while.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِذَا</div><div class="col" lang="en" dir="ltr">Here... is, there... is; on a sudden. When, if.
@@ -778,7 +785,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto"><span class="foreignborrowing" lang="en" dir="ltr">P</span> آذَرْيُون</div><div class="col" lang="en" dir="ltr">A kind of anemone.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءذن»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءذن"><b>«ءذن»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَذِنَ ◌َ (أَذَن) إِلى</div><div class="col" lang="en" dir="ltr">To listen, to hearken to.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— ل (إِذْن) في</div><div class="col" lang="en" dir="ltr">To permit a.th. to a.o.
@@ -809,7 +816,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مِئْذَنَة جـ. مَآذِنُ</div><div class="col" lang="en" dir="ltr">Minaret, turret of a mosque.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءذي»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءذي"><b>«ءذي»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَذِيَ ◌َ (أَذًى ، أَذَاة) ب</div><div class="col" lang="en" dir="ltr">To suffer damage.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">IV آذَى (إِيذَاء) ه</div><div class="col" lang="en" dir="ltr">To injure, to harm a.o.
@@ -822,7 +829,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مُؤْذٍ</div><div class="col" lang="en" dir="ltr">Noxious, harmful, prejudicial to.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءرب»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءرب"><b>«ءرب»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَرِبَ ◌َ (أَرَب) ب ، أَرُبَ ◌ُ (أَرَابَة ، إِرْب) في</div><div class="col" lang="en" dir="ltr">To be skilful, ingenious in.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَرَّبَ هـ ، ه</div><div class="col" lang="en" dir="ltr">To achieve, to better a.th. To render a.o. intelligent, sharp, to cut up.
@@ -851,7 +858,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مَأْرَب ، مَأْرُبَة جـ. مَآرِبُ</div><div class="col" lang="en" dir="ltr">End, aim, thing wanted.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءرث»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءرث"><b>«ءرث»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِرْث (اطلُب ورث)</div><div class="col" lang="en" dir="ltr">Inheritance. Ashes. Old thing. Boot.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَرَّثَ هـ</div><div class="col" lang="en" dir="ltr">To light (the fire).
@@ -860,7 +867,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُرْثَة ، إِرَاث</div><div class="col" lang="en" dir="ltr">Combustible, tinder.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءرج»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءرج"><b>«ءرج»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَرِجَ ◌َ (أَرَج ، أَرِيج) V تَأَرَّجَ</div><div class="col" lang="en" dir="ltr">To exhale a perfume, to smell fragrant.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَرَّجَ ه ، هـ</div><div class="col" lang="en" dir="ltr">To excite a.o., or (dissension).
@@ -871,7 +878,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَرَّاج</div><div class="col" lang="en" dir="ltr">Intriguer, intriguing.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءرخ»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءرخ"><b>«ءرخ»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَرَّخَ ، IV آرَخَ (إِيرَاخ) هـ</div><div class="col" lang="en" dir="ltr">To put the date to. To write the history of.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">تَأْرِيخ جـ. تَوَارِيخ</div><div class="col" lang="en" dir="ltr">Date of a fact, of a letter. History, chronology.
@@ -884,7 +891,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مُؤَرَّخ</div><div class="col" lang="en" dir="ltr">Dated from; of such a date.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءرز»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءرز"><b>«ءرز»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَرَزَ ◌ِ ◌ُ ، أَرِزَ ◌َ (أَرْز ، أُرُوز)</div><div class="col" lang="en" dir="ltr">To cower, to roll up, to squat (reptiles). To be cold (night).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَرِيز</div><div class="col" lang="en" dir="ltr">Cold.
@@ -897,21 +904,21 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَرُزّ ، رُزّ</div><div class="col" lang="en" dir="ltr">Rice.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءرس»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءرس"><b>«ءرس»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَرَسَ ◌ِ (أُرْس)</div><div class="col" lang="en" dir="ltr">To practice agriculture, to be a tiller, a husbandman.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِرِّيس</div><div class="col" lang="en" dir="ltr">Prince.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— ، أَرِيس جـ. إِرِّيسُون ، أَرِيسُون ،<br><br>&ldca;&nbsp;&nbsp;&nbsp; أَرَارِسُ ، أَرَارِيسُ ، أَرَارِسَة</div><div class="col" lang="en" dir="ltr">Agriculturist, tiller.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءرش»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءرش"><b>«ءرش»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَرْش</div><div class="col" lang="en" dir="ltr">Price of blood. Gift. Price given for damage. Incitement to discord.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَرَّشَ بَيْن</div><div class="col" lang="en" dir="ltr">To make mischief amongst, to set at variance.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— هـ</div><div class="col" lang="en" dir="ltr">To light (the fire). To kindle (war).
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءرض»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءرض"><b>«ءرض»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَرْض جـ. أَرَضُون ، أُرُوض ، أَرَاضٍ ، آرَاض</div><div class="col" lang="en" dir="ltr">Earth, terrestrial globe. Soil, ground. Country, land.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَرَضَ ◌ُ (أَرْض)</div><div class="col" lang="en" dir="ltr">To bring foi'th herbs abundantly (soil).
@@ -930,19 +937,19 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَرِيض</div><div class="col" lang="en" dir="ltr">Fruitful. Broad.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءرف»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءرف"><b>«ءرف»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَرَّفَ (تَأْرِيف) هـ</div><div class="col" lang="en" dir="ltr">To set limits to.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُرْفَة جـ. أُرَف</div><div class="col" lang="en" dir="ltr">Boundaries, limit.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءرق»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءرق"><b>«ءرق»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَرِقَ ◌َ (أَرَق)</div><div class="col" lang="en" dir="ltr">To be sleepless, wakeful. To slumber.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَرَّقَ (تَأْرِيق) ، IV آرَقَ (إِيرَاق) ه</div><div class="col" lang="en" dir="ltr">To cause a.o. to slumber.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَرَق</div><div class="col" lang="en" dir="ltr">Partial insomnia, sleeplessness.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءرك»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءرك"><b>«ءرك»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَرَاك</div><div class="col" lang="en" dir="ltr">A kind of thorny tree.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَرَكَ ◌ِ ◌ُ (أُرُوك)</div><div class="col" lang="en" dir="ltr">To eat the leaves of that tree (camel).
@@ -953,7 +960,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَرِيكَة جـ. أَرَائِكُ</div><div class="col" lang="en" dir="ltr">Throne, seat. Ottoman.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءرم»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءرم"><b>«ءرم»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَرَمَ ◌ِ (أَرْم) هـ</div><div class="col" lang="en" dir="ltr">To eat all (the food). To devour the whole harvest, to destroy the crops (of the land).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— القَوْمَ و بأَمْوَالِهِمْ</div><div class="col" lang="en" dir="ltr">To reduce people to misery, wretchedness.
@@ -974,7 +981,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَرُوم ، أَرُومَة ، أُرُومَة</div><div class="col" lang="en" dir="ltr">Koot, origin.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءرن»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءرن"><b>«ءرن»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَرِنَ ◌َ (أَرَن ، أَرِين ، إِرَان)</div><div class="col" lang="en" dir="ltr">To be lively, quick.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِرَان جـ. أُرَن</div><div class="col" lang="en" dir="ltr">Litter, coffin.
@@ -983,7 +990,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَرِن ، أَرُون</div><div class="col" lang="en" dir="ltr">Lively, quick.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءري»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءري"><b>«ءري»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَرَىٰ ◌ِ (أَرْي)</div><div class="col" lang="en" dir="ltr">To produce honey (bee).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— هـ</div><div class="col" lang="en" dir="ltr">To remaia in the stable, to become accustomed to it (beast).
@@ -994,41 +1001,41 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">آرِيّ ، آرِيَّة جـ. أَوَارِيّ ، أَوَارٍ</div><div class="col" lang="en" dir="ltr">Pole to which a beast is fastened. Stable.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءز»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءز"><b>«ءز»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَزَّ ◌ُ (أَزّ ، أَزَاز ، أَزِيز)</div><div class="col" lang="en" dir="ltr">To produce a noise (pot on the fire).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— ه على</div><div class="col" lang="en" dir="ltr">To incite a.o. to.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَزَّة</div><div class="col" lang="en" dir="ltr">Confusion, press, pell-mell.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءزء»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءزء"><b>«ءزء»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَزَأَ ◌َ (أَزَأ) ه</div><div class="col" lang="en" dir="ltr">To feed (sheep to the full), to satiate.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— عَن</div><div class="col" lang="en" dir="ltr">To renounce, to give up.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءزب»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءزب"><b>«ءزب»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَزَبَ ◌ِ (أَزْب)</div><div class="col" lang="en" dir="ltr">To flow (water).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِزْب</div><div class="col" lang="en" dir="ltr">Little man, despised man.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مِئْزَاب جـ. مَآزِيبُ</div><div class="col" lang="en" dir="ltr">Drain, sewer. Leaden pipe.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءزج»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءزج"><b>«ءزج»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَزَج جـ. آزُج ، آزَاج ، إِزَجَة</div><div class="col" lang="en" dir="ltr">A prolate vault.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَزَّجَ هـ</div><div class="col" lang="en" dir="ltr">To build a prolate vault.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءزح»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءزح"><b>«ءزح»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَزَحَ ◌ِ (أُزُوح) ، V تَأَزَّحَ</div><div class="col" lang="en" dir="ltr">To be late.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَزُوح</div><div class="col" lang="en" dir="ltr">Person in arrears, late.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto"><span class="foreignborrowing" lang="en" dir="ltr">P</span> آزَادِرَخْت ، أَزْدِرَخْت</div><div class="col" lang="en" dir="ltr">Lilac of Persia.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءزذ»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءزذ"><b>«ءزذ»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَزَاذ</div><div class="col" lang="en" dir="ltr">Very good dates.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءزر»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءزر"><b>«ءزر»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَزَرَ ◌ِ (أَزْر) هـ</div><div class="col" lang="en" dir="ltr">To surround a.th.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— ، II أَزَّرَ (تَأْزِير) ه ب</div><div class="col" lang="en" dir="ltr">To strengthen. To wrap a.o. in a veil. To clothe a.o. with a waist-wrapper.
@@ -1047,7 +1054,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مُؤَازَرَة</div><div class="col" lang="en" dir="ltr">Help, assistance.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءزف»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءزف"><b>«ءزف»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَزِفَ ◌َ (أَزَف ، أُزُوف) إِلى</div><div class="col" lang="en" dir="ltr">To arrive suddenly. To draw near, to approach.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">VI تَآزَفَ</div><div class="col" lang="en" dir="ltr">To draw near (one to the other).
@@ -1056,12 +1063,12 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">آزِفَة</div><div class="col" lang="en" dir="ltr">Day, hour of the last judgment.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءزق»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءزق"><b>«ءزق»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَزَقَ ◌ِ (أَزْق) ، V تَأَزَّقَ</div><div class="col" lang="en" dir="ltr">To be straitened.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مَأْزِق جـ. مَآزِقُ</div><div class="col" lang="en" dir="ltr">Narrow place. Battletield.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءزل»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءزل"><b>«ءزل»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَزَلَ ◌ِ (أَزْل) ، V تَأَزَّلَ</div><div class="col" lang="en" dir="ltr">To be in a strait.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَزَل ، أَزَلِيَّة</div><div class="col" lang="en" dir="ltr">Eternity.
@@ -1072,7 +1079,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَزِل</div><div class="col" lang="en" dir="ltr">Uncomfortable, under constraint.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءزم»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءزم"><b>«ءزم»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَزَمَ ◌ِ (أَزْم ، أُزُوم) ه ، هـ</div><div class="col" lang="en" dir="ltr">To bite.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— ه</div><div class="col" lang="en" dir="ltr">To ruin a.o. (dearth).
@@ -1083,7 +1090,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَزْمَة جـ. إِزَم</div><div class="col" lang="en" dir="ltr">Scarcity, dearth. Poverty.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءزي»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءزي"><b>«ءزي»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">III آزَى (مُؤَازَاة) هـ</div><div class="col" lang="en" dir="ltr">To correspond (o. to the other). To be opposite.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">VI تَآزَى (تَآزٍ)</div><div class="col" lang="en" dir="ltr">To be opposite, to front o. a,
@@ -1092,7 +1099,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">بِإِزَائِهِ</div><div class="col" lang="en" dir="ltr">Before him, opposite to him.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءس»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءس"><b>«ءس»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِسّ ، أُسّ جـ. إِسَاس ؛ أَسَاس جـ. أُسُس</div><div class="col" lang="en" dir="ltr">Foundalion, principle, basis.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَسَّسَ هـ</div><div class="col" lang="en" dir="ltr">To lay the foundation, to ground.
@@ -1111,12 +1118,12 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مُؤَسَّس على</div><div class="col" lang="en" dir="ltr">Founded upon, established, grounded on.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءست»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءست"><b>«ءست»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">ٱِسْت</div><div class="col" lang="en" dir="ltr">Buttock. See سَتَهَ
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto"><span class="foreignborrowing" lang="en" dir="ltr">P</span> أَلْإِسْتَانَة العَلِيَّة</div><div class="col" lang="en" dir="ltr">Surname of Constantinople.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءسد»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءسد"><b>«ءسد»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَسَدَ ◌ِ (أَسْد) ، II أَسَّدَ ، IV آسَدَ (إِيسَاد) ه</div><div class="col" lang="en" dir="ltr">To set (a dog). To encourage a.o.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">V تَأَسَّدَ ، X ٱِسْتَأْسَدَ</div><div class="col" lang="en" dir="ltr">To be as courageous as a lion. To become strong, tall or dry.
@@ -1127,7 +1134,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مَأْسَدَة جـ. مَآسِدُ</div><div class="col" lang="en" dir="ltr">Place full of lions.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءسر»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءسر"><b>«ءسر»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَسَرَ ◌ِ (أَسْر ، إِسَارَة) ه</div><div class="col" lang="en" dir="ltr">To tie, to bind a.o., to take captive.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— (أَسْر ، إِسَار) ، X ٱِسْتَأْسَرَ ه</div><div class="col" lang="en" dir="ltr">To bring a.o. away as a captive.
@@ -1156,7 +1163,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto"><span class="foreignborrowing" lang="en" dir="ltr">H</span> إِسْرَائِيل</div><div class="col" lang="en" dir="ltr">Israel.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءسف»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءسف"><b>«ءسف»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَسِفَ ◌َ (أَسَف) على</div><div class="col" lang="en" dir="ltr">To be afflicted with.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">IV آسَفَ (إِيسَاف) ه</div><div class="col" lang="en" dir="ltr">To afflict; to irritate a.o.
@@ -1177,7 +1184,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَسُوف</div><div class="col" lang="en" dir="ltr">Sad. Nervous, touchy.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءسل»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءسل"><b>«ءسل»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَسُلَ ◌ُ (أَسَالَة) ، أَسِلَ ◌َ (أَسَل)</div><div class="col" lang="en" dir="ltr">To be oblong full and smooth (face).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَسَّلَ هـ</div><div class="col" lang="en" dir="ltr">To sharpen, to point.
@@ -1190,19 +1197,19 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَسِيل</div><div class="col" lang="en" dir="ltr">Oval-shaped full and smooth (face).
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءسم»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءسم"><b>«ءسم»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">ٱِسْم جـ. أَسْمَاء ، أَسَامٍ</div><div class="col" lang="en" dir="ltr">Noun, name. See سمو.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُسَامَة</div><div class="col" lang="en" dir="ltr">Lion.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto"><span class="foreignborrowing" lang="en" dir="ltr">H</span> إِسْمَعِيل</div><div class="col" lang="en" dir="ltr">Ismael.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءسن»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءسن"><b>«ءسن»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَسَنَ ◌ِ ◌ُ (أَسْن ، أُسُون) ،<br><br>&ldca;&nbsp;&nbsp;&nbsp; أَسِنَ ◌َ (أَسَن) ، V تَأَسَّنَ</div><div class="col" lang="en" dir="ltr">To be corrupted, to stink (water).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">آسِن</div><div class="col" lang="en" dir="ltr">Corrupted, putrid (water).
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءسو»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءسو"><b>«ءسو»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَسَا ◌ُ (أَسْو ، أَسًا) هـ ، ه</div><div class="col" lang="en" dir="ltr">To nurse, to cure. To console a.o.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— بَيْن</div><div class="col" lang="en" dir="ltr">To make peace between.
@@ -1225,7 +1232,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">آسِيَة جـ. آسِيَات ، أَوَاسٍ</div><div class="col" lang="en" dir="ltr">A medical woman. Doctoress.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءسي»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءسي"><b>«ءسي»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَسَىٰ ◌ِ (أَسْي) مِن ل</div><div class="col" lang="en" dir="ltr">To leave a.th. to a.o.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">آسِيّ</div><div class="col" lang="en" dir="ltr">Honey that remains in the hive.
@@ -1236,10 +1243,10 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَسًى ، أَسًا</div><div class="col" lang="en" dir="ltr">Sadness, pain, sorrow.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءش»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءش"><b>«ءش»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَشّ</div><div class="col" lang="en" dir="ltr">Dry bread.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءشب»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءشب"><b>«ءشب»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَشِبَ ◌َ (أَشَب) ، V تَأَشَّبَ</div><div class="col" lang="en" dir="ltr">To be intertwisted (tree). To be entangled.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">V تَأَشَّبَ ، VIII ٱِئْتَشَبَ</div><div class="col" lang="en" dir="ltr">To be mixed (crowd).
@@ -1250,7 +1257,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُشَابَة جـ. أَشَائِبُ</div><div class="col" lang="en" dir="ltr">Rabble.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءشر»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءشر"><b>«ءشر»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَشِرَ ◌َ (أَشَر)</div><div class="col" lang="en" dir="ltr">To be cheerful, merry.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَشَر</div><div class="col" lang="en" dir="ltr">Joy, sprightliness.
@@ -1267,12 +1274,12 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مِئْشَار جـ. مَآشِيرُ ، مَوَاشِيرُ</div><div class="col" lang="en" dir="ltr">Saw.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءشن»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءشن"><b>«ءشن»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُشْنَة</div><div class="col" lang="en" dir="ltr">White moss that grows on oak and pine trees.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُشْنَان ، إِشْنَان</div><div class="col" lang="en" dir="ltr">Alkali. Potash.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءص»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءص"><b>«ءص»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَصَّ ◌ُ (أَصّ) هـ</div><div class="col" lang="en" dir="ltr">To break or soften a.th.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَصَّصَ هـ</div><div class="col" lang="en" dir="ltr">To strengthen.
@@ -1281,14 +1288,14 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَصِيصَة</div><div class="col" lang="en" dir="ltr">Adjoining houses.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءصد»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءصد"><b>«ءصد»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَصَّدَ ، IV آصَدَ هـ</div><div class="col" lang="en" dir="ltr">To stop, to shut.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَصَّدَ ه</div><div class="col" lang="en" dir="ltr">To clothe a.o. with a chemisette, a short dress.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُصْدَة جـ. أُصَد ، إِصَاد</div><div class="col" lang="en" dir="ltr">Chemisette, tucker, a kind of short dress.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءصر»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءصر"><b>«ءصر»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَصَرَ ◌ِ (أَصْر) هـ</div><div class="col" lang="en" dir="ltr">To provide a tent (with a stake).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— ه على</div><div class="col" lang="en" dir="ltr">To render a.o. kind.
@@ -1301,10 +1308,10 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">آصِرَة جـ. أَوَاصِر</div><div class="col" lang="en" dir="ltr">Tie, band. Relationship. Favour.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءصف»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءصف"><b>«ءصف»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَصَف</div><div class="col" lang="en" dir="ltr">Caper-bush.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءصل»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءصل"><b>«ءصل»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَصُلَ ◌ُ (أَصَالَة)</div><div class="col" lang="en" dir="ltr">To be rooted.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَصَّلَ ◌ُ ، هـ</div><div class="col" lang="en" dir="ltr">To state the origin of. To consolidate. To consider as noble. To classify according to a common origin.
@@ -1339,17 +1346,17 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">جَاؤُوا بِأَصِيلَتِهِم</div><div class="col" lang="en" dir="ltr">They came all of them.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءض»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءض"><b>«ءض»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَضَّ ◌ِ ◌ُ (أَضّ) ه إِلى</div><div class="col" lang="en" dir="ltr">To compel a.o. to.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِضَاض</div><div class="col" lang="en" dir="ltr">Shelter, refuge, asylum.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءط»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءط"><b>«ءط»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَطَّ ◌ِ (أَطِيط)</div><div class="col" lang="en" dir="ltr">To crack (saddle). To groan (she-camel).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَطَّتْ بِهِ الرَّحِم</div><div class="col" lang="en" dir="ltr">He was moved with pity.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءطر»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءطر"><b>«ءطر»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَطَرَ ◌ُ (أَطْر) ، II أَطَّرَ هـ</div><div class="col" lang="en" dir="ltr">To arch, to curve an arch. To bend a.th., to bow.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَطَرَ ◌ُ ◌ِ هـ</div><div class="col" lang="en" dir="ltr">To surround (a house).
@@ -1358,10 +1365,10 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِطَار جـ. أُطُر</div><div class="col" lang="en" dir="ltr">Circumference. Hoop, circle, ring.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءطل»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءطل"><b>«ءطل»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِطْل جـ. آطَال ؛ أَيْطَلُ جـ. أَيَاطِلُ</div><div class="col" lang="en" dir="ltr">Side, flank.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءطم»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءطم"><b>«ءطم»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُطْم جـ. أُطُوم ، آطَام</div><div class="col" lang="en" dir="ltr">Fort, fortlet, stronghold.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">V تَأَطَّمَ</div><div class="col" lang="en" dir="ltr">To swell (waves). To rise up (flame).
@@ -1374,27 +1381,27 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">آغَا جـ. آغَاوَات</div><div class="col" lang="en" dir="ltr">Agha (a Turkish officer).
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءف»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءف"><b>«ءف»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُفّ</div><div class="col" lang="en" dir="ltr">Dirt of the ears or nails.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُفٍّ</div><div class="col" lang="en" dir="ltr">Fie, for shame!
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءفن»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءفن"><b>«ءفن»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِفَّان ، أَفَّان ، إِفْن ، إِفَن</div><div class="col" lang="en" dir="ltr">Time.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">على إِفْن ذٰلِك</div><div class="col" lang="en" dir="ltr">At the time of that.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءفد»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءفد"><b>«ءفد»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَفِدَ ◌َ (أَفَد)</div><div class="col" lang="en" dir="ltr">To hurry.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءفر»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءفر"><b>«ءفر»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَفَرَ ◌ِ (أَفْر ، أُفُور)</div><div class="col" lang="en" dir="ltr">To be active, nimble.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَفَّار ، مِئْفَر</div><div class="col" lang="en" dir="ltr">To be quick, active (servant).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto"><span class="foreignborrowing" lang="en" dir="ltr">G</span> إِفْسَنتِين</div><div class="col" lang="en" dir="ltr">Wormwood. Absinth.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءفق»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءفق"><b>«ءفق»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَفَقَ ◌ِ (أَفْق) هـ</div><div class="col" lang="en" dir="ltr">To tan (hides, skins).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَفِقَ ◌َ (أَفَق)</div><div class="col" lang="en" dir="ltr">To reach the utmost degree of science, generosity.
@@ -1409,7 +1416,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَفَّاق</div><div class="col" lang="en" dir="ltr">Great traveller. Adveuturer.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءفك»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءفك"><b>«ءفك»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَفَكَ ◌ِ (أَفْك ، أُفُوك) ، أَفِكَ ◌َ (أَفَك)</div><div class="col" lang="en" dir="ltr">To lie.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— (أَفْك) ه عَن</div><div class="col" lang="en" dir="ltr">To deter a.o. from.
@@ -1424,12 +1431,12 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">المُؤْتَفِكَات</div><div class="col" lang="en" dir="ltr">Wild and destructive winds; hurricanes, storms.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءفل»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءفل"><b>«ءفل»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَفَلَ ◌ِ ◌ُ (أُفُول)</div><div class="col" lang="en" dir="ltr">To set (sun).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَفَلَ ◌ُ (أُفُول) ، أَفِلَ ◌َ (أَفَل)</div><div class="col" lang="en" dir="ltr">To dry up, to have no more milk (wet-nurse).
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءفن»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءفن"><b>«ءفن»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَفَنَ ◌ِ (أَفْن) ه</div><div class="col" lang="en" dir="ltr">To milk a (she-camel) out of time.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَفِنَ ◌َ ، أُفِنَ (أَفْن)</div><div class="col" lang="en" dir="ltr">To be weak-minded.
@@ -1444,7 +1451,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">خَمْر الْأَفْيُون</div><div class="col" lang="en" dir="ltr">Laudunura.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءقط»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءقط"><b>«ءقط»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَقَطَ ◌ِ (أَقْط) هـ</div><div class="col" lang="en" dir="ltr">To prepare (a dish) with sour cheese.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— ه</div><div class="col" lang="en" dir="ltr">To give to a.o. sour cheese to eat.
@@ -1455,12 +1462,12 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مَأْقِط</div><div class="col" lang="en" dir="ltr">Battlefield.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءك»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءك"><b>«ءك»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَكَّ ◌ُ (أَكّ)</div><div class="col" lang="en" dir="ltr">To be hot and windless (day).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَكِيك</div><div class="col" lang="en" dir="ltr">Hot and windless (day).
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءكد»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءكد"><b>«ءكد»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَكَّدَ ، وَكَّدَ هـ</div><div class="col" lang="en" dir="ltr">To strengthen a.th. To assert. To certify.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">V تَأَكَّدَ</div><div class="col" lang="en" dir="ltr">To ascertain. To be verified. To be confirmed.
@@ -1469,19 +1476,19 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">تَأْكِيد</div><div class="col" lang="en" dir="ltr">Reliance. Certainty.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءكر»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءكر"><b>«ءكر»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَكَرَ ◌ِ (أَكْر) ، V تَأَكَّرَ هـ</div><div class="col" lang="en" dir="ltr">To till (the ground), to dig.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَكَّار جـ. أَكَرَة ، أَكَّارُون</div><div class="col" lang="en" dir="ltr">Tiller, husbandman.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُكْرَة جـ. أُكَر</div><div class="col" lang="en" dir="ltr">Ball, bowl. Ditch, hole.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«عكف»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="عكف"><b>«عكف»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">عِكَاف ، عُكَاف جـ. عُكُف ، عَاكِفَة</div><div class="col" lang="en" dir="ltr">Pack-saddle (for asses, mules).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II عَكَّفَ (تَعْكِيف) ، IV أَعْكَفَ (إِعْكَاف) ه</div><div class="col" lang="en" dir="ltr">To put a pack-saddle (on an ass, a mule).
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءكل»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءكل"><b>«ءكل»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَكَلَ ◌ُ (أَكْل ، مَأْكَل) هـ</div><div class="col" lang="en" dir="ltr">To eat. To gnaw, to nibble, to corrode.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَكَلَ ◌ُ (إِكْلَة ، أُكَال ، أَكَال)</div><div class="col" lang="en" dir="ltr">To itch (head).
@@ -1514,13 +1521,13 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مَأْكُول جـ. مَآكِيلُ ، مَأْكُولَات</div><div class="col" lang="en" dir="ltr">Edible, eatable. Victuals.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءكم»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءكم"><b>«ءكم»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَكَمَة جـ. أَكَم ، أَكَمَات ، إِكَام ، أُكُم ، آكَام</div><div class="col" lang="en" dir="ltr">Hill, hillock. Rising ground.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءل»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءل"><b>«ءل»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَل</div><div class="col" lang="en" dir="ltr">The (<i>article</i>).
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءل»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءل"><b>«ءل»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَلَّ ◌ُ ◌ِ (أَلّ)</div><div class="col" lang="en" dir="ltr">To hurry. To be restless. To be clear and bright (colour).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— ه</div><div class="col" lang="en" dir="ltr">To strike a.o. with a spear.
@@ -1547,7 +1554,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِلَّا</div><div class="col" lang="en" dir="ltr">If not, unless, except, save. Less.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءلب»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءلب"><b>«ءلب»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَلَبَ ◌ُ (أَلْب) ، V تَأَلَّبَ إِلى</div><div class="col" lang="en" dir="ltr">To meet with.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَلَبَ ◌ُ ◌ِ (أَلْب) ، II أَلَّبَ ه</div><div class="col" lang="en" dir="ltr">To gather (dispersed people).
@@ -1560,12 +1567,12 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto"><span class="foreignborrowing" lang="en" dir="ltr">Te</span> الدِّوَان</div><div class="col" lang="en" dir="ltr">Gloves.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءلذ»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءلذ"><b>«ءلذ»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">ٱَلَّذِي جـ. ٱَلَّذِين ✧ إِلِي</div><div class="col" lang="en" dir="ltr"><i>M.</i> who; whose, whom; that.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">ٱَلَّتِي جـ. ٱللَّوَاتِي ، ٱللَّاءِي</div><div class="col" lang="en" dir="ltr"><i>F.</i> who, whose, whom; that.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءلس»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءلس"><b>«ءلس»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَلَسَ ◌ِ (أَلْس) ، III آلَسَ (مُؤَالَسَة) ه</div><div class="col" lang="en" dir="ltr">To deceive, to circumvent a.o.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُلِسَ</div><div class="col" lang="en" dir="ltr">To become insane.
@@ -1574,7 +1581,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مَأْلُوس</div><div class="col" lang="en" dir="ltr">Insane.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءلف»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءلف"><b>«ءلف»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَلِفَ ◌َ (أَلْف) ، IV آلَفَ (إِيلَاف) ه ، هـ</div><div class="col" lang="en" dir="ltr">To get accustomed to a.o., to (a place). To become tame.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَلَّفَ بَيْن</div><div class="col" lang="en" dir="ltr">To join, to unite, to bring together.
@@ -1621,7 +1628,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مَأْلَف جـ. مَآلِفُ</div><div class="col" lang="en" dir="ltr">Dwelling, continuance in one place.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءلق»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءلق"><b>«ءلق»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَلَقَ ◌ِ (أَلْق) ، V تَأَلَّقَ ، VIII ٱِئْتَلَقَ</div><div class="col" lang="en" dir="ltr">To flash (lightning), to lighten.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَلِقَ ◌َ (أَلْق)</div><div class="col" lang="en" dir="ltr">To be mad. To lie.
@@ -1630,14 +1637,14 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مِئْلَق ، مَأْلُوق</div><div class="col" lang="en" dir="ltr">Seized with madness.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءلك»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءلك"><b>«ءلك»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَلَكَ ◌ُ ◌ِ (أَلْك) ، IV آلَكَ (إِلَاكَة) ه</div><div class="col" lang="en" dir="ltr">To send a.o. To champ (the bit: horse).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">X ٱِسْتَأْلَكَ ه</div><div class="col" lang="en" dir="ltr">To bear (a letter).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَلُوكَة ، مَأْلُكَة</div><div class="col" lang="en" dir="ltr">Letter, missive.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءلم»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءلم"><b>«ءلم»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَلِمَ ◌َ (أَلَم)</div><div class="col" lang="en" dir="ltr">To suffer.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَلَّمَ ، IV آلَمَ (إِيلَام) ه</div><div class="col" lang="en" dir="ltr">To cause suffering; to affect, to grieve a.o.
@@ -1654,7 +1661,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَلِيم</div><div class="col" lang="en" dir="ltr">Painful. ✧ Rancorous.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءله»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءله"><b>«ءله»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَلِهَ ◌َ (إِلَاهَة ، أُلُوهَة) ه</div><div class="col" lang="en" dir="ltr">To adore a.o. (as a god); to worship.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَلَّهَ ه</div><div class="col" lang="en" dir="ltr">To deify a.o. To call o.'s self a god.
@@ -1683,7 +1690,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">عِلْمُ الْإِلـٰهِيَّات</div><div class="col" lang="en" dir="ltr">Theology. Metaphysics.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءلو»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءلو"><b>«ءلو»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَلَا ◌ُ (أَلْو ، أُلُوّ ، أُلِيّ) في</div><div class="col" lang="en" dir="ltr">To be unable to do a.th. To be late.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— هـ</div><div class="col" lang="en" dir="ltr">To be able to. To neglect, to leave a.th.
@@ -1710,7 +1717,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَلْوَة ، أُلْوَة ، أَلِيَّة</div><div class="col" lang="en" dir="ltr">Swearing, oath.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءلي»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءلي"><b>«ءلي»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَلِيَ ◌َ (أَلْي)</div><div class="col" lang="en" dir="ltr">To have big buttocks.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَلْيَة جـ. أَلَايَا ، أَلَيَات</div><div class="col" lang="en" dir="ltr">Fat tail. Buttocks.
@@ -1729,7 +1736,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مِئْلَاة جـ. مَآلٍ</div><div class="col" lang="en" dir="ltr">Handkerchief used by hired mourners.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءلي»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءلي"><b>«ءلي»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِلَى</div><div class="col" lang="en" dir="ltr">To Till. Towards. At o.'s.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إلَيَّ ، إِلَيْكَ ، إِلَيْهِ</div><div class="col" lang="en" dir="ltr">To me, to, thee, to him.
@@ -1746,7 +1753,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">الْعَرَب الْأُولَى والْأُلَى</div><div class="col" lang="en" dir="ltr">The ancient Arabs.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءم»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءم"><b>«ءم»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَمَّ ◌ُ (أَمّ) ، II أَمَّمَ ، V تَأَمَّمَ ، VIII ٱِئْتَمَّ هـ</div><div class="col" lang="en" dir="ltr">To direct o.'s steps towards (a place). To propose a.th.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَمَّ ◌ُ ه</div><div class="col" lang="en" dir="ltr">To wound a.o. in the brain.
@@ -1797,7 +1804,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَمِيم ، مَأْمُوم</div><div class="col" lang="en" dir="ltr">Wounded in the brain.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءم»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءم"><b>«ءم»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَمْ</div><div class="col" lang="en" dir="ltr">A <i>conj. part.</i> Either, or.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَمَا</div><div class="col" lang="en" dir="ltr">Is (he, she, it).., not?
@@ -1808,17 +1815,17 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِمَّا ... وإِمَّا</div><div class="col" lang="en" dir="ltr">Either.... or. Whether.... or.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءمت»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءمت"><b>«ءمت»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَمَتَ ◌ِ (أَمْت) ، II أَمَّتَ</div><div class="col" lang="en" dir="ltr">To conjecture, to determine a.th.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَمْت جـ. إِمَات ، أُمُوت</div><div class="col" lang="en" dir="ltr">Weakness. Emptiness, inequality. Doubt.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءمج»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءمج"><b>«ءمج»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَمِجَ ◌َ (أَمَج)</div><div class="col" lang="en" dir="ltr">To be thirsty.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">صَيْفٌ أَمَجٌ</div><div class="col" lang="en" dir="ltr">Very hot summer.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءمد»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءمد"><b>«ءمد»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَمَد جـ. آمَاد</div><div class="col" lang="en" dir="ltr">Extreme point. Starting-place or goal in a race. Anger.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">على الْأَمَد</div><div class="col" lang="en" dir="ltr">Eternally.
@@ -1829,7 +1836,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">آمِد ، آمِدَة</div><div class="col" lang="en" dir="ltr">Laden ship, Amida (town).
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءمر»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءمر"><b>«ءمر»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَمَرَ ◌ُ (أَمْر) ه ب</div><div class="col" lang="en" dir="ltr">To command a.th. to a.o.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I ◌ِ (أَمْر) ، أَمُرَ ◌ُ (إِمْرَة ، إِمَارَة) على</div><div class="col" lang="en" dir="ltr">To become a prince, chief, amir.
@@ -1896,15 +1903,15 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مَأْمُورِيَّة</div><div class="col" lang="en" dir="ltr">Mission, power of attorney. Office in the government.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءمس»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءمس"><b>«ءمس»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَمْس جـ. آمُس ، آمَاس ، أُمُوس</div><div class="col" lang="en" dir="ltr">Yesterday.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">الُأَمْس</div><div class="col" lang="en" dir="ltr">Lately, time not long past.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءمع»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءمع"><b>«ءمع»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِمَّع ، إِمَّعَة جـ. إِمَّعُون</div><div class="col" lang="en" dir="ltr">Silly. Parasite.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءمل»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءمل"><b>«ءمل»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَمَلَ ◌ُ (أَمَل ، أَمْل) ، II أَمَّلَ هـ</div><div class="col" lang="en" dir="ltr">To hope a.th.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— ه</div><div class="col" lang="en" dir="ltr">To trust in, to set o.'s hope on.
@@ -1921,7 +1928,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مَأْمُول</div><div class="col" lang="en" dir="ltr">Hope, that which is hoped.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءمن»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءمن"><b>«ءمن»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَمُنَ ◌ُ (أَمَانَة)</div><div class="col" lang="en" dir="ltr">To be true, loyal, faithful.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَمِنَ ◌َ (أَمْن ، أَمَن ، أَمَان ، أَمَنَة) هـ</div><div class="col" lang="en" dir="ltr">To be in security, in safety.
@@ -1988,12 +1995,12 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مُسْتَأْمَن</div><div class="col" lang="en" dir="ltr">He whose safety is guaranteed.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءمه»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءمه"><b>«ءمه»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَمِهَ ◌َ (أَمْه) هـ</div><div class="col" lang="en" dir="ltr">To forget a.th.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُمِهَ</div><div class="col" lang="en" dir="ltr">To have the mind disturbed, disordered.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءمو»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءمو"><b>«ءمو»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَمِيَ ◌َ ، أَمَا ◌ُ ، أَمَى ◌ِ (أُمُوَّة)</div><div class="col" lang="en" dir="ltr">To become a maid-servant, a female slave.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَمَّى ه</div><div class="col" lang="en" dir="ltr">To use (a female) as a servant, a slave.
@@ -2002,7 +2009,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَمَة جـ. إِمَاء ، أَمَوَات ، آمٍ</div><div class="col" lang="en" dir="ltr">Female servant, bondwoman; handmaid.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءن»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءن"><b>«ءن»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَن ، أَنَّ</div><div class="col" lang="en" dir="ltr">That. (<i>Conjunctive</i>).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِنْ</div><div class="col" lang="en" dir="ltr">If.
@@ -2011,7 +2018,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِنَّ</div><div class="col" lang="en" dir="ltr">Certainly, indeed.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءن»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءن"><b>«ءن»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَنَّ ◌ِ (أَنِين ، أَنّ ، أَنَان ، تَأْنَان)</div><div class="col" lang="en" dir="ltr">To moan.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— هـ</div><div class="col" lang="en" dir="ltr">To spill water.
@@ -2022,27 +2029,27 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَنَان</div><div class="col" lang="en" dir="ltr">Groan. Lamenting continually.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءن»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءن"><b>«ءن»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَنَا جـ. نَحْنُ</div><div class="col" lang="en" dir="ltr">I. We.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَنَانِيَّة</div><div class="col" lang="en" dir="ltr">Selfishness, egotism.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءنب»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءنب"><b>«ءنب»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَنَّبَ ه</div><div class="col" lang="en" dir="ltr">To reprehend a.o. energetically.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءنت»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءنت"><b>«ءنت»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَنْتَ جـ. أَنْتُم مـ. أَنْتِ جـ. أَنْتُنَّ</div><div class="col" lang="en" dir="ltr">Thou, you.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَنْتُمَا <span lang="en" dir="ltr">(<i>dual</i>).</span></div><div class="col" lang="en" dir="ltr">You both
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءنت»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءنت"><b>«ءنت»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَنَتَ ◌ِ (أَنِيت)</div><div class="col" lang="en" dir="ltr">To lament.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— هـ ، ه</div><div class="col" lang="en" dir="ltr">To measure a.th. To grudge a.o.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَنِيت</div><div class="col" lang="en" dir="ltr">Moan. Envy.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءنث»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءنث"><b>«ءنث»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَنُثَ ◌ُ (أُنُوثَة)</div><div class="col" lang="en" dir="ltr">To be soft (iron). To be effeminate (pers.).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَنَّثَ هـ ، ه</div><div class="col" lang="en" dir="ltr">To render feminine, to effeminate a.o.
@@ -2055,7 +2062,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مُؤَنَّث</div><div class="col" lang="en" dir="ltr">Feminine, effeminate.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءنس»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءنس"><b>«ءنس»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَنِسَ ◌َ ، أَنُسَ ◌ُ (أُنْس ، أَنَس ، أَنَسَة)</div><div class="col" lang="en" dir="ltr">To be polite, kind, social.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— ب</div><div class="col" lang="en" dir="ltr">To have an intimate connection with a.o.
@@ -2100,14 +2107,14 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مُسْتَأْنِس</div><div class="col" lang="en" dir="ltr">Accustomed. Familiar.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءنض»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءنض"><b>«ءنض»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَنُضَ ◌ُ (أَنَاضَة)</div><div class="col" lang="en" dir="ltr">To be insufficiently cooked (meat).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">IV آنَضَ (إِينَاض) هـ</div><div class="col" lang="en" dir="ltr">To cook insufficiently (the meat).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَنِيض</div><div class="col" lang="en" dir="ltr">Insufficiently cooked (meat).
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءنف»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءنف"><b>«ءنف»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَنِفَ ◌َ (أَنَف) مِن</div><div class="col" lang="en" dir="ltr">To abstain from a.th. out of modesty, of shame.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَنَفَ ◌ِ (أَنْف) ه</div><div class="col" lang="en" dir="ltr">To knock a.o. on his nose: to mortify.
@@ -2136,7 +2143,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مُسْتَأْنَفًا</div><div class="col" lang="en" dir="ltr">For the future, henceforth.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءنق»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءنق"><b>«ءنق»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَنِقَ ◌َ (أَنَق) هـ</div><div class="col" lang="en" dir="ltr">To admire a.th.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— ب</div><div class="col" lang="en" dir="ltr">To delight in.
@@ -2151,15 +2158,15 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَعَزَّ مِن بَيْض الْأُنُوق</div><div class="col" lang="en" dir="ltr">Scarcer than a vulture's eggs: <i>Said of a.th. difficult to be found.</i>
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءنك»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءنك"><b>«ءنك»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَنَكَ ◌ُ (أَنْك)</div><div class="col" lang="en" dir="ltr">To be gross, coarse (th.). To be ill-tempered (pers.).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">آنُك</div><div class="col" lang="en" dir="ltr">Lead.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءنم»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءنم"><b>«ءنم»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَنَام ، آنَام</div><div class="col" lang="en" dir="ltr">Creatures. Mankind.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءني»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءني"><b>«ءني»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَنَىٰ ◌ِ (أَنْي ، إِنًى ، أَنَاء)</div><div class="col" lang="en" dir="ltr">To become mature, to ripen.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَنَّى هـ</div><div class="col" lang="en" dir="ltr">To procrastinate, to delay.
@@ -2190,12 +2197,12 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَنَّى</div><div class="col" lang="en" dir="ltr">How? Wherefrom?
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءه»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءه"><b>«ءه»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">آه ، آهًا</div><div class="col" lang="en" dir="ltr">Ah! Alas!
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَهَّ ◌ُ (أَهَّة) V تَأَهَّهَ</div><div class="col" lang="en" dir="ltr">To groan, to sigh.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءهب»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءهب"><b>«ءهب»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَهَّبَ ، V تَأَهَّبَ ل</div><div class="col" lang="en" dir="ltr">To get ready, to prepare.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِهَاب جـ. آهِبَة ، أُهُب</div><div class="col" lang="en" dir="ltr">Skin, hide, raw leather.
@@ -2204,10 +2211,10 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مُتَأَهِّب</div><div class="col" lang="en" dir="ltr">Ready. Prepared, fitted out.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءهر»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءهر"><b>«ءهر»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَهَرَة جـ. أَهَر ، أَهَرَات</div><div class="col" lang="en" dir="ltr">Movables, chattels.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءهل»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءهل"><b>«ءهل»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَهَلَ ◌ِ ◌ُ (أَهْل، أُهُول)</div><div class="col" lang="en" dir="ltr">To marry.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَهِلَ ◌َ (أَهَل) ب</div><div class="col" lang="en" dir="ltr">To get accustomed to (a place). To welcome a.o.
@@ -2248,13 +2255,13 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مُسْتَأْهِل</div><div class="col" lang="en" dir="ltr">Who deserves, worthy of.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءهن»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءهن"><b>«ءهن»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">آهِن مِن المال</div><div class="col" lang="en" dir="ltr">Hereditary goods. Home-born slave, cattle.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءو»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءو"><b>«ءو»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَوْ</div><div class="col" lang="en" dir="ltr">Whether, or. Unless.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءوب»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءوب"><b>«ءوب»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I آبَ ◌ُ (أَوْب ، إِيَاب) مِن</div><div class="col" lang="en" dir="ltr">To come back from, to repent. To set (sun).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— إِلى اللّٰه</div><div class="col" lang="en" dir="ltr">To come back to God.
@@ -2279,16 +2286,16 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مَآب جـ. مَآوِبُ</div><div class="col" lang="en" dir="ltr">Place to which one comes back.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءوج»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءوج"><b>«ءوج»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَوْج</div><div class="col" lang="en" dir="ltr">The highest point of the sky. Summit. Apogee.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءوح»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءوح"><b>«ءوح»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">آح</div><div class="col" lang="en" dir="ltr">White of eggs.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءوخ»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءوخ"><b>«ءوخ»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">✧ V تَأَوَّخَ</div><div class="col" lang="en" dir="ltr">To complain, to express grief.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءود»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءود"><b>«ءود»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I آدَ ◌ُ (أَوْد ، أُوُود) ه</div><div class="col" lang="en" dir="ltr">To overwhelm a.o. (affair).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I آدَ ◌ُ (أَوْد)</div><div class="col" lang="en" dir="ltr">To decline, to incline towards its end (day).
@@ -2305,13 +2312,13 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَوْدَة جـ. أَوْدَات</div><div class="col" lang="en" dir="ltr">Burden, weight.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءور»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءور"><b>«ءور»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُوَار جـ. أُور</div><div class="col" lang="en" dir="ltr">Ardour of fire, thirst.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءوز»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءوز"><b>«ءوز»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِوَزَّة جـ. إِوَزّ</div><div class="col" lang="en" dir="ltr">Goose.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءوس»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءوس"><b>«ءوس»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I آسَ ◌ُ (أَوْس ، إِيَاس) ه</div><div class="col" lang="en" dir="ltr">To bestow a.th. upon a.o.; to reward.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَوْس</div><div class="col" lang="en" dir="ltr">Gift.
@@ -2322,19 +2329,19 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">آس بَرِّي</div><div class="col" lang="en" dir="ltr">Holly.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءوض»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءوض"><b>«ءوض»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto"><span class="foreignborrowing" lang="en" dir="ltr">Ts</span> أُوضَة جـ. أُوَض</div><div class="col" lang="en" dir="ltr">Room, apartment.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto"><span class="foreignborrowing" lang="en" dir="ltr">Ts</span> أوضَجِي</div><div class="col" lang="en" dir="ltr">Waiter, footman.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءوف»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءوف"><b>«ءوف»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I آفَ ◌ُ (أَوْف) ه ، هـ</div><div class="col" lang="en" dir="ltr">To cause damage to a.o. or a.th.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَوَفَة جـ. آوَاف</div><div class="col" lang="en" dir="ltr">Damage. Misfortune. Infirmity, bane, evil.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مَؤُوف</div><div class="col" lang="en" dir="ltr">Damaged, affected.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءوق»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءوق"><b>«ءوق»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I آقَ ◌ُ (أَوْق) على</div><div class="col" lang="en" dir="ltr">To draw an evil upon a.o.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَوَّقَ ه</div><div class="col" lang="en" dir="ltr">To burden a.o.
@@ -2343,7 +2350,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُوقَة ، أُقَّة جـ. أُقَّات</div><div class="col" lang="en" dir="ltr">Okka (a weight of about two pounds and a half).
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءول»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءول"><b>«ءول»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I آلَ ◌ُ (أَوْل ، مَآل) إِلى</div><div class="col" lang="en" dir="ltr">To reach. To come back to. To be reduced to.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— عَن</div><div class="col" lang="en" dir="ltr">To abandon a.o.
@@ -2396,7 +2403,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مَآل</div><div class="col" lang="en" dir="ltr">End, result. Return to a place, retreat. Event. Meaning (of a writing).
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءوم»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءوم"><b>«ءوم»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I آمَ ◌ُ (أَوْم)</div><div class="col" lang="en" dir="ltr">To thirst.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— (أَوْم ، أُيَام ، إِيَام) على</div><div class="col" lang="en" dir="ltr">To smoke out (the bees).
@@ -2405,7 +2412,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أُوَام</div><div class="col" lang="en" dir="ltr">Burning thirst. Giddiness.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءون»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءون"><b>«ءون»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I آنَ ◌ُ (أَوْن) على نَفْسِهِ</div><div class="col" lang="en" dir="ltr">To go, to act at ease.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَوْن</div><div class="col" lang="en" dir="ltr">Calmness, tranquillity. Fatigue.
@@ -2420,14 +2427,14 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto"><span class="foreignborrowing" lang="en" dir="ltr">P</span> إِيوَان جـ. إِيوَانَات ، أَوَاوِين ؛ ✧ لِيوَان جـ. لَوَاوِين</div><div class="col" lang="en" dir="ltr">Palace. Arched hall.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءوه»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءوه"><b>«ءوه»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I آهَ ◌ُ (أَوْه) ، II أَوَّهَ ، V تَأَوَّهَ</div><div class="col" lang="en" dir="ltr">To exclaim ah! To weep.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَوَّاه</div><div class="col" lang="en" dir="ltr">He who sighs and cries to God.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">آه ، آهًا ، أَوَّه ، أَوْهِ</div><div class="col" lang="en" dir="ltr">Ah! Alas!
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءوي»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءوي"><b>«ءوي»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَوَىٰ ◌ِ (أُوِيًّ) هـ ، إِلَى</div><div class="col" lang="en" dir="ltr">To retire anywhere to take shelter in.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَوَىٰ ، IV آوَى ، II أَوَّى ه إِلى</div><div class="col" lang="en" dir="ltr">To receive a.o. at o.'s own house, to give hospitality to.
@@ -2444,21 +2451,21 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">آيَة جـ. آيَات ، آيٌ</div><div class="col" lang="en" dir="ltr">Sign. Wonder. Verse of a sacred book. Example.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءي»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءي"><b>«ءي»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَيْ</div><div class="col" lang="en" dir="ltr">That is..., viz. Hey.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِي</div><div class="col" lang="en" dir="ltr">Yes. of course.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَيْ</div><div class="col" lang="en" dir="ltr">O! Ho! Holloa!
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءي»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءي"><b>«ءي»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَيٌّ مـ. أَيَّة</div><div class="col" lang="en" dir="ltr">Which? What? Which one?
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَيُّ مَن</div><div class="col" lang="en" dir="ltr">Whosoever.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَيُّ شَيْءٍ</div><div class="col" lang="en" dir="ltr">What?
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءي»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءي"><b>«ءي»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِيَّا</div><div class="col" lang="en" dir="ltr"><i>Particle, prefixed to the objective case of pronouns. </i>
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِيَّايَ ، إِيَّاكَ ، إِيَّاهُ ، إِيَّاكُم ، إِيَّاهُم</div><div class="col" lang="en" dir="ltr">Me, thee, him, us, you. them.
@@ -2473,13 +2480,13 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَيَّانَ</div><div class="col" lang="en" dir="ltr">When? Wheresoever.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءي»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءي"><b>«ءي»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَيَا</div><div class="col" lang="en" dir="ltr"><i>Int.</i> used ia calling. Holloa!
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءي»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءي"><b>«ءي»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِيَا ، إِيَاة ، أَيَاة ، أَيَاء</div><div class="col" lang="en" dir="ltr">Sunlight.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءيد»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءيد"><b>«ءيد»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I آدَ ◌ِ (أَيْد ، آد)</div><div class="col" lang="en" dir="ltr">To be strong, firm.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَيَّدَ ه ، هـ</div><div class="col" lang="en" dir="ltr">To strengthen. To help. To authorise, to confirm a.o. or a.th.
@@ -2498,12 +2505,12 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مُؤْيِد جـ. مَوَائِدُ ، مَآوِدُ</div><div class="col" lang="en" dir="ltr">Serious affair. Monster.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءير»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءير"><b>«ءير»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَيْر جـ. أُيُور ، آيَار</div><div class="col" lang="en" dir="ltr">The north wind. The East wind. Membrum virile.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto"><span class="foreignborrowing" lang="en" dir="ltr">S</span> أَيَّار</div><div class="col" lang="en" dir="ltr">May (month).
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءيس»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءيس"><b>«ءيس»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I أَيِسَ ◌َ (إِيَاس) مِن</div><div class="col" lang="en" dir="ltr">To despair of.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَيَّسَ ، IV آيَسَ (إِيَاس) ه مِن</div><div class="col" lang="en" dir="ltr">To make a.o. to despair of.
@@ -2514,17 +2521,17 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">✧ أَيْش (عوض أَيّ شَيْءٍ)</div><div class="col" lang="en" dir="ltr">What?
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءيض»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءيض"><b>«ءيض»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I آضَ ◌ِ (أَيْض) هـ</div><div class="col" lang="en" dir="ltr">To reiterate a.th.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">— إِلى</div><div class="col" lang="en" dir="ltr">To come back to.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَيْضًا</div><div class="col" lang="en" dir="ltr">Again. Too, also.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءيك»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءيك"><b>«ءيك»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَيْك</div><div class="col" lang="en" dir="ltr">Wood, forest of bushy trees.
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءيم»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءيم"><b>«ءيم»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I آمَ ◌ِ (أَيْمَة ، أَيْم ، أُيُوم)</div><div class="col" lang="en" dir="ltr">To be a widower, a widow. To be unmarried.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">II أَيَّمَ ه</div><div class="col" lang="en" dir="ltr">To widow a.o. (God).
@@ -2537,7 +2544,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَيْمُ اللّٰه</div><div class="col" lang="en" dir="ltr">By God!
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءين»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءين"><b>«ءين»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">I آنَ ◌ِ (أَيْن)</div><div class="col" lang="en" dir="ltr">To draw near (time). To be tired, fatigued.
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">أَيْن</div><div class="col" lang="en" dir="ltr">Weariness, fatigue.
@@ -2552,7 +2559,7 @@
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">مِن أَيْن</div><div class="col" lang="en" dir="ltr">Wherefrom?
 </div></div>
-<div class="row py-2 justify-content-around"><div class="col-auto"><b>«ءيه»</b></div><div class="col" lang="en" dir="ltr"></div></div>
+<div class="row py-2 justify-content-around"><div class="col-auto"><span id="ءيه"><b>«ءيه»</b></span></div><div class="col" lang="en" dir="ltr"></div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">إِيهِ</div><div class="col" lang="en" dir="ltr">Tell me. Go on (<i>imper. part.</i>).
 </div></div>
 <div class="row py-2 justify-content-around"><div class="col-auto">&square; أَيْوَاه ، أَيْوَا</div><div class="col" lang="en" dir="ltr">Yes. So.

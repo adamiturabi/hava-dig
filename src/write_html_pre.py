@@ -37,6 +37,7 @@ def write_html_pre(fout):
           }
         </style>
         <title>Hava: Arabic-English Dictionary</title>
+        <script src="searchroot.js"/>
     </head>
     <body>
         <!--<h1>Hava's Arabic Dictionary</h1>-->
@@ -56,6 +57,12 @@ def write_html_pre(fout):
           </div></div>
           <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">
           <a href="https://github.com/adamiturabi/hava-dig">Github development page</a>
+          </div></div>
+          <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">
+          <input type="text" id="textinput" placeholder="Search for root (Buckwalter or Unicode Arabic)"/>
+          <!--<input type="button" id="btn" value="Submit" onClick="javascript: window.open('1.html#' + document.getElementById('text').value);" />-->
+          <button type="button" id="btn2" onclick="searchRoot()">Search</button>
+          <p id=outputsearched></p>
           </div></div>
 """
   fout.write(outstr)
