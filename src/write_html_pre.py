@@ -50,10 +50,11 @@ def write_html_pre(fout):
     -->
         <div class="container">
           <div class="row justify-content-center"><div class="col-auto text-center" dir="ltr" lang="en"><h1>Arabic-English Dictionary for the Use of Students</h1></div></div>
+          <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">being a modified edition of the compilation of the same name</div></div>
           <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">by</div></div>
           <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en"><h3>J.G. Hava</h3></div></div>
           <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">
-          (Digitization project. Work in progress.)
+          (Digitization project. Work in progress. Current status: incomplete and unproofread.)
           </div></div>
           <div class="row pb-3 justify-content-center"><div class="col-auto" dir="ltr" lang="en">
           <a href="https://github.com/adamiturabi/hava-dig">Github development page</a>
