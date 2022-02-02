@@ -63,7 +63,7 @@ function normalize(instr) {
   return outstr;
 }
 function searchRoot() {
-  let searched_root = document.getElementById('textinput').value;
+  let searched_root = document.getElementById('search_input').value;
   let normalized_root = normalize(searched_root);
   let filename = '';
   let first_char = normalized_root.charAt(0);
@@ -78,16 +78,7 @@ function searchRoot() {
     document.getElementById("outputsearched").innerHTML = normalized_root + ' not found'
   }
 }
-
-var searched_root_input = document.getElementById('textinput');
-// Call searchRoot when the user hits 'Enter'
-searched_root_input.addEventListener("keyup", function(event) {
-  // Number 13 is the "Enter" key on the keyboard
-  if (event.keyCode === 13) {
-    // Cancel the default action, if needed
-    event.preventDefault();
-    // Trigger the button element with a click
-    document.getElementById("btn2").click();
-  }
-});
+function clearSearchInput() {
+  document.getElementById('search_input').value = "";
+}
 

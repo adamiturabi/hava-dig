@@ -14,7 +14,7 @@ def gen_title_page(num_letters):
 """
     for i in range(1, num_letters+1):
       from src import index2letter
-      out_str +='<p><a href="'+str(i)+'.html">Roots beginning with ' + index2letter.index2letter(i) + '</a></p>\n'
+      out_str +='<p><a href="'+str(i)+'.html">Browse roots beginning with ' + index2letter.index2letter(i) + '</a></p>\n'
 
     out_str += '</div></div></div></body></html>'
     fout.write(out_str)
