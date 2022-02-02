@@ -10,21 +10,21 @@ def conj_tri_form1(root, past_vowel, pres_vowel):
     if past_vowel == "a":
       past_verb = r1 + "a" + r2 + "~a"
     if pres_vowel == "a":
-      pres_verb = "ya" + r1 + "o" + "yaY`"
+      pres_verb = "ya" + r1 + "o" + "yaY"
     else:
       pres_verb = "ya" + r1 + "o" + "yiy"
   elif r2+r3 == "wy":
     if past_vowel == "a":
-      past_verb = r1 + "a" + "waY`"
+      past_verb = r1 + "a" + "waY"
     if pres_vowel == "a":
-      pres_verb = "ya" + r1 + "o" + "waY`"
+      pres_verb = "ya" + r1 + "o" + "waY"
     else:
       pres_verb = "ya" + r1 + "o" + "wiy"
   elif r1 == "w" and r3 == "y":
     if past_vowel == "a":
-      past_verb = r1 + "a" + r2 + past_vowel + "aY`"
+      past_verb = r1 + "a" + r2 + past_vowel + "aY"
     if pres_vowel == "a":
-      pres_verb = "ya" + r2 + "aY`"
+      pres_verb = "ya" + r2 + "aY"
     else:
       pres_verb = "ya" + r2 + "iy"
   elif r2+r3 == "y'":
@@ -38,9 +38,9 @@ def conj_tri_form1(root, past_vowel, pres_vowel):
       pres_verb = "ya" + r1 + "uwiu"
   elif r3 == "y":
     if past_vowel == "a":
-      past_verb = r1 + "a" + r2 + "a" + "Y`"
+      past_verb = r1 + "a" + r2 + "a" + "Y"
     if pres_vowel == "a":
-      pres_verb = "ya" + r1 + "o" + r2 + "aY`"
+      pres_verb = "ya" + r1 + "o" + r2 + "aY"
     else:
       pres_verb = "ya" + r1 + "o" + r2 + "iy"
   elif r3 == "w":

@@ -370,7 +370,7 @@ def num2word(numstr_in, root_in):
   if suffix_str == 't':
     outstr = basestr + a + O
   elif suffix_str == 'ya':
-    outstr = basestr + a + Y + dagA
+    outstr = basestr + a + Y
   elif suffix_str == 'yi':
     outstr = basestr + i + y + ss
   elif suffix_str == 'yit':
