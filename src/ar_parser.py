@@ -66,7 +66,7 @@ class Parser:
           out_str += word[:-1]
         else:
           out_str += word
-        do_conj = word[-1] != 'x' and not (word == 'I' and len(self.curr_root) == 3)
+        do_conj = word[-1] != 'x' and not (word == 'I' and len(self.curr_root) <= 3)
         if do_conj:
           from src import conj
           form = word
