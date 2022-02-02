@@ -1,5 +1,8 @@
 # hava-dig
-Hava Arabic dictionary digitization
+
+A modified digital edition based on *Arabic-English Dictionary for the Use of Students* by J.G. Hava.
+
+The modification is generally in formatting, sometimes in orthography, and occasionally in the text as well.
 
 Work in progress output: https://adamiturabi.github.io/hava-dig/
 
