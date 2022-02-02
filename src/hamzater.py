@@ -127,7 +127,7 @@ def build_cons_list(instr):
     if index < len(instr) and instr[index] in { N, F, K}:
       cons_info.vowel_mark = instr[index]
       cons_info.vowel = instr[index]
-      cons_info.post_cons_str = instr[index]
+      cons_info.post_cons_str += instr[index]
       index += 1
     cons_list.append(cons_info)
   return cons_list
