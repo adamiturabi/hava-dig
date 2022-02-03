@@ -18,7 +18,7 @@ I A i (1) h , elY
 I A i (27)
 -- b
 -- o i (27)
-I A a (4) elY
+I ! a (4) elY
 II h_ , h
 V
 4 j_. 38 , 27
@@ -45,7 +45,7 @@ I A o (1) , II h_
 @EbD
 I A o i (1) , V h
 23 j_. 10
-3 j_. 38 , 18 j_. 44
+3 j_. 38 ; 18 j_. 44
 @EbT
 2 j_. 38 , + baAT baATaAt
 V h_
@@ -58,7 +58,7 @@ I A i o (1 , 23) <ilY
 21 , 26 j_. 11 , 29
 @Ebl
 I ! a (4) , A o (22t)
--- o i (4 , 27) , ! (1)
+-- o i (4 , 27) , ! (4)
 8 j_. 38 , 25
 25 , 25yi , >ayobuliy~ j_. 38 , 3
 23t , <ib~aAlaO
@@ -184,7 +184,7 @@ II h
 IV (403) h
 V min
 2 j_. 38
-25 j_. 43 , 21 j_. 4t
+25 j_. 43 ; 21 j_. 4t
 17t , 17 j_. 44
 @Evw
 I A o (1 , 23t) , >avaY i (>avoy , 23t) b
@@ -353,11 +353,11 @@ I A i (1)
 2
 @Edm
 I A i (1) , VIII
-A , IV (403) bayon
+I A , IV (403) bayon
 I ! a (4) , U o (3t)
 3 , 23
 4 , 4t
-|dam
+|damu
 |damiy~
 = |damiy~aAt
 |dam j_. 3 , 35 m_. 42 , 35t j_. 3
@@ -397,7 +397,7 @@ X h fy
 10 , 3 j_. 38 , = wupn
 22
 101
-|pan , 24yi
+|panu , 24yi
 201 , 25
 20t j_. 44
 @Epy
@@ -487,7 +487,7 @@ I A i (1) h_
 maA bihaA 5 w>ariym
 11
 yuHar~iq Alo>ur~am elY fulaAn
->aromaAE , 102t
+42 , 102t
 26 , 26t , 27t
 @Ern
 I ! a (4 , 25 , 23)
@@ -597,8 +597,8 @@ V elY
 yaA >asafiy , yaA >asafaAh
 503
 5
-25 , 5 elY
-22t , >aroD 25t
+25 , >asifN elY
+24t , >aroD 25t
 26
 @Esl
 I U o (22t) , ! a (4)
@@ -672,7 +672,7 @@ III (303) h
 4
 @ESl
 I U o (22t)
-II u , h_
+II h , h_
 V fy
 -- min
 X h_
@@ -711,8 +711,8 @@ V
 @Ef
 3
 >uf~K
-@Efn
-<if~aAn , 28 , 2 , 7
+@Ef
+<if~aAn , >af~aAn , <if~N , 7
 elY 2 p`lik
 @Efd
 I ! a (4)

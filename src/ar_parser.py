@@ -145,6 +145,7 @@ class Parser:
 
   def parse_file(self, letter_index, ar_text_filename, en_text_filename, htmlout_filename):
     lines = ''
+    ids = set()
     
     with open(htmlout_filename, 'w') as fout, open(ar_text_filename) as fin_ar, open(en_text_filename) as fin_en:
       from src import write_html_pre
@@ -164,7 +165,12 @@ class Parser:
         if ar_out_str[:6] == 'qwerty':
           this_root = ar_out_str[6:]
           this_root = this_root.replace('ء', 'أ')
-          ar_out_str = '<hr id="'+this_root+'"/><p class="text-center"><b>«'+this_root+'»</b></p>'
+          if this_root not in ids:
+            ids.add(this_root)
+            ar_out_str = '<hr id="'+this_root+'"/>'
+          else:
+            ar_out_str = '<hr/>'
+          ar_out_str += '<p class="text-center"><b>«'+this_root+'»</b></p>'
         else:
           en_line = fin_en.readline()
           en_line = self.process_en_line(en_line)
@@ -179,6 +185,6 @@ class Parser:
           outstr += '<div class="col" lang="en" dir="ltr">'+en_line+'</div>'
           outstr += '</div>\n'
         else:
-          outstr = '<div class="row py-2"><div class="col">'+ar_out_str+'</div></div>'
+          outstr = '<div class="row py-2"><div class="col">'+ar_out_str+'</div></div>\n'
         fout.write(outstr)
       fout.write("</div></body></html>")
