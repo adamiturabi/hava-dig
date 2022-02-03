@@ -765,7 +765,7 @@ V
 I A i (1) , V h_
 28 j_. 4t , >ak~aAruwn
 3t j_. 9
-@ekf
+@Ekf
 23 , 24 j_. 10 , 101t
 II (203) , IV (403) h
 @Ekl
@@ -815,7 +815,7 @@ hum ealay~a <ilobN waAHid
 {al~atiy j_. {ll~awaAtiy , {ll~aAEiy
 @Els
 I A i (1) , III (303) h
->ulisa
+I >ulisa
 1
 102
 @Elf
@@ -897,7 +897,7 @@ I ! a (1)
 2 , <ilFY j_. |laAE
 >alaAE , >alaY
 33 , |laY m_. 33t , >aloyaAE j_. 3
->alaAy j_. >alaAyaAt
+[Ts]{.fbr} >alaAy j_. >alaAyaAt
 mi}olaAO j_. ma|lK
 @Ely
 <ilaY
@@ -954,7 +954,7 @@ II h_
 101 , 101t
 @Emr
 I A o (1) h b
-I i (1) , U o (2t , 23t) elY
+I ! a (1) , U o (2t , 23t) elY
 I ! a (4 , 4t)
 II h
 III (303) h fy
@@ -980,7 +980,7 @@ ta>omuriy~ , ta>omuwriy~ , tu&omuriy~
 25 Almu&ominiyn
 >amiyru AlbaHor
 >maiyru >alaAy , + miyr >alaAy
-25yi , + mirY
+25yi , + miyry
 + >am~aAraAt
 202
 802
@@ -988,7 +988,7 @@ ta>omuriy~ , ta>omuwriy~ , tu&omuriy~
 102yit
 @Ems
 1 j_. 16 , 38 , 27
-Alu>amos
+Alo>amos
 @Eme
 <im~ae , <im~aeaO j_. <im~aeuwn
 @Eml
@@ -1121,7 +1121,7 @@ V b , fy
 22t
 5 , 25 , 401
 26
->aeaz~a min bayoD Alo>unuwq
+>aeaz~a min bayoD Alo>anuwq
 @Enk
 I A o (1)
 16
@@ -1138,18 +1138,18 @@ X h
 >anaAO
 22.--E , >anFY , <inFY
 >anFY j_. 38.--E , >uniy~
-38.--E All~ayol , >aToraAf Aln~ahaAr
+38.--E All~ayol w>aToraAf Aln~ahaAr
 23.--E j_. 101t , jj_. >awaAnK
 503
 501
 >an~aY
 @Eh
 |h , |hFA
-I A o (1t) V
+I A o (1t) , V
 @Ehb
 II , V l
 23 j_. 101t , 10
-3t , 9
+3t j_. 9
 501
 @Ehr
 4t j_. 4 , >aharaAt
@@ -1221,7 +1221,7 @@ I A o (1 , 23.-y-) h
 [Ts]{.fbr} >wDajiy
 @Ewf
 I A o (1) h , h_
-4t j_. 38
+|faO j_. |faAt
 ma&uwf
 @Ewq
 I A o (1) elY
@@ -1263,7 +1263,7 @@ II h
 @Ewn
 I A o (1) elY nafosihi
 1
-|n , 22 j_. 101t
+|n , 22 j_. 21t
 {lo|n
 min Alo|n wSAeidFA
 <ilY Alo|n
