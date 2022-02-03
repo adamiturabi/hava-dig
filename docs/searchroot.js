@@ -86,6 +86,7 @@ function clearSearchInput() {
 $(function(){
   $('#search_input').keypress(function(e){
     if(e.which == 13) {
+      e.preventDefault();
       //dosomething
       searchRoot();
     }
