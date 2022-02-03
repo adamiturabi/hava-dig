@@ -84,8 +84,6 @@ function clearSearchInput() {
   // put focus back on input text field
   document.getElementById("search_input").focus();
 }
-
-
 $(function(){
   $('#search_input').keypress(function(e){
     if(e.which == 13) {
