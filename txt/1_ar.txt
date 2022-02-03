@@ -104,6 +104,7 @@ V biAlo<itob
 202 AlP~ufor
 @Etd
 23 j_. 21t , 10
+@Etc
 [Te]{.fbr} |tacojiy j_. |tacojiy~aO
 @Etl
 I A i (1 , 36)
@@ -322,6 +323,7 @@ V h
 >axiy~aO , |xiy~aO j_. >awaAxiy~ , >awaAxK
 4yi
 + 4yit
+@Exy
 [G]{.fbr} >uxoyuwn
 @Ed
 I A o i (1) h
@@ -382,6 +384,7 @@ X h elY
 <ipo , <ip pAka
 <ipaA
 <ipFA , <ipan
+@Epr
 [S]{.fbr} |paAr , >apaAr
 [P]{.fbr} |paroyuwn
 @Epn
@@ -517,6 +520,7 @@ II h_
 @EzH
 I A i (27) , V
 26
+@Ezd
 [P]{.fbr} |zaAdiraxot , >azodiraxot
 @Ezp
 22
@@ -610,7 +614,7 @@ V >abaAhu
 @Esm
 {isom j_. >asomaAE , >asaAmK
 24t
-[H]{.fbr} <isomaeiyl
+[H]{.fbr} <isomaAeiyl
 @Esn
 I A i o (1 , 27) ,\n ! a (4) , V
 101
@@ -719,6 +723,7 @@ I ! a (4)
 @Efr
 I A i (1 , 27)
 28 , 20
+@Efs
 [G]{.fbr} <ifosantiyn
 @Efq
 I A i (1) h_
@@ -808,7 +813,9 @@ I A o (1) , V <ilY
 I A o i (1) , II h
 II h elY
 hum ealay~a <ilobN waAHid
+@Elj
 [Ts]{.fbr} <ilojiy~ j_. <ilojiy~aO
+@Eld
 [Te]{.fbr} Ald~iwaAn
 @Elp
 {al~apiy j_. {al~apiyn + <iliy
