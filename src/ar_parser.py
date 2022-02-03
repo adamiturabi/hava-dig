@@ -187,4 +187,4 @@ class Parser:
         else:
           outstr = '<div class="row py-2"><div class="col">'+ar_out_str+'</div></div>\n'
         fout.write(outstr)
-      fout.write("</div></body></html>")
+      fout.write("</div></body></html>\n")
