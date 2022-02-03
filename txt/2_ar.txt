@@ -64,13 +64,16 @@ I A a (1 , 42) elY
 @bb
 bab~N , bab~aAn
 hum bab~aAn waAHid
+@bbj
 [Ps]{.fbr} baAbuwj j_. bawaAbiyju
+@bbr
 [P]{.fbr} babor j_. bubuwr
 @bbg
 42 , bab~agaAE j_. babogaAwaAt
 @bbl
 101
 101yi
+@bbn
 [P]{.fbr} baAbuwnaj
 @bt
 I A o i (1) , IV h_
