@@ -164,7 +164,7 @@ class Parser:
         if ar_out_str[:6] == 'qwerty':
           this_root = ar_out_str[6:]
           this_root = this_root.replace('ء', 'أ')
-          ar_out_str = '<span id="'+this_root+'"><b>«'+this_root+'»</b></span>'
+          ar_out_str = '<hr id="'+this_root+'"/><p class="text-center"><b>«'+this_root+'»</b></p>'
         else:
           en_line = fin_en.readline()
           en_line = self.process_en_line(en_line)
@@ -174,7 +174,11 @@ class Parser:
           ar_line = ''
         if not en_line:
           en_line = ''
-        outstr = '<div class="row py-2 justify-content-around"><div class="col-auto">'+ar_out_str+'</div>'
-        outstr += '<div class="col" lang="en" dir="ltr">'+en_line+'</div></div>\n'
+        if en_line != '':
+          outstr = '<div class="row py-2 justify-content-around"><div class="col-auto">'+ar_out_str+'</div>'
+          outstr += '<div class="col" lang="en" dir="ltr">'+en_line+'</div>'
+          outstr += '</div>\n'
+        else:
+          outstr = '<div class="row py-2"><div class="col">'+ar_out_str+'</div></div>'
         fout.write(outstr)
       fout.write("</div></body></html>")
