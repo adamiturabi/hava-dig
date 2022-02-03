@@ -154,7 +154,7 @@ class Parser:
       outstr += '</div></div>\n'
       from src import index2letter
       outstr += '<div class="row py-2 justify-content-center"><div class="col-auto" dir="ltr" lang="en">'
-      outstr +='<h4>Roots beginning with ' + index2letter.index2letter(letter_index) + ':</h4>\n'
+      outstr +='<h5>Roots beginning with ' + index2letter.index2letter(letter_index) + ':</h5>\n'
       outstr += '</div></div>\n'
       fout.write(outstr)
       while True:

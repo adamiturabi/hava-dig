@@ -1,6 +1,6 @@
 def index2letter(index):
   mydict = {
-    1: "ء",
+    1: "أ",
     2: "ب",
     3: "ت",
     4: "ث",
