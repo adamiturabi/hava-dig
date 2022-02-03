@@ -71,7 +71,7 @@ O my father!
 Cock.
 Poppy.
 Sphynx.
-The man wearing spectacIes.
+The man wearing spectacles.
 Paternity.
 Fatherly, belonging to a father.
 Fatherly. + Paternity.
@@ -277,7 +277,7 @@ Tie, band, horse-lock, stake to which a beast is tied.
 Brotherly.
 Confraternity, congregation.
 Viper's bugloss.
-To happen unexpectediy, to overwhelm a.o. (evil).
+To happen unexpectedly, to overwhelm a.o. (evil).
 To behave resolutely.
 Misfortune, adversity.
 Difficult, serious (affair).
@@ -347,7 +347,7 @@ Muezzin (a crier who calls to prayer).
 Minaret, turret of a mosque.
 To suffer damage.
 To injure, to harm a.o.
-To sutfer damage.
+To suffer damage.
 Damage, harm done to a.o.
 Who suffers or causes damage.
 Noxious, harmful, prejudicial to.
@@ -420,13 +420,13 @@ There is nobody, no one.
 Molar teeth.
 To gnash the teeth against.
 Wasted (land).
-Koot, origin.
+Root, origin.
 To be lively, quick.
 Litter, coffin.
 Den.
 Lively, quick.
 To produce honey (bee).
-To remaia in the stable, to become accustomed to it (beast).
+To remain in the stable, to become accustomed to it (beast).
 To prepare a stable for (a beast); to fasten it to a pole.
 Honey.
 Pole to which a beast is fastened. Stable.
@@ -458,7 +458,7 @@ To draw near (one to the other).
 Quick step.
 Day, hour of the last judgment.
 To be straitened.
-Narrow place. Battletield.
+Narrow place. Battlefield.
 To be in a strait.
 Eternity.
 Eternal.
@@ -473,7 +473,7 @@ To correspond (o. to the other). To be opposite.
 To be opposite, to front o. a,
 Before, opposite, in front.
 Before him, opposite to him.
-Foundalion, principle, basis.
+Foundation, principle, basis.
 To lay the foundation, to ground.
 To be founded (building).
 Small quantity of ashes.
@@ -616,7 +616,7 @@ Liberal, learned.
 Tanned (hide, skin).
 Horizon. Country.
 Horizontal.
-Great traveller. Adveuturer.
+Great traveller. Adventurer.
 To lie.
 To deter a.o. from.
 To be in want of rain and barren (soil). To be weak-minded.
@@ -631,8 +631,8 @@ To be weak-minded.
 To have very little milk (she-camel).
 To decrease (th.). To boast of what one has not.
 Weak-minded.
-Opitum.
-Laudunura.
+Opium.
+Laudanum.
 To prepare (a dish) with sour cheese.
 To give to a.o. sour cheese to eat.
 Cheese made with sour milk.
@@ -879,7 +879,7 @@ Deposit; a.th. intrusted to a.o.'s care.
 Good faith; sincerity.
 Trusted by all.
 Belief. Religious faith.
-Faithful. Loval. Steadfast.
+Faithful. Loyal. Steadfast.
 Treasurer.
 Amen, be it so. Yes.
 Lime-kiln.
@@ -923,7 +923,7 @@ To be polite, kind, social.
 To have an intimate connection with a.o.
 To become acquainted and familiar with.
 To render familiar. To tame.
-To be sociable, friendly, familiar wth.
+To be sociable, friendly, familiar with.
 To delight a.o. by good manners. To perceive a.th. from afar.
 <i>Christian: </i>To become a man. To show kindness.
 To act as a social man.
@@ -950,7 +950,7 @@ To begin or to commence anew.
 To go to appeal; to institute new proceedings against.
 Nose. Fore-part of anything. Extremity, point.
 In the first place. Above. Before, afore.
-Bashfuluess, shame. Scorn.
+Bashfulness, shame. Scorn.
 New. Harmless, unhurt.
 First of all, in the first place.
 He who rates himself high, piqued, disdainful.
@@ -1149,6 +1149,3 @@ Whereabout? Where? How far.
 Wherefrom?
 Tell me. Go on (<i>imper. part.</i>).
 Yes. So.
-
-
-
