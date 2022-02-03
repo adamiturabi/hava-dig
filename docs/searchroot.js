@@ -65,17 +65,21 @@ function normalize(instr) {
 function searchRoot() {
   let searched_root = document.getElementById('search_input').value;
   let normalized_root = normalize(searched_root);
-  let filename = '';
-  let first_char = normalized_root.charAt(0);
-  if (first_char === 'أ') {
-    filename = '1.html';
-  } else if (first_char === 'ب') {
-    filename = '2.html';
-  }
-  if (filename != '') {
-    window.open(filename + '#' + normalized_root, "_self");
+  let root_found = document.getElementById(normalized_root);
+  if (root_found == null) {
+    document.getElementById("outputsearched").innerHTML = 'Submitted root '+normalized_root + ' not found. Either it doesn\'t exist or it hasn\'t been entered yet. You may try to search for roots nearby, or substitute the weak radicals for others (if any), or browse entries using the links below.'
   } else {
-    document.getElementById("outputsearched").innerHTML = normalized_root + ' not found'
+    document.getElementById("outputsearched").innerHTML = ''
+    let filename = '';
+    let first_char = normalized_root.charAt(0);
+    if (first_char === 'أ') {
+      filename = '1.html';
+    } else if (first_char === 'ب') {
+      filename = '2.html';
+    }
+    if (filename != '') {
+      window.open(filename + '#' + normalized_root, "_self");
+    }
   }
 }
 function clearSearchInput() {

@@ -143,9 +143,8 @@ class Parser:
         out_str += x
     return out_str
 
-  def parse_file(self, letter_index, ar_text_filename, en_text_filename, htmlout_filename):
+  def parse_file(self, letter_index, ar_text_filename, en_text_filename, htmlout_filename, roots_set):
     lines = ''
-    ids = set()
     
     with open(htmlout_filename, 'w') as fout, open(ar_text_filename) as fin_ar, open(en_text_filename) as fin_en:
       from src import write_html_pre
@@ -165,8 +164,8 @@ class Parser:
         if ar_out_str[:6] == 'qwerty':
           this_root = ar_out_str[6:]
           this_root = this_root.replace('ء', 'أ')
-          if this_root not in ids:
-            ids.add(this_root)
+          if this_root not in roots_set:
+            roots_set.add(this_root)
             ar_out_str = '<hr id="'+this_root+'"/>'
           else:
             ar_out_str = '<hr/>'
