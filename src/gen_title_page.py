@@ -1,4 +1,4 @@
-def gen_title_page(num_letters, roots_set):
+def gen_title_page(num_letters, roots_divs):
   with open('docs/index.html', 'w') as fout:
     from src import write_html_pre
     write_html_pre.write_html_pre(fout)
@@ -18,8 +18,7 @@ def gen_title_page(num_letters, roots_set):
 
     out_str += '</div></div>\n'
 
-    for root in roots_set:
-      out_str += '<div style="visibility: hidden;" id="'+root+'"></div>\n'
+    out_str += roots_divs
 
     out_str += '</div></body></html>\n'
     fout.write(out_str)
