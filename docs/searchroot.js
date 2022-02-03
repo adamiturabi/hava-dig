@@ -82,3 +82,12 @@ function clearSearchInput() {
   document.getElementById('search_input').value = "";
 }
 
+
+$(function(){
+  $('#search_input').keypress(function(e){
+    if(e.which == 13) {
+      //dosomething
+      searchRoot();
+    }
+  })
+})
