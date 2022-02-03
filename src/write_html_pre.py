@@ -37,7 +37,7 @@ def write_html_pre(fout):
           }
         </style>
         <title>Hava: Arabic-English Dictionary</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="searchroot.js"></script>
     </head>
     <body>
