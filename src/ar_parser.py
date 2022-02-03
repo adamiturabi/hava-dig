@@ -1,8 +1,8 @@
 class Parser:
   special_chars = {
     "indent": '&ldca;&nbsp;&nbsp;&nbsp;',
-    "square": '&square;',
-    "4star": chr(int('0x2727', 16))
+    "square": '&#9643;',
+    "4star": '&#10023;' #chr(int('0x2727', 16))
   }
   def __init__(self):
     self.curr_root = ''
