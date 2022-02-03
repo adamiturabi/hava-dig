@@ -79,14 +79,17 @@ function searchRoot() {
   }
 }
 function clearSearchInput() {
+  // clear input text field
   document.getElementById('search_input').value = "";
+  // put focus back on input text field
+  document.getElementById("search_input").focus();
 }
 
 
 $(function(){
   $('#search_input').keypress(function(e){
     if(e.which == 13) {
-      e.preventDefault();
+      e.preventDefault(); // needed otherwise doesn't work on deployment
       //dosomething
       searchRoot();
     }
