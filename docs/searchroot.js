@@ -123,7 +123,7 @@ searchModal.addEventListener('shown.bs.modal', function () {
 $('body').on('shown.bs.modal', '#searchModal', function () {
     $('input:visible:enabled:first', this).focus();
 })
+*/
 $("#searchModal").on('shown.bs.modal', function () {
     $(this).find("input:visible:first").focus();
 });
-*/
