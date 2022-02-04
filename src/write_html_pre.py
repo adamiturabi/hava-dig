@@ -53,6 +53,14 @@ def write_html_pre(fout):
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
         <div class="container">
+          <div class="modal fade" id="searchModal" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body" dir="ltr" lang="en">"""
+  from src import get_search_form
+  outstr += get_search_form.get_search_form("modal")
+  outstr += '</div></div></div></div>\n'
+  outstr += """
           <div class="row justify-content-center"><div class="col-auto text-center" dir="ltr" lang="en"><h1 id="top">Arabic-English Dictionary for the Use of Students</h1></div></div>
           <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">being a modified edition of the compilation of the same name</div></div>
           <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">by</div></div>
@@ -63,22 +71,9 @@ def write_html_pre(fout):
           <div class="row pb-3 justify-content-center"><div class="col-auto" dir="ltr" lang="en">
           <a href="https://github.com/adamiturabi/hava-dig">Github development page</a>
           </div></div>
-          <!--<div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">
-          <input type="text" id="textinput" placeholder="Search for root (Buckwalter or Unicode Arabic)"/>
-          <button type="button" id="btn2" onclick="searchRoot()">Search</button>
-          <p id=outputsearched></p>
-          </div></div>-->
           <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">
-          <form>
-            <div class="mb-3">
-              <label for="search_input" class="form-label">Search by root</label>
-              <input type="text" class="form-control" id="search_input" aria-describedby="searchHelp" placeholder="Enter root">
-              <div id="searchHelp" class="form-text">Enter text in Unicode Arabic or <a href="https://en.wikipedia.org/wiki/Buckwalter_transliteration#Buckwalter_transliteration_table">Buckwalter transliteration</a> format, e.g., اتي or Aty.</div>
-            </div>
-            <button type="button" class="btn btn-primary" id="btn_submit" onclick="searchRoot()">Submit</button>
-            <button type="button" class="btn btn-secondary" id="btn_clear" onclick="clearSearchInput()">Clear input</button>
-          </form>
-          <p class="py-2" id=outputsearched></p>
-          </div></div>
 """
+  from src import get_search_form
+  outstr += get_search_form.get_search_form("reg")
+  outstr += '</div></div>'
   fout.write(outstr)

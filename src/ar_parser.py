@@ -170,8 +170,9 @@ class Parser:
           else:
             ar_out_str = '<hr/>'
           ar_out_str += '<div class="col">'
-          #ar_out_str += '<a href="#top"><button type="button" class="btn btn-link btn-sm py-0 my-0" id="btn2"">&uarr;</button></a>'
+          #ar_out_str += '<a href="#top"><button type="button" class="btn btn-link btn-sm py-0 my-0" id="btn2">&uarr;</button></a>'
           ar_out_str += '<a href="#top">&uarr;</a>'
+          ar_out_str += '<button type="button" class="btn btn-link btn-sm py-0 my-0" data-bs-toggle="modal" data-bs-target="#searchModal">&#x1F50D;</button>'
           ar_out_str += '</div>'
           ar_out_str += '<div class="col-auto" lang="en" dir="ltr"><p class="text-center"><b>«'+this_root+'»</b></p></div>'
           #ar_out_str += '<div class="col" lang="en" dir="ltr"><p class="text-left><a href="index.html">To top</a></p></div>'

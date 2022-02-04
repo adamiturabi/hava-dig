@@ -62,14 +62,17 @@ function normalize(instr) {
   }
   return outstr;
 }
-function searchRoot() {
-  let searched_root = document.getElementById('search_input').value;
+function searchRoot(fromwhere) {
+  let searched_root = document.getElementById(fromwhere+'search_input').value;
   let normalized_root = normalize(searched_root);
   let root_found = document.getElementById('index_'+normalized_root);
   if (root_found == null) {
-    document.getElementById("outputsearched").innerHTML = 'Submitted root '+normalized_root + ' not found. Either it doesn\'t exist or it hasn\'t been entered yet. You may try to search for roots nearby, or substitute the weak radicals for others (if any), or browse the root entries from the index page.'
+    document.getElementById(fromwhere+"outputsearched").innerHTML = 'Submitted root '+normalized_root + ' not found. Either it doesn\'t exist or it hasn\'t been entered yet. You may try to search for roots nearby, or substitute the weak radicals for others (if any), or browse the root entries from the index page.'
   } else {
-    document.getElementById("outputsearched").innerHTML = ''
+    document.getElementById(fromwhere+"outputsearched").innerHTML = ''
+    if (fromwhere == 'modal') {
+      $("#searchModal").modal('hide');
+    }
     let filename = '';
     let first_char = normalized_root.charAt(0);
     if (first_char === 'أ') {
@@ -82,19 +85,45 @@ function searchRoot() {
     }
   }
 }
-function clearSearchInput() {
+function clearSearchInput(fromwhere) {
   // clear input text field
-  document.getElementById('search_input').value = "";
-  document.getElementById("outputsearched").innerHTML = ''
+  document.getElementById(fromwhere+'search_input').value = "";
+  document.getElementById(fromwhere+"outputsearched").innerHTML = ''
   // put focus back on input text field
-  document.getElementById("search_input").focus();
+  document.getElementById(fromwhere+"search_input").focus();
 }
 $(function(){
-  $('#search_input').keypress(function(e){
+  $('#regsearch_input').keypress(function(e){
     if(e.which == 13) {
       e.preventDefault(); // needed otherwise doesn't work on deployment
       //dosomething
-      searchRoot();
+      searchRoot('reg');
     }
   })
 })
+$(function(){
+  $('#modalsearch_input').keypress(function(e){
+    if(e.which == 13) {
+      e.preventDefault(); // needed otherwise doesn't work on deployment
+      //dosomething
+      searchRoot('modal');
+    }
+  })
+})
+/*
+var searchModal = document.getElementById('searchModal')
+var modalsearch_input = document.getElementById('modalsearch_input')
+
+searchModal.addEventListener('shown.bs.modal', function () {
+  //modalsearch_input.focus();
+  setTimeout(function() {
+    modalsearch_input.focus();
+  }, 1000);
+})
+$('body').on('shown.bs.modal', '#searchModal', function () {
+    $('input:visible:enabled:first', this).focus();
+})
+*/
+$("#searchModal").on('shown.bs.modal', function () {
+    $(this).find("input:visible:first").focus();
+});
