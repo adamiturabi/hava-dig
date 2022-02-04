@@ -8,10 +8,6 @@ def get_search_form(purpose):
             </div>
             <button type="button" class="btn btn-primary" id="btn_submit" onclick="searchRoot()">Submit</button>
             <button type="button" class="btn btn-secondary" id="btn_clear" onclick="clearSearchInput()">Clear input</button>
-"""
-  #if purpose == "modal":
-  #  outstr +='<button type="button" class="btn-close pull-left" data-bs-dismiss="modal" aria-label="Close"></button>'
-  outstr += """
           </form>
           <p class="py-2" id="outputsearched"></p>
 """
