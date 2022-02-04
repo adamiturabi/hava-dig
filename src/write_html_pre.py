@@ -59,7 +59,9 @@ def write_html_pre(fout):
                 <div class="modal-body" dir="ltr" lang="en">"""
   from src import get_search_form
   outstr += get_search_form.get_search_form("modal")
-  outstr += '</div></div></div></div>\n'
+  outstr += '</div>\n'
+  outstr +='<div class="modal-footer" id="closeSearchModal" dir="ltr" lang="en"><button type="button" class="btn-close pull-right" data-bs-dismiss="modal" aria-label="Close" onclick="clearSearchInput(\'modal\')"></button></div>'
+  outstr += '</div></div></div>\n'
   outstr += """
           <div class="row justify-content-center"><div class="col-auto text-center" dir="ltr" lang="en"><h1 id="top">Arabic-English Dictionary for the Use of Students</h1></div></div>
           <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">being a modified edition of the compilation of the same name</div></div>
