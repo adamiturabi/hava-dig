@@ -169,13 +169,14 @@ class Parser:
             ar_out_str = '<hr id="'+this_root+'"/>'
           else:
             ar_out_str = '<hr/>'
-          ar_out_str += '<div class="col" lang="en" dir="ltr"><p></p></div>'
+          ar_out_str += '<div class="col">'
+          #ar_out_str += '<a href="#top"><button type="button" class="btn btn-link btn-sm py-0 my-0" id="btn2"">&uarr;</button></a>'
+          ar_out_str += '<a href="#top">&uarr;</a>'
+          ar_out_str += '</div>'
           ar_out_str += '<div class="col-auto" lang="en" dir="ltr"><p class="text-center"><b>«'+this_root+'»</b></p></div>'
           #ar_out_str += '<div class="col" lang="en" dir="ltr"><p class="text-left><a href="index.html">To top</a></p></div>'
-          #ar_out_str += '<div class="col" lang="en" dir="ltr"><a href="#pagetitle">^To top</a></div>'
-          ar_out_str += '<div class="col" lang="en" dir="ltr">'
-          ar_out_str += '<a href="#pagetitle"><button type="button" class="btn btn-link btn-sm py-0 my-0" id="btn2"">&uarr;</button></a>'
-          ar_out_str += '</div>'
+          #ar_out_str += '<div class="col" lang="en" dir="ltr"><a href="#top">^To top</a></div>'
+          ar_out_str += '<div class="col" lang="en" dir="ltr"><p></p></div>'
         else:
           ar_out_str = '<div class="col-auto">'+ar_out_str+'</div>'
           en_line = fin_en.readline()
