@@ -53,7 +53,7 @@ def write_html_pre(fout):
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
         <div class="container">
-          <div class="row justify-content-center"><div class="col-auto text-center" dir="ltr" lang="en"><h1>Arabic-English Dictionary for the Use of Students</h1></div></div>
+          <div class="row justify-content-center"><div class="col-auto text-center" dir="ltr" lang="en"><h1 id="pagetitle">Arabic-English Dictionary for the Use of Students</h1></div></div>
           <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">being a modified edition of the compilation of the same name</div></div>
           <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en">by</div></div>
           <div class="row justify-content-center"><div class="col-auto" dir="ltr" lang="en"><h3>J.G. Hava</h3></div></div>

@@ -169,8 +169,15 @@ class Parser:
             ar_out_str = '<hr id="'+this_root+'"/>'
           else:
             ar_out_str = '<hr/>'
-          ar_out_str += '<p class="text-center"><b>«'+this_root+'»</b></p>'
+          ar_out_str += '<div class="col" lang="en" dir="ltr"><p></p></div>'
+          ar_out_str += '<div class="col-auto" lang="en" dir="ltr"><p class="text-center"><b>«'+this_root+'»</b></p></div>'
+          #ar_out_str += '<div class="col" lang="en" dir="ltr"><p class="text-left><a href="index.html">To top</a></p></div>'
+          #ar_out_str += '<div class="col" lang="en" dir="ltr"><a href="#pagetitle">^To top</a></div>'
+          ar_out_str += '<div class="col" lang="en" dir="ltr">'
+          ar_out_str += '<a href="#pagetitle"><button type="button" class="btn btn-link btn-sm py-0 my-0" id="btn2"">&uarr;</button></a>'
+          ar_out_str += '</div>'
         else:
+          ar_out_str = '<div class="col-auto">'+ar_out_str+'</div>'
           en_line = fin_en.readline()
           en_line = self.process_en_line(en_line)
         if not ar_line and not en_line:
@@ -178,13 +185,20 @@ class Parser:
         if not ar_line:
           ar_line = ''
         if not en_line:
-          en_line = ''
-        if en_line != '':
-          outstr = '<div class="row py-2 justify-content-around"><div class="col-auto">'+ar_out_str+'</div>'
-          outstr += '<div class="col" lang="en" dir="ltr">'+en_line+'</div>'
+          en_out_str = ''
+        else:
+          en_out_str = '<div class="col" lang="en" dir="ltr">'+en_line+'</div>'
+        if en_out_str != '':
+          outstr = '<div class="row py-2 justify-content-around">'+ar_out_str
+          #outstr = '<div class="row py-2 justify-content-around"><div class="col-auto">'+ar_out_str+'</div>'
+          #outstr += '<div class="col" lang="en" dir="ltr">'+en_line+'</div>'
+          outstr += en_out_str
           outstr += '</div>\n'
         else:
-          outstr = '<div class="row py-2"><div class="col">'+ar_out_str+'</div></div>\n'
+          outstr = '<div class="row py-2">'
+          #outstr += '<div class="col">'+ar_out_str+'</div>'
+          outstr += ar_out_str
+          outstr += '</div>\n'
         fout.write(outstr)
       #fout.write("</div></body></html>\n")
 

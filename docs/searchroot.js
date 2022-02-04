@@ -85,6 +85,7 @@ function searchRoot() {
 function clearSearchInput() {
   // clear input text field
   document.getElementById('search_input').value = "";
+  document.getElementById("outputsearched").innerHTML = ''
   // put focus back on input text field
   document.getElementById("search_input").focus();
 }
