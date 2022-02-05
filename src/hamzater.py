@@ -1,59 +1,14 @@
-A                 = chr(0x0627);
-b                 = chr(0x0628);
-p                 = chr(0x0629);
-t                 = chr(0x062A);
-v                 = chr(0x062B);
-j                 = chr(0x062C);
-H                 = chr(0x062D);
-x                 = chr(0x062E);
-d                 = chr(0x062F);
-dh                = chr(0x0630);
-r                 = chr(0x0631);
-z                 = chr(0x0632);
-s                 = chr(0x0633);
-sh                = chr(0x0634);
-S                 = chr(0x0635);
-D                 = chr(0x0636);
-T                 = chr(0x0637);
-Z                 = chr(0x0638);
-E                 = chr(0x0639);
-g                 = chr(0x063A);
-f                 = chr(0x0641);
-q                 = chr(0x0642);
-k                 = chr(0x0643);
-l                 = chr(0x0644);
-m                 = chr(0x0645);
-n                 = chr(0x0646);
-h                 = chr(0x0647);
-w                 = chr(0x0648);
-Y                 = chr(0x0649);
-y                 = chr(0x064A);
-tatw              = chr(0x0640);
-hamza             = chr(0x0621);
-hamza_above       = chr(0x0654);
-hamza_below       = chr(0x0655);
-F                 = chr(0x064b);
-N                 = chr(0x064c);
-K                 = chr(0x064d);
-a                 = chr(0x064e);
-u                 = chr(0x064f);
-i                 = chr(0x0650);
-shaddah           = chr(0x0651);
-o                 = chr(0x0652);
-maddah_above      = chr(0x0653);
-dagA              = chr(0x0670);
-Awasl             = chr(0x0671);
+from src import translit
 
-harakaat_and_sukoon = { a, u, i, shaddah, o, F, N, K }
-letters = {A, b, p, t, v, j, H, x, d, dh, r, z, s, sh, S, D, T, Z, E, g, f, q, k, l, m, n, h, w, Y, y , hamza, Awasl}
-
+harakaat_and_sukoon = { a, u, i, ss, o, F, N, K }
+letters = {A, b, p, t, v, j, H, x, d, dh, r, z, s, sh, S, D, T, Z, E, g, f, q, k, l, m, n, h, w, Y, y , hmz, Awasl}
 
 class ConsonantInfo:
   cons = ""
   doubled = False
   vowel_mark = ""
   vowel = ""
-  hamza = ""
+  hmz = ""
   post_cons_str = ""
   def __str__(self):
     return "cons="+self.cons+", doubled="+str(self.doubled)+", vowel_mark="+self.vowel_mark+", vowel="+self.vowel
@@ -75,9 +30,9 @@ def build_cons_list(instr):
       index += 1
       cons_list.append(cons_info)
       continue
-    if index < len(instr) and instr[index] == shaddah:
+    if index < len(instr) and instr[index] == ss:
       cons_info.doubled = True
-      cons_info.post_cons_str += shaddah
+      cons_info.post_cons_str += ss
       index += 1
     if index < len(instr) and instr[index] == a:
       cons_info.vowel_mark = a
@@ -88,9 +43,9 @@ def build_cons_list(instr):
         cons_info.vowel += A
         cons_info.post_cons_str += A
         index += 1
-      elif index < (len(instr)-1) and instr[index:(index+2)] == Y+dagA:
+      elif index < (len(instr)-1) and instr[index:(index+2)] == Y:
         cons_info.vowel += A
-        cons_info.post_cons_str += Y+dagA
+        cons_info.post_cons_str += Y:
         index+=2
       elif index < (len(instr)-1) and instr[index:(index+2)] == y+o:
         cons_info.vowel += y+o
@@ -141,30 +96,30 @@ def build_str(cons_list):
   retval = ""
   for x in cons_list:
     add_post_str = True
-    if x.hamza != "":
-      retval += x.hamza
-      if x.hamza == A+maddah_above:
+    if x.hmz != "":
+      retval += x.hmz
+      if x.hmz == A_md:
         add_post_str = False
     else:
       retval += x.cons
     if add_post_str:
       retval += x.post_cons_str
-  retval = retval.replace(A+hamza_above+a+A+hamza_above+o, A+maddah_above)
+  retval = retval.replace(A+hmz_ab+a+A+hmz_ab+o, A_md)
   return retval
 
 def hamzate(instr):
   cons_list = build_cons_list(instr)
   for index in range(0, len(cons_list)):
     x = cons_list[index]
-    if x.cons == hamza:
+    if x.cons == hmz:
       if index == 0:
         # beginning
         if x.vowel == a+A:
-          x.hamza = A+maddah_above
+          x.hmz = A_md
         elif x.vowel_mark == i:
-          x.hamza = A+hamza_below
+          x.hmz = A+hmz_bl
         else:
-          x.hamza = A+hamza_above
+          x.hmz = A+hmz_ab
       elif index == (len(cons_list)-1):
         # end
         prev_cons = cons_list[index-1]
@@ -172,14 +127,14 @@ def hamzate(instr):
           not prev_cons.vowel_mark == o and
           not (prev_cons.cons == w and prev_cons.doubled and prev_cons.vowel_mark == u)):
           if prev_cons.vowel_mark == i:
-            x.hamza = y+hamza_above
+            x.hmz = y+hmz_ab
           elif prev_cons.vowel_mark == u:
-            x.hamza = w+hamza_above
+            x.hmz = w+hmz_ab
           else:
             if x.vowel_mark == i:
-              x.hamza = A+hamza_below
+              x.hmz = A+hmz_bl
             else:
-              x.hamza = A+hamza_above
+              x.hmz = A+hmz_ab
       else:
         # middle
         prev_cons = cons_list[index-1]
@@ -189,67 +144,67 @@ def hamzate(instr):
             pass
           elif prev_cons.vowel in { u+w, a+w+o }:
             if x.vowel_mark == i:
-              x.hamza = y+hamza_above
+              x.hmz = y+hmz_ab
             else:
               if x.vowel == a+A and x.post_cons_str[-1] == A:
-                x.hamza = A+maddah_above
+                x.hmz = A_md
               else:
                 pass
               #pass
           else:
             if x.vowel_mark == i:
-              x.hamza = y+hamza_above
+              x.hmz = y+hmz_ab
             elif x.vowel_mark == u:
-              x.hamza = w+hamza_above
+              x.hmz = w+hmz_ab
             else:
               pass
         elif prev_cons.vowel_mark == o:
           if x.vowel_mark == i:
-            x.hamza = y+hamza_above
+            x.hmz = y+hmz_ab
           elif x.vowel_mark == u:
-            x.hamza = w+hamza_above
+            x.hmz = w+hmz_ab
           else:
             if x.vowel == a+A and x.post_cons_str[-1] == A:
               if x.doubled:
                 pass
               else:
-                x.hamza = A+maddah_above
+                x.hmz = A_md
             else:
-              x.hamza = A+hamza_above
+              x.hmz = A+hmz_ab
         elif x.vowel_mark == o:
           if prev_cons.vowel_mark == i:
-            x.hamza = y+hamza_above
+            x.hmz = y+hmz_ab
           elif prev_cons.vowel_mark == u:
-            x.hamza = w+hamza_above
+            x.hmz = w+hmz_ab
           else:
-            x.hamza = A+hamza_above
+            x.hmz = A+hmz_ab
         else:
           if x.vowel_mark == i or prev_cons.vowel_mark == i:
-            x.hamza = y+hamza_above
+            x.hmz = y+hmz_ab
           elif x.vowel_mark == u or prev_cons.vowel_mark == u:
-            x.hamza = w+hamza_above
+            x.hmz = w+hmz_ab
           else:
             if x.vowel == a+A and x.post_cons_str[-1] == A:
               if x.doubled:
                 pass
               else:
-                x.hamza = A+maddah_above
+                x.hmz = A_md
             else:
-              x.hamza = A+hamza_above
+              x.hmz = A+hmz_ab
 
   apply_tatweel = False
   if apply_tatweel:
     for index in range(1, len(cons_list)-1):
       x = cons_list[index]
       prev_cons = cons_list[index-1]
-      if (x.cons == hamza and x.hamza == "" and 
+      if (x.cons == hmz and x.hmz == "" and 
         A not in prev_cons.post_cons_str and
         d not in prev_cons.post_cons_str and
         dh not in prev_cons.post_cons_str and
         r not in prev_cons.post_cons_str and
         z not in prev_cons.post_cons_str and
         w not in prev_cons.post_cons_str):
-        x.hamza = tatw+hamza_above
+        x.hmz = tatw+hmz_ab
 
   outstr = build_str(cons_list)
   return outstr

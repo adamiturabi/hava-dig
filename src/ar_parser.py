@@ -118,11 +118,12 @@ class Parser:
         out_str += '<br><br>' + self.special_chars["indent"]
       elif word == '--':
         out_str += '—'
-      elif ord(word[0]) >= ord('1') and ord(word[0]) <= ord('9'):
+      #elif (ord(word[0]) >= ord('1') and ord(word[0]) <= ord('9')) or word[0] in translit_to_ar.translit_map
+      elif any(char.isdigit() for char in word):
         from src import num2word
         temp = translit_to_ar.translit_to_ar(num2word.num2word(word, self.curr_root))
-        from src import hamzater
-        out_str += hamzater.hamzate(temp)
+        #from src import hamzater
+        #out_str += hamzater.hamzate(temp)
       elif word[0] in translit_to_ar.translit_map:
         out_str += translit_to_ar.translit_to_ar(word)
       else:
