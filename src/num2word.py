@@ -1,8 +1,8 @@
-from src.translit import *
+from translit import *
 
 def add_prefix(prefix_str, basestr):
   sun_letters = { 't', 'v', 'd', '*', 'r', 'z', 's', '$', 'S', 'D', 'T', 'Z', 'l', 'n' }
-  def_art = (len(prefix_str) >= 2 and prefix_str[-2:] == 'Al') or (len(prefix_str) >= 2 and and prefix_str[-2:] == 'll') or (len(prefix_str) >= 3 and and prefix_str[-3:] == 'lil')
+  def_art = (len(prefix_str) >= 2 and prefix_str[-2:] == 'Al') or (len(prefix_str) >= 2 and prefix_str[-2:] == 'll') or (len(prefix_str) >= 3 and prefix_str[-3:] == 'lil')
   if def_art and basestr[0] in sunletters:
     return prefix_str + basestr[0] + ss + basestr[1:]
   else:
@@ -400,6 +400,7 @@ def get_base_str(basenum, root):
   basestr = basestr.replace('{', 'A')
   #printstr = 'input='+numstr_in+',root='+root_in+',out='+basestr
   #print(printstr)
+  return (basestr, diptote)
 
 
 def num2word(numstr_in, root_in):
@@ -420,7 +421,7 @@ def num2word(numstr_in, root_in):
   basenum_str = ''
   suffix_str = ''
   prefix_str = ''
-  num_started = false
+  num_started = False
   for x in numstr:
     if ord(x) >= ord('0') and ord(x) <= ord('9'):
       num_started = True
@@ -432,7 +433,7 @@ def num2word(numstr_in, root_in):
         prefix_str += x
   basenum = int(basenum_str)
 
-  (is_diptote, basestr) = get_basestr(basenum, root)
+  (basestr, is_diptote) = get_base_str(basenum, root)
 
   if suffix_str != '':
     if basestr[-1] == 'u':
@@ -442,7 +443,7 @@ def num2word(numstr_in, root_in):
     elif basestr[-2:] == 'FY':
       basestr = basestr[:-2] + 'aA'
 
-  from src import hamzater
+  import hamzater
   basestr = hamzater.hamzate(basestr, suffix_str)
   outstr = add_prefix(prefix_str, basestr)
   #if suffix_str == 't':
@@ -462,4 +463,9 @@ def num2word(numstr_in, root_in):
 
   #remove alef wasla
   return outstr
+
+def test():
+  print(num2word("bi403ayoni", "slm"))
+
+test()
 
