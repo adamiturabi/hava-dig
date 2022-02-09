@@ -199,19 +199,19 @@ def get_base_str(basenum, root):
   elif basenum == 101:
     if len(root) == 3:
       basestr = r1 + a + A + r2 + i + r3
-      if r1 == E and (r3 == w or r3 == y):
-        basestr = E + a + A + r2 + K
+      if r1 == hmz and (r3 == w or r3 == y):
+        basestr = hmz + a + A + r2 + K
       elif r3 == w or r3 == y:
         basestr = r1 + a + A + r2 + K
-      elif r1 == E and r2 == r3:
-        basestr = E + a + A + r2 + ss
+      elif r1 == hmz and r2 == r3:
+        basestr = hmz + a + A + r2 + ss
       elif r2 == w or r2 == y:
-        if r1 == E:
-          basestr = E + a + A + E + i + r3
+        if r1 == hmz:
+          basestr = hmz + a + A + hmz + i + r3
         else:
-          basestr = r1 + a + A + E + i + r3
-      elif r1 == E:
-        basestr = E + a + A + r2 + i + r3
+          basestr = r1 + a + A + hmz + i + r3
+      elif r1 == hmz:
+        basestr = hmz + a + A + r2 + i + r3
       elif r2 == r3:
         basestr = r1 + a + A + r2 + ss
     elif len(root) == 4:
@@ -226,7 +226,7 @@ def get_base_str(basenum, root):
     elif len(root) == 4:
       basestr = m + u + r1 + a + r2 + o + r3 + a + r4
   elif basenum == 103:
-    basestr = r1 + a + r2 + o + r3 + a + r4 + a + O
+    basestr = r1 + a + r2 + o + r3 + a + r4 + a + p
   elif basenum == 201:
     if len(root) == 3:
       basestr = m + u + r1 + a + r2 + ss + i + r3
@@ -247,7 +247,7 @@ def get_base_str(basenum, root):
     elif len(root) == 4:
       basestr = t + a + r1 + a + r2 + o + r3 + u + r4
   elif basenum == 204:
-    basestr = t + a + r1 + o + r2 + i + r3 + a + O
+    basestr = t + a + r1 + o + r2 + i + r3 + a + p
   elif basenum == 301:
     basestr = m + u + r1 + a + A + r2 + i + r3
     if r3 == w or r3 == y:
@@ -261,11 +261,11 @@ def get_base_str(basenum, root):
     elif r2 == r3:
       basestr = m + u + r1 + a + A + r2 + ss
   elif basenum == 303:
-    basestr = m + u + r1 + a + A + r2 + a + r3 + a + O
+    basestr = m + u + r1 + a + A + r2 + a + r3 + a + p
     if r2 == r3:
-      basestr = m + u + r1 + a + A + r2 + ss + a + O
+      basestr = m + u + r1 + a + A + r2 + ss + a + p
     elif r3 == w or r3 == y:
-      basestr = m + u + r1 + a + A + r2 + a + A + O
+      basestr = m + u + r1 + a + A + r2 + a + A + p
   elif basenum == 401:
     basestr = m + u + r1 + o + r2 + i + r3
     if r3 == w or r3 == y:
@@ -283,15 +283,15 @@ def get_base_str(basenum, root):
     elif r2 == w or r2 == y:
       basestr = m + u + r1 + a + A + r3
   elif basenum == 403:
-    basestr = E + i + r1 + o + r2 + a + A + r3
-    if r1 == E and r3 == w or r3 == y:
-      basestr = E + i + y + r2 + a + A + E
+    basestr = hmz + i + r1 + o + r2 + a + A + r3
+    if r1 == hmz and r3 == w or r3 == y:
+      basestr = hmz + i + y + r2 + a + A + hmz
     elif r3 == w or r3 == y:
-      basestr = E + i + r1 + o + r2 + a + A + E
-    elif r1 == E:
-      basestr = E + i + y + r2 + a + A + r3
+      basestr = hmz + i + r1 + o + r2 + a + A + hmz
+    elif r1 == hmz:
+      basestr = hmz + i + y + r2 + a + A + r3
     elif r2 == w or r2 == y:
-      basestr = E + i + r1 + a + A + r3 + O
+      basestr = hmz + i + r1 + a + A + r3 + p
   elif basenum == 501:
     basestr = 'muta' + r1 + a + r2 + ss + i + r3
     if r3 == w or r3 == y:
@@ -341,7 +341,7 @@ def get_base_str(basenum, root):
   elif basenum == 703:
     basestr = '{ino' + r1 + i + r2 + a + A + r3
     if r3 == w or r3 == y:
-      basestr = '{ino' + r1 + i + r2 + a + A + E
+      basestr = '{ino' + r1 + i + r2 + a + A + hmz
     elif r2 == w:
       basestr = '{ino' + r1 + i + y + a + A + r3
   elif basenum == 801:
@@ -363,7 +363,7 @@ def get_base_str(basenum, root):
   elif basenum == 803:
     basestr = '{i' + r1 + 'oti' + r2 + a + A + r3
     if r3 == w or r3 == y:
-      basestr = '{i' + r1 + 'oti' + r2 + A + E
+      basestr = '{i' + r1 + 'oti' + r2 + A + hmz
     elif r2 == w:
       basestr = '{i' + r1 + 'oti' + y + a + A + r3
   elif basenum == 1001:
@@ -385,9 +385,9 @@ def get_base_str(basenum, root):
   elif basenum == 1003:
     basestr = '{isoti' + r1 + o + r2 + a + A + r3
     if r3 == w or r3 == y:
-      basestr = '{isoti' + r1 + o + r2 + a + A + E
+      basestr = '{isoti' + r1 + o + r2 + a + A + hmz
     elif r2 == w or r2 == y:
-      basestr = '{isoti' + r1 + a + A + r3 + a + O
+      basestr = '{isoti' + r1 + a + A + r3 + a + p
 
   basestr = basestr.replace("aAo", "aA")
   basestr = basestr.replace("iyo", "iy")
@@ -447,15 +447,15 @@ def num2word(numstr_in, root_in):
   basestr = hamzater.hamzate(basestr, suffix_str)
   outstr = add_prefix(prefix_str, basestr)
   #if suffix_str == 't':
-  #  outstr = basestr + a + O
+  #  outstr = basestr + a + p
   #elif suffix_str == 'ya':
   #  outstr = basestr + a + Y
   #elif suffix_str == 'yi':
   #  outstr = basestr + i + y + ss
   #elif suffix_str == 'yit':
-  #  outstr = basestr + i + y + ss + a + O
+  #  outstr = basestr + i + y + ss + a + p
   #elif suffix_str == 'At':
-  #  if outstr[-1] == O:
+  #  if outstr[-1] == p:
   #    outstr = outstr[:-1]
   #  outstr = basestr + a + A + t
   #elif suffix_str == 'uwn':
