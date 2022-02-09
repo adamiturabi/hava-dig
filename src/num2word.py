@@ -432,7 +432,7 @@ def num2word(numstr_in, root_in):
       num_started = True
       basenum_str += x
     else:
-      if x == "!":
+      if x == '"':
         suf_started = True
       else:
         if not num_started:
