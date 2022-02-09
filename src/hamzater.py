@@ -138,8 +138,9 @@ def build_str(cons_list):
 def hamzate(instr, suf):
   cons_list = build_cons_list(instr, suf)
   cons_list_base = build_cons_list(instr, "")
-  if (instr == "buTo'a"):
-    print_cons_list(cons_list)
+  # For debugging:
+  #if (instr == "buTo'a"):
+  #  print_cons_list(cons_list)
   for index in range(0, len(cons_list)):
     x = cons_list[index]
     if x.cons == hmz:
@@ -255,6 +256,12 @@ if do_test:
 
 def test():
   pairs = [
+    (("'aAmana", ""), "|mana"),
+    (("'asolama", ""), "A^asolama"),
+    (("'uriydu", ""), "A^uriydu"),
+    (("'isolaAm", ""), "A/isolaAm"),
+    (("'iymaAn", ""), "A/iymaAn"),
+    (("'uwxi*a", ""), "A^uwxi*a"),
     (("hayo'ap", ""), "hayo'ap"),
     (("xaTiy'ap", ""), "xaTiy'ap"),
     (("bariy'", "uwn"), "bariy'uwn"),
