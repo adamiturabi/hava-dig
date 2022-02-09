@@ -19,9 +19,7 @@ def build_cons_list(basestr, suff):
   cons_list = []
   index = 0
   while index < len(instr):
-    if instr[index] not in letters:
-      print(index)
-      assert(False)
+    assert instr[index] in letters, "basestr="+str(basestr)+", index="+str(index)
     cons_info = ConsonantInfo()
     cons_info.cons = instr[index]
     if index >= len(basestr):
@@ -163,12 +161,13 @@ def normalize_hamza(instr):
   return instr
 
 def reduce_hamza_comb_chars(instr):
-  instr = instr.replace(A+hmz_ab, A_hmz_ab)
-  instr = instr.replace(A+hmz_bl, A_hmz_bl)
-  instr = instr.replace(y+hmz_ab, y_hmz)
-  instr = instr.replace(y+hmz_bl, y_hmz)
-  instr = instr.replace(w+hmz_ab, w_hmz)
-  instr = instr.replace(w+hmz_bl, w_hmz)
+  #instr = instr.replace(A+hmz_ab, A_hmz_ab)
+  #instr = instr.replace(A+hmz_bl, A_hmz_bl)
+  #instr = instr.replace(y+hmz_ab, y_hmz)
+  #instr = instr.replace(y+hmz_bl, y_hmz)
+  #instr = instr.replace(w+hmz_ab, w_hmz)
+  #instr = instr.replace(w+hmz_bl, w_hmz)
+  instr = instr.replace(A_md, A+md_ab)
   return instr
 
 def det_hamza_orth(cons_list, cons_list_base):
@@ -391,6 +390,7 @@ def test():
     (("saq~aA'F", "", ""), "saq~aA'F"),
     (("maloja'F", "", ""), "maloja'FA"),
     (("$ayo'F", "", ""), "$ayo'FA"),
+    (("bado'ap", "", ""), "badoA^ap"),
     #(("", ""), ""),
   ]
 

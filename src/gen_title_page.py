@@ -1,6 +1,6 @@
 def gen_title_page(num_letters): #, roots_divs):
-  with open('docs/index.html', 'w') as fout:
-    from src import write_html_pre
+  with open('../docs/index.html', 'w') as fout:
+    import write_html_pre
     write_html_pre.write_html_pre(fout)
     out_str = """
     <!--
@@ -13,7 +13,7 @@ def gen_title_page(num_letters): #, roots_divs):
           <div class="row pt-4 justify-content-end"><div class="col-auto" dir="ltr" lang="en">
 """
     for i in range(1, num_letters+1):
-      from src import index2letter
+      import index2letter
       out_str +='<p><a href="'+str(i)+'.html">Browse roots beginning with ' + index2letter.index2letter(i) + '</a></p>\n'
 
     out_str += '</div></div>\n'

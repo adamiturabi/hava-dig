@@ -1,3 +1,7 @@
+import hamzater
+import conj
+import translit_to_ar
+
 class Parser:
   special_chars = {
     "indent": '&ldca;&nbsp;&nbsp;&nbsp;',
@@ -53,7 +57,6 @@ class Parser:
     #print(words)
     out_str = ''
     for word in words:
-      from src import translit_to_ar
       if word[0] == '@':
         self.curr_root = word[1:]
         out_str = 'qwerty'+translit_to_ar.translit_to_ar(self.curr_root)
@@ -68,15 +71,13 @@ class Parser:
           out_str += word
         do_conj = word[-1] != 'x' and not (word == 'I' and len(self.curr_root) <= 3)
         if do_conj:
-          from src import conj
           form = word
           enverb = conj.conj(self.curr_root, form, 'a', 'a')
-          arverb = translit_to_ar.translit_to_ar(enverb)
-          from src import hamzater
-          out_str += ' ' + hamzater.hamzate(arverb)
+          hamzated = hamzater.hamzate(enverb)
+          arverb = translit_to_ar.translit_to_ar(hamzated)
+          out_str += ' ' + arverb
       elif len(word) == 1 and word in {'A', '!', 'O', 'U' }:
         #out_str += get_pret(word, self.curr_root)
-        from src import conj
         form = 'I'
         vowel = word
         if vowel == 'O':
@@ -84,19 +85,17 @@ class Parser:
         elif vowel == '!':
           vowel = 'I'
         enverb = conj.conj(self.curr_root, form, vowel.lower(), "pret")
-        arverb = translit_to_ar.translit_to_ar(enverb)
-        from src import hamzater
-        out_str += hamzater.hamzate(arverb)
+        hamzated = hamzater.hamzate(enverb)
+        arverb = translit_to_ar.translit_to_ar(hamzated)
+        out_str += arverb
       elif len(word) == 1 and word in {'a', 'i', 'o', 'u' }:
-        from src import conj
         form = 'I'
         vowel = word
         if vowel == 'o':
           vowel = 'u'
         enverb = conj.conj(self.curr_root, form, vowel, "ao")
+        #hamzated = hamzater.hamzate(enverb)
         arverb = translit_to_ar.translit_to_ar(enverb)
-        #import hamzater
-        #out_str += hamzater.hamzate(arverb)
         out_str += arverb
       elif len(word) == 1 and word in delims:
         if word == ',':
@@ -120,10 +119,10 @@ class Parser:
         out_str += '—'
       #elif (ord(word[0]) >= ord('1') and ord(word[0]) <= ord('9')) or word[0] in translit_to_ar.translit_map
       elif any(char.isdigit() for char in word):
-        from src import num2word
-        temp = translit_to_ar.translit_to_ar(num2word.num2word(word, self.curr_root))
-        #from src import hamzater
-        #out_str += hamzater.hamzate(temp)
+        import num2word
+        bk_word = num2word.num2word(word, self.curr_root)
+        ar_word = translit_to_ar.translit_to_ar(bk_word)
+        out_str += ar_word
       elif word[0] in translit_to_ar.translit_map:
         out_str += translit_to_ar.translit_to_ar(word)
       else:
@@ -148,12 +147,12 @@ class Parser:
     lines = ''
     
     with open(htmlout_filename, 'w') as fout, open(ar_text_filename) as fin_ar, open(en_text_filename) as fin_en:
-      from src import write_html_pre
+      import write_html_pre
       write_html_pre.write_html_pre(fout)
       outstr = '<div class="row py-2 justify-content-center"><div class="col-auto" dir="ltr" lang="en">'
       outstr += '<a href="index.html">Index page</a>\n'
       outstr += '</div></div>\n'
-      from src import index2letter
+      import index2letter
       outstr += '<div class="row py-2 justify-content-center"><div class="col-auto" dir="ltr" lang="en">'
       outstr +='<h5>Roots beginning with ' + index2letter.index2letter(letter_index) + ':</h5>\n'
       outstr += '</div></div>\n'

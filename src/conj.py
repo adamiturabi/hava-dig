@@ -1,4 +1,4 @@
-from src.translit import *
+from translit import *
 
 def conj_tri_form1(root, past_vowel, pres_vowel):
   r1 = root[0]
@@ -45,7 +45,7 @@ def conj_tri_form1(root, past_vowel, pres_vowel):
       pres_verb = "ya" + r1 + "o" + r2 + "iy"
   elif r3 == "w":
     if past_vowel == "a":
-      if r2 == E:
+      if r2 == hmz:
         past_verb = r1 + "a" + r2 + "a" + "Y"
       else:
         past_verb = r1 + "a" + r2 + "a" + "A"
@@ -101,16 +101,16 @@ def conj_tri_form4(root):
   r1 = root[0]
   r2 = root[1]
   r3 = root[2]
-  past_verb = E + a + r1 + o + r2 + a + r3 + a
+  past_verb = hmz + a + r1 + o + r2 + a + r3 + a
   pres_verb = "yu" + r1 + o + r2 + i + r3 + u
   if r3 == y or r3 == w:
-    past_verb = E + a + r1 + o + r2 + a + Y
+    past_verb = hmz + a + r1 + o + r2 + a + Y
     pres_verb = "yu" + r1 + o + r2 + i + y
   elif r2 == r3:
-    if r1 == E:
-      past_verb = E + a + A + r2 + ss + a
+    if r1 == hmz:
+      past_verb = hmz + a + A + r2 + ss + a
     else:
-      past_verb = E + a + r1 + a + r2 + ss + a
+      past_verb = hmz + a + r1 + a + r2 + ss + a
     pres_verb = "yu" + r1 + i + r2 + ss + u
   return (past_verb, pres_verb)
 

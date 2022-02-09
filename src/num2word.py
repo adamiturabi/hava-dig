@@ -66,16 +66,16 @@ def get_base_str(basenum, root):
   elif basenum == 13:
     basestr = "1u2u3~"
   elif basenum == 14:
-    basestr = "'afo2a3"
+    basestr = "'a1o2a3"
     diptote = True
     if r2 == r3:
       basestr = "'a1a2~"
     elif r3 == w or r4 == y:
       basestr = "'a1o2aY"
   elif basenum == 15:
-    basestr = "'afo2i3"
+    basestr = "'a1o2i3"
   elif basenum == 16:
-    basestr = "'afo2u3"
+    basestr = "'a1o2u3"
   elif basenum == 17:
     basestr = "ma1o2a3"
   elif basenum == 18:
@@ -105,7 +105,7 @@ def get_base_str(basenum, root):
   elif basenum == 30:
     basestr = "1i2~iy3"
   elif basenum == 31:
-    basestr = "1a2~awo3"
+    basestr = "1a2~uwo3"
   elif basenum == 32:
     basestr = "1u2~awo3"
   elif basenum == 33:
@@ -118,7 +118,7 @@ def get_base_str(basenum, root):
   elif basenum == 36:
     basestr = "1a2a3aAn"
   elif basenum == 37:
-    basestr = 'a1aA2i3'
+    basestr = "'a1aA2i3"
     diptote = True
   elif basenum == 38:
     basestr = "'a1o2aA3"
@@ -196,10 +196,12 @@ def get_base_str(basenum, root):
     basestr = "'a1aA2iy3"
     diptote = True
   elif basenum == 70:
-    basestr = "1a2aA3iy4"
+    basestr = "1a2aA2iy3"
     diptote = True
   elif basenum == 101:
-    if len(root) == 3:
+    if len(root) == 4:
+      basestr = m + u + r1 + a + r2 + o + r3 + i + r4
+    else:
       basestr = r1 + a + A + r2 + i + r3
       if r1 == hmz and (r3 == w or r3 == y):
         basestr = hmz + a + A + r2 + K
@@ -216,38 +218,36 @@ def get_base_str(basenum, root):
         basestr = hmz + a + A + r2 + i + r3
       elif r2 == r3:
         basestr = r1 + a + A + r2 + ss
-    elif len(root) == 4:
-      basestr = m + u + r1 + a + r2 + o + r3 + i + r4
   elif basenum == 102:
-    if len(root) == 3:
+    if len(root) == 4:
+      basestr = m + u + r1 + a + r2 + o + r3 + a + r4
+    else:
       basestr = m + a + r1 + o + r2 + u + w + r3
       if r3 == w:
         basestr = m + a + r1 + o + r2 + u + w + ss
       elif r3 == w:
         basestr = m + a + r1 + o + r2 + i + y + ss
-    elif len(root) == 4:
-      basestr = m + u + r1 + a + r2 + o + r3 + a + r4
   elif basenum == 103:
     basestr = r1 + a + r2 + o + r3 + a + r4 + a + p
   elif basenum == 201:
-    if len(root) == 3:
+    if len(root) == 4:
+      basestr = m + u + t + a + r1 + a + r2 + o + r3 + i + r4
+    else:
       basestr = m + u + r1 + a + r2 + ss + i + r3
       if r3 == w or r3 == y:
         basestr = m + u + r1 + a + r2 + ss + K
-    elif len(root) == 4:
-      basestr = m + u + t + a + r1 + a + r2 + o + r3 + i + r4
   elif basenum == 202:
-    if len(root) == 3:
+    if len(root) == 4:
+      basestr = m + u + t + a + r1 + a + r2 + o + r3 + a + r4
+    else:
       basestr = m + u + r1 + a + r2 + ss + a + r3
       if r3 == w or r3 == y:
         basestr = m + u + r1 + a + r2 + ss + F + Y
-    elif len(root) == 4:
-      basestr = m + u + t + a + r1 + a + r2 + o + r3 + a + r4
   elif basenum == 203:
-    if len(root) == 3:
-      basestr = t + a + r1 + o + r2 + i + y + r3
-    elif len(root) == 4:
+    if len(root) == 4:
       basestr = t + a + r1 + a + r2 + o + r3 + u + r4
+    else:
+      basestr = t + a + r1 + o + r2 + i + y + r3
   elif basenum == 204:
     basestr = t + a + r1 + o + r2 + i + r3 + a + p
   elif basenum == 301:
@@ -401,7 +401,8 @@ def get_base_str(basenum, root):
   basestr = basestr.replace("5", r5)
   basestr = basestr.replace('{', 'A')
   #printstr = 'input='+numstr_in+',root='+root_in+',out='+basestr
-  #print(printstr)
+  if diptote:
+    basestr += "u"
   return (basestr, diptote)
 
 
@@ -421,23 +422,32 @@ def num2word(numstr_in, root_in):
         root = new_root
 
   basenum_str = ''
+  post_str = ''
   suffix_str = ''
   prefix_str = ''
   num_started = False
+  suf_started = False
   for x in numstr:
     if ord(x) >= ord('0') and ord(x) <= ord('9'):
       num_started = True
       basenum_str += x
     else:
-      if num_started:
-        suffix_str += x
+      if x == "!":
+        suf_started = True
       else:
-        prefix_str += x
+        if not num_started:
+          prefix_str += x
+        else:
+          if suf_started:
+            suffix_str += x
+          else:
+            post_str += x
+
   basenum = int(basenum_str)
 
   (basestr, is_diptote) = get_base_str(basenum, root)
 
-  if suffix_str != '':
+  if suffix_str != '' or post_str != '':
     if basestr[-1] == 'u':
       basestr = basestr[:-1]
     elif basestr[-1] == 'K':
@@ -446,8 +456,11 @@ def num2word(numstr_in, root_in):
       basestr = basestr[:-2] + 'aA'
 
   import hamzater
-  basestr = hamzater.hamzate(basestr, suffix_str)
-  outstr = add_prefix(prefix_str, basestr)
+  hamzated = hamzater.hamzate(basestr+post_str, suffix_str)
+  outstr = add_prefix(prefix_str, hamzated)
+  #if root == "bd'":
+  #  print(str(basenum)+" "+numstr+" "+" "+basestr+" "+hamzated)
+
   #if suffix_str == 't':
   #  outstr = basestr + a + p
   #elif suffix_str == 'ya':
@@ -474,5 +487,5 @@ def test():
       got = num2word(line[0], line[1])
       assert got == line[2], "in="+line[0]+"."+line[1]+", exp="+line[2]+", got="+got
 
-test()
+#test()
 
