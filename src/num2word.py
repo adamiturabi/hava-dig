@@ -2,8 +2,10 @@ from translit import *
 
 def add_prefix(prefix_str, basestr):
   sun_letters = { 't', 'v', 'd', '*', 'r', 'z', 's', '$', 'S', 'D', 'T', 'Z', 'l', 'n' }
-  def_art = (len(prefix_str) >= 2 and prefix_str[-2:] == 'Al') or (len(prefix_str) >= 2 and prefix_str[-2:] == 'll') or (len(prefix_str) >= 3 and prefix_str[-3:] == 'lil')
-  if def_art and basestr[0] in sunletters:
+  def_art = (len(prefix_str) >= 2 and prefix_str[-1:] == 'l')  or (len(prefix_str) >= 3 and prefix_str[-2:] == 'lo') # or (len(prefix_str) >= 3 and prefix_str[-3:] == 'lil')
+  if def_art and basestr[0] in sun_letters:
+    if prefix_str[-1] == 'o':
+      prefix_str = prefix_str[:-1]
     return prefix_str + basestr[0] + ss + basestr[1:]
   else:
     return prefix_str + basestr
@@ -465,7 +467,14 @@ def num2word(numstr_in, root_in):
   return outstr
 
 def test():
-  print(num2word("bi403ayoni", "slm"))
+  print(num2word("lil403ayoni", "slm"))
+  print(num2word("lil22i", "slm"))
+  print(num2word("lilo403ayoni", "slm"))
+  print(num2word("lilo22i", "slm"))
+  print(num2word("Al1i", "$ms"))
+  print(num2word("Alo1i", "$ms"))
+  print(num2word("Alo4u", "qmr"))
+  print(num2word("Al4u", "qmr"))
 
 test()
 
