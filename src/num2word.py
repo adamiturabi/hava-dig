@@ -467,14 +467,12 @@ def num2word(numstr_in, root_in):
   return outstr
 
 def test():
-  print(num2word("lil403ayoni", "slm"))
-  print(num2word("lil22i", "slm"))
-  print(num2word("lilo403ayoni", "slm"))
-  print(num2word("lilo22i", "slm"))
-  print(num2word("Al1i", "$ms"))
-  print(num2word("Alo1i", "$ms"))
-  print(num2word("Alo4u", "qmr"))
-  print(num2word("Al4u", "qmr"))
+  import csv
+  with open("num2word_testdata_in.txt") as fin:
+    csv_reader = csv.reader(fin, skipinitialspace=True, delimiter=',')
+    for line in csv_reader:
+      got = num2word(line[0], line[1])
+      assert got == line[2], "in="+line[0]+"."+line[1]+", exp="+line[2]+", got="+got
 
 test()
 
