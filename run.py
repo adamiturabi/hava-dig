@@ -10,20 +10,12 @@ for i in range(1, num_letters+1):
 from src import get_roots_divs
 roots_divs = get_roots_divs.get_roots_divs(roots_set)
 
-import shutil
-shutil.copyfile('src/searchroot.js', 'docs/searchroot.js')
-
-with open('docs/searchroot.js', 'a') as fout:
-  fout.write("const root_index_set = new Set();\n")
-  for root in sorted(roots_set):
-    fout.write('root_index_set.add("'+root+'");\n')
-
 from src import gen_title_page
-gen_title_page.gen_title_page(num_letters) #, roots_divs)
+gen_title_page.gen_title_page(num_letters, roots_divs)
 
-#for i in range(1, num_letters+1):
-#  with open('docs/'+str(i)+'.html', 'a') as fout:
-#    fout.write(roots_divs)
-#    fout.write('</div></body></html>\n')
+for i in range(1, num_letters+1):
+  with open('docs/'+str(i)+'.html', 'a') as fout:
+    fout.write(roots_divs)
+    fout.write('</div></body></html>\n')
 
 
