@@ -113,6 +113,18 @@ def build_cons_list(basestr, suff):
       cons_info.post_cons_str += instr[index]
       index += 1
     cons_list.append(cons_info)
+
+  for index in range(1, len(cons_list)):
+    this_cons = cons_list[index]
+    prev_cons = cons_list[index-1]
+    if this_cons.cons == hmz and this_cons.vowel_mark == F and A not in prev_cons.vowel:
+      assert(A not in this_cons.vowel)
+      this_cons.vowel_mark = a
+      this_cons.vowel = this_cons.vowel.replace(F, a)
+      this_cons.vowel += A
+      this_cons.post_cons_str += A
+      cons_list[index] = this_cons
+
   return cons_list
 
 def print_cons_list(cons_list):
@@ -145,6 +157,9 @@ def normalize_hamza(instr):
   instr = instr.replace(w+hmz_bl, hmz)
   instr = instr.replace(y_hmz, hmz)
   instr = instr.replace(w_hmz, hmz)
+  # remove extra alef after hmz+F for now
+  instr = instr.replace(hmz+F+A, hmz+F)
+  instr = instr.replace(hmz+ss+F+A, hmz+ss+F)
   return instr
 
 def reduce_hamza_comb_chars(instr):
@@ -157,9 +172,6 @@ def reduce_hamza_comb_chars(instr):
   return instr
 
 def det_hamza_orth(cons_list, cons_list_base):
-  # For debugging:
-  #if (base_str == "buTo'a"):
-  #  print_cons_list(cons_list)
   for index in range(0, len(cons_list)):
     this_cons = cons_list[index]
     if this_cons.cons == hmz:
@@ -182,10 +194,13 @@ def det_hamza_orth(cons_list, cons_list_base):
           elif prev_cons.vowel_mark == u:
             this_cons.hmz = w+hmz_ab
           else:
-            if this_cons.vowel_mark == i:
-              this_cons.hmz = A+hmz_bl
+            if this_cons.vowel == a+A:
+              pass
             else:
-              this_cons.hmz = A+hmz_ab
+              if this_cons.vowel_mark == i:
+                this_cons.hmz = A+hmz_bl
+              else:
+                this_cons.hmz = A+hmz_ab
       else:
         # middle
         prev_cons = cons_list[index-1]
@@ -275,16 +290,15 @@ def str_replace_at_index(instr, index, repl_with):
 def hamzate(base_str, suff_str="", pref_str=""):
   base_str = normalize_hamza(base_str)
   suff_str = normalize_hamza(suff_str)
-  #(base_str, is_base_F) = process_tanwin_fath(base_str)
-  #(suff_str, is_suff_F) = process_tanwin_fath(suff_str)
   cons_list = build_cons_list(base_str, suff_str)
   cons_list_base = build_cons_list(base_str, "")
   det_hamza_orth(cons_list, cons_list_base)
   outstr = build_str(cons_list)
+  # For debugging:
+  #if (base_str == "duEaA'F"):
+  #  print_cons_list(cons_list)
+  #  print("outstr="+outstr)
   outstr = reduce_hamza_comb_chars(outstr)
-  #if is_base_F or is_suff_F:
-  #  index_last_a = outstr.rfind(a)
-  #  outstr = str_replace_at_index(outstr, index_last_a, F)
   return pref_str + outstr
 
 def test():
@@ -369,6 +383,14 @@ def test():
     (("baTu'a", "", ""), "baTuw^a"),
     (("yahoda'u", "", ""), "yahodaA^u"),
     (("mubotada'i", "", ""), "mubotadaA/i"),
+    (("mubotada'F", "", ""), "mubotada'FA"),
+    (("mubotada'FA", "", ""), "mubotada'FA"),
+    (("mubotadi'F", "", ""), "mubotadiy^FA"),
+    (("duEaA'F", "", ""), "duEaA'F"),
+    (("duEaA'FA", "", ""), "duEaA'F"),
+    (("saq~aA'F", "", ""), "saq~aA'F"),
+    (("maloja'F", "", ""), "maloja'FA"),
+    (("$ayo'F", "", ""), "$ayo'FA"),
     #(("", ""), ""),
   ]
 
