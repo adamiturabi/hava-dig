@@ -161,13 +161,13 @@ def normalize_hamza(instr):
   return instr
 
 def reduce_hamza_comb_chars(instr):
-  #instr = instr.replace(A+hmz_ab, A_hmz_ab)
-  #instr = instr.replace(A+hmz_bl, A_hmz_bl)
-  #instr = instr.replace(y+hmz_ab, y_hmz)
-  #instr = instr.replace(y+hmz_bl, y_hmz)
-  #instr = instr.replace(w+hmz_ab, w_hmz)
-  #instr = instr.replace(w+hmz_bl, w_hmz)
-  instr = instr.replace(A_md, A+md_ab)
+  instr = instr.replace(A+hmz_ab, A_hmz_ab)
+  instr = instr.replace(A+hmz_bl, A_hmz_bl)
+  instr = instr.replace(y+hmz_ab, y_hmz)
+  instr = instr.replace(y+hmz_bl, y_hmz)
+  instr = instr.replace(w+hmz_ab, w_hmz)
+  instr = instr.replace(w+hmz_bl, w_hmz)
+  #instr = instr.replace(A_md, A+md_ab)
   return instr
 
 def det_hamza_orth(cons_list, cons_list_base):

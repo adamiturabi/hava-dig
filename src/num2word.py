@@ -401,8 +401,8 @@ def get_base_str(basenum, root):
   basestr = basestr.replace("5", r5)
   basestr = basestr.replace('{', 'A')
   #printstr = 'input='+numstr_in+',root='+root_in+',out='+basestr
-  if diptote:
-    basestr += "u"
+  #if diptote:
+  #  basestr += "u"
   return (basestr, diptote)
 
 
@@ -487,5 +487,5 @@ def test():
       got = num2word(line[0], line[1])
       assert got == line[2], "in="+line[0]+"."+line[1]+", exp="+line[2]+", got="+got
 
-#test()
+test()
 
