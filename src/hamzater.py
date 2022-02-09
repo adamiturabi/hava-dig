@@ -135,7 +135,7 @@ def build_str(cons_list):
   retval = retval.replace(A+hmz_ab+a+A+hmz_ab+o, A_md)
   return retval
 
-def sanitize(instr):
+def normalize_hamza(instr):
   instr = instr.replace(A_md, hmz+a+A)
   instr = instr.replace(A+hmz_ab, hmz)
   instr = instr.replace(A+hmz_bl, hmz)
@@ -147,9 +147,18 @@ def sanitize(instr):
   instr = instr.replace(w_hmz, hmz)
   return instr
 
+def reduce_hamza_comb_chars(instr):
+  instr = instr.replace(A+hmz_ab, A_hmz_ab)
+  instr = instr.replace(A+hmz_bl, A_hmz_bl)
+  instr = instr.replace(y+hmz_ab, y_hmz)
+  instr = instr.replace(y+hmz_bl, y_hmz)
+  instr = instr.replace(w+hmz_ab, w_hmz)
+  instr = instr.replace(w+hmz_bl, w_hmz)
+  return instr
+
 def hamzate(base_str, suff_str="", pref_str=""):
-  base_str = sanitize(base_str)
-  suff_str = sanitize(suff_str)
+  base_str = normalize_hamza(base_str)
+  suff_str = normalize_hamza(suff_str)
   cons_list = build_cons_list(base_str, suff_str)
   cons_list_base = build_cons_list(base_str, "")
   # For debugging:
@@ -256,8 +265,7 @@ def hamzate(base_str, suff_str="", pref_str=""):
         x.hmz = tatw+hmz_ab
 
   outstr = build_str(cons_list)
-  return pref_str + outstr
-
+  return pref_str + reduce_hamza_comb_chars(outstr)
 def test():
   pairs = [
     (("'aAmana", "", ""), "|mana"),
@@ -347,7 +355,7 @@ def test():
     base_str = pair[0][0]
     suff_str = pair[0][1]
     pref_str = pair[0][2]
-    exp_str = pair[1]
+    exp_str = reduce_hamza_comb_chars(pair[1])
     out_str = hamzate(base_str, suff_str, pref_str)
     assert out_str == exp_str, "in=("+base_str+","+suff_str+"), exp="+exp_str+", got="+out_str
 
