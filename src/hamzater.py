@@ -135,7 +135,21 @@ def build_str(cons_list):
   retval = retval.replace(A+hmz_ab+a+A+hmz_ab+o, A_md)
   return retval
 
+def sanitize(instr):
+  instr = instr.replace(A_md, hmz+a+A)
+  instr = instr.replace(A+hmz_ab, hmz)
+  instr = instr.replace(A+hmz_bl, hmz)
+  instr = instr.replace(y+hmz_ab, hmz)
+  instr = instr.replace(y+hmz_bl, hmz)
+  instr = instr.replace(w+hmz_ab, hmz)
+  instr = instr.replace(w+hmz_bl, hmz)
+  instr = instr.replace(y_hmz, hmz)
+  instr = instr.replace(w_hmz, hmz)
+  return instr
+
 def hamzate(base_str, suff_str="", pref_str=""):
+  base_str = sanitize(base_str)
+  suff_str = sanitize(suff_str)
   cons_list = build_cons_list(base_str, suff_str)
   cons_list_base = build_cons_list(base_str, "")
   # For debugging:
