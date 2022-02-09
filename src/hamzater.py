@@ -117,21 +117,21 @@ def build_cons_list(basestr, suff):
 
 def print_cons_list(cons_list):
   print("------------")
-  for x in cons_list:
-    print(x)
+  for this_cons in cons_list:
+    print(this_cons)
 
 def build_str(cons_list):
   retval = ""
-  for x in cons_list:
+  for this_cons in cons_list:
     add_post_str = True
-    if x.hmz != "":
-      retval += x.hmz
-      if x.hmz == A_md:
+    if this_cons.hmz != "":
+      retval += this_cons.hmz
+      if this_cons.hmz == A_md:
         add_post_str = False
     else:
-      retval += x.cons
+      retval += this_cons.cons
     if add_post_str:
-      retval += x.post_cons_str
+      retval += this_cons.post_cons_str
   retval = retval.replace(A+hmz_ab+a+A+hmz_ab+o, A_md)
   return retval
 
@@ -156,25 +156,21 @@ def reduce_hamza_comb_chars(instr):
   instr = instr.replace(w+hmz_bl, w_hmz)
   return instr
 
-def hamzate(base_str, suff_str="", pref_str=""):
-  base_str = normalize_hamza(base_str)
-  suff_str = normalize_hamza(suff_str)
-  cons_list = build_cons_list(base_str, suff_str)
-  cons_list_base = build_cons_list(base_str, "")
+def det_hamza_orth(cons_list, cons_list_base):
   # For debugging:
   #if (base_str == "buTo'a"):
   #  print_cons_list(cons_list)
   for index in range(0, len(cons_list)):
-    x = cons_list[index]
-    if x.cons == hmz:
+    this_cons = cons_list[index]
+    if this_cons.cons == hmz:
       if index == 0:
         # beginning
-        if x.vowel == a+A:
-          x.hmz = A_md
-        elif x.vowel_mark == i:
-          x.hmz = A+hmz_bl
+        if this_cons.vowel == a+A:
+          this_cons.hmz = A_md
+        elif this_cons.vowel_mark == i:
+          this_cons.hmz = A+hmz_bl
         else:
-          x.hmz = A+hmz_ab
+          this_cons.hmz = A+hmz_ab
       elif index == (len(cons_list)-1):
         # end
         prev_cons = cons_list[index-1]
@@ -182,14 +178,14 @@ def hamzate(base_str, suff_str="", pref_str=""):
           not prev_cons.vowel_mark == o and
           not (prev_cons.cons == w and prev_cons.doubled and prev_cons.vowel_mark == u)):
           if prev_cons.vowel_mark == i:
-            x.hmz = y+hmz_ab
+            this_cons.hmz = y+hmz_ab
           elif prev_cons.vowel_mark == u:
-            x.hmz = w+hmz_ab
+            this_cons.hmz = w+hmz_ab
           else:
-            if x.vowel_mark == i:
-              x.hmz = A+hmz_bl
+            if this_cons.vowel_mark == i:
+              this_cons.hmz = A+hmz_bl
             else:
-              x.hmz = A+hmz_ab
+              this_cons.hmz = A+hmz_ab
       else:
         # middle
         prev_cons = cons_list[index-1]
@@ -198,74 +194,99 @@ def hamzate(base_str, suff_str="", pref_str=""):
           if prev_cons.vowel in { i+y, a+y+o }:
             pass
           elif prev_cons.vowel in { u+w, a+w+o }:
-            if x.vowel_mark == i:
-              x.hmz = y+hmz_ab
+            if this_cons.vowel_mark == i:
+              this_cons.hmz = y+hmz_ab
             else:
-              if x.vowel == a+A and x.post_cons_str[-1] == A and not x.doubled and not x.suff:
-                x.hmz = A_md
+              if this_cons.vowel == a+A and this_cons.post_cons_str[-1] == A and not this_cons.doubled and not this_cons.suff:
+                this_cons.hmz = A_md
               else:
                 pass
               #pass
           else:
-            if x.vowel_mark == i:
-              x.hmz = y+hmz_ab
-            elif x.vowel_mark == u:
-              x.hmz = w+hmz_ab
+            if this_cons.vowel_mark == i:
+              this_cons.hmz = y+hmz_ab
+            elif this_cons.vowel_mark == u:
+              this_cons.hmz = w+hmz_ab
             else:
               pass
         elif prev_cons.vowel_mark == o:
-          if x.suff or index == (len(cons_list_base)-1):
+          if this_cons.suff or index == (len(cons_list_base)-1):
             pass
           else:
-            if x.vowel_mark == i:
-              x.hmz = y+hmz_ab
-            elif x.vowel_mark == u:
-              x.hmz = w+hmz_ab
+            if this_cons.vowel_mark == i:
+              this_cons.hmz = y+hmz_ab
+            elif this_cons.vowel_mark == u:
+              this_cons.hmz = w+hmz_ab
             else:
-              if x.vowel == a+A and x.post_cons_str[-1] == A:
-                if x.doubled:
+              if this_cons.vowel == a+A and this_cons.post_cons_str[-1] == A:
+                if this_cons.doubled:
                   pass
                 else:
-                  x.hmz = A_md
+                  this_cons.hmz = A_md
               else:
-                x.hmz = A+hmz_ab
-        elif x.vowel_mark == o:
+                this_cons.hmz = A+hmz_ab
+        elif this_cons.vowel_mark == o:
           if prev_cons.vowel_mark == i:
-            x.hmz = y+hmz_ab
+            this_cons.hmz = y+hmz_ab
           elif prev_cons.vowel_mark == u:
-            x.hmz = w+hmz_ab
+            this_cons.hmz = w+hmz_ab
           else:
-            x.hmz = A+hmz_ab
+            this_cons.hmz = A+hmz_ab
         else:
-          if x.vowel_mark == i or prev_cons.vowel_mark == i:
-            x.hmz = y+hmz_ab
-          elif x.vowel_mark == u or prev_cons.vowel_mark == u:
-            x.hmz = w+hmz_ab
+          if this_cons.vowel_mark == i or prev_cons.vowel_mark == i:
+            this_cons.hmz = y+hmz_ab
+          elif this_cons.vowel_mark == u or prev_cons.vowel_mark == u:
+            this_cons.hmz = w+hmz_ab
           else:
-            if x.vowel == a+A and x.post_cons_str[-1] == A:
-              if x.doubled:
+            if this_cons.vowel == a+A and this_cons.post_cons_str[-1] == A:
+              if this_cons.doubled:
                 pass
               else:
-                x.hmz = A_md
+                this_cons.hmz = A_md
             else:
-              x.hmz = A+hmz_ab
+              this_cons.hmz = A+hmz_ab
 
   apply_tatweel = False
   if apply_tatweel:
     for index in range(1, len(cons_list)-1):
-      x = cons_list[index]
+      this_cons = cons_list[index]
       prev_cons = cons_list[index-1]
-      if (x.cons == hmz and x.hmz == "" and 
+      if (this_cons.cons == hmz and this_cons.hmz == "" and 
         A not in prev_cons.post_cons_str and
         d not in prev_cons.post_cons_str and
         dh not in prev_cons.post_cons_str and
         r not in prev_cons.post_cons_str and
         z not in prev_cons.post_cons_str and
         w not in prev_cons.post_cons_str):
-        x.hmz = tatw+hmz_ab
+        this_cons.hmz = tatw+hmz_ab
 
+ 
+def str_replace_at_index(instr, index, repl_with):
+  outstr = instr[:index] + repl_with + instr[(index+1):]
+  return outstr
+
+#def process_tanwin_fath(instr):
+#  index_F = outstr.rfind(F)
+#  if index_F != -1:
+#    outstr = str_replace_at_index(outstr, index_F, a)
+#    if outstr[-1] == A:
+#      outstr = outstr
+
+def hamzate(base_str, suff_str="", pref_str=""):
+  base_str = normalize_hamza(base_str)
+  suff_str = normalize_hamza(suff_str)
+  #(base_str, is_base_F) = process_tanwin_fath(base_str)
+  #(suff_str, is_suff_F) = process_tanwin_fath(suff_str)
+  cons_list = build_cons_list(base_str, suff_str)
+  cons_list_base = build_cons_list(base_str, "")
+  det_hamza_orth(cons_list, cons_list_base)
   outstr = build_str(cons_list)
-  return pref_str + reduce_hamza_comb_chars(outstr)
+  outstr = reduce_hamza_comb_chars(outstr)
+  #if is_base_F or is_suff_F:
+  #  index_last_a = outstr.rfind(a)
+  #  outstr = str_replace_at_index(outstr, index_last_a, F)
+  return pref_str + outstr
+
 def test():
   pairs = [
     (("'aAmana", "", ""), "|mana"),
