@@ -202,5 +202,5 @@ class Parser:
           outstr += ar_out_str
           outstr += '</div>\n'
         fout.write(outstr)
-      #fout.write("</div></body></html>\n")
+      fout.write("</div></body></html>\n")
 
