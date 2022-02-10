@@ -139,6 +139,8 @@ def get_base_str(basenum, root):
     diptote = True
   elif basenum == 44:
     basestr = "ma1aA2i3"
+    if r3 == w or r3 == y:
+      basestr = "ma1aA2K"
     diptote = True
   elif basenum == 45:
     basestr = "mi1o2aA3"
