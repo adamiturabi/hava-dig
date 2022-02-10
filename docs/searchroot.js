@@ -407,3 +407,4 @@ root_index_set.add("بردق");
 root_index_set.add("بردو");
 root_index_set.add("برذع");
 root_index_set.add("برذن");
+root_index_set.add("برز");
