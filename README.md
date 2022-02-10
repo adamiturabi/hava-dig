@@ -40,8 +40,9 @@ Arabic numerals 1 through 70 will output nouns based on the coding devised by Sa
 
 ![print version](https://raw.githubusercontent.com/adamiturabi/hava-dig/master/etc/codes.png)
 
-
 For example numeric code `1003` for `current-root=Eml` will output `AisotiEomaAl`
+
+The intention is that changes due to weak letters should be automatically be taken care of, although this is a work in progress. For example numeric code `403` for `current-root=qwm` should output `<iqaAmap`, not `<iqowaAm`.
 
 Prefixes and suffixes may be added to the numeric code. Suffixes, if they are integral to the word (like ة) are appended directly to the numeric code. If not integral (like dual and plural suffixes and attached pronouns), they are separated by a `"` double-quote character. This is for correct hamza orthography. 
 
