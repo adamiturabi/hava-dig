@@ -146,9 +146,13 @@ def get_base_str(basenum, root):
     basestr = "mi1o2aA3"
   elif basenum == 46:
     basestr = "1a2aA'i3"
+    if r3 == w or r3 == y:
+      basestr = "1a2aA'K"
     diptote = True
   elif basenum == 47:
     basestr = "1a2aA3i4"
+    if r4 == w or r4 == y:
+      basestr = "1a2aA3K"
     diptote = True
   elif basenum == 48:
     basestr = "1a2o3aA4"
@@ -182,6 +186,8 @@ def get_base_str(basenum, root):
     basestr = "ta1o2aA3"
   elif basenum == 63:
     basestr = "ta1aA2i3"
+    if r3 == w or r3 == y:
+      basestr = "ta1aA2K"
   elif basenum == 64:
     basestr = "ta1aA2iy3"
   elif basenum == 65:
