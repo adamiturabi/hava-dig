@@ -13,9 +13,9 @@ Work in progress output: https://adamiturabi.github.io/hava-dig/
 
 ## Methodology
 
-An OCR digital text of Hava's dictonary is available from archive.com. However, only the English text has been digitized reliably. Evidently, the OCR did not recognize the Arabic text and output it as garbled Roman characters. Also, due to the hybrid left-to-right/right-to-left direction of the columns and pages in the printed volume, the OCR'ed English text needs some page reordering.
+An OCR digital text of Hava's dictonary is available from archive.com. However, only the English text has been digitized reliably. Evidently, the OCR did not recognize the Arabic text and output it as garbled Roman characters. Also, due to the hybrid left-to-right/right-to-left direction of the columns and pages in the printed volume, the OCR'ed English text needs some internal page reordering.
 
-So, our methodology is to purge the garbled Latin text which is the output of the OCR of Arabic characters, and to re-order the pages of English text correctly.
+So, our methodology is to purge the garbled characters which is the output of the OCR of Arabic characters, and to re-order the pages of English text correctly.
 
 Then we manually enter the Arabic text in a separate file. Arabic text may be entered either in Unicode Arabic, Buckwalter transliteration, or using word codes (described below).
 
