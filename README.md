@@ -21,7 +21,7 @@ Then we manually enter the Arabic text in a separate file. Arabic text may be en
 
 These text files are to be found in the `txt` subdirectory.
 
-## Arabic word codes
+### Arabic word codes
 
 In order to expedite the manual text input, we make use of word codes. Hamza orthography is automatically derived.
 
@@ -53,4 +53,20 @@ For the definite article prefix (prefix that ends with `l`), sun and moon letter
 `ll1` for root `$ms` will output `ll$~amos`  
 
 To override the current root for any verb or noun append the new root to the numeric code separated by '.'. For example, if the current root is `bdr`, then `I.bydr` will output `I bayodara`
+
+### Foreign borrowings
+
+Hava uses abreviations like P, T, etc. to indicate foreign borrowings. Use the following format: `[Ps]{.fbr}`.
+
+### Roots
+
+Roots are entered preceded by the `@` character on a new line by itself, and only in the Arabic text. For example,
+
+```
+@bd'
+```
+
+For foreign borrowings, Hava does not show a new root but we do if the root letters are different than the preceding root. Root letters for foreign words are triliteral.
+
+Sometimes Hava will add a new root unalphabetically. For example, `bydr` directly after `bdr`. In this case we won't enter a new root. Instead use the `.<new-root>` format if you need to use a numeric word code.
 
