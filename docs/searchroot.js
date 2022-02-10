@@ -384,3 +384,5 @@ root_index_set.add("بذم");
 root_index_set.add("بذن");
 root_index_set.add("بذو");
 root_index_set.add("بر");
+root_index_set.add("برأ");
+root_index_set.add("بربر");
