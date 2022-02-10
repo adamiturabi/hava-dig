@@ -417,6 +417,7 @@ I h , h_
 + II
 + 203
 + 101
+@bdz
 [P]{.fbr} baAdizahor
 @bdE
 I A a (1) h_
@@ -526,4 +527,20 @@ I h , h_
 @b*E
 I A (1) , IV h , h_
 @b*Er
-
+IV
+@b*q
+[P]{.fbr} ba>o*aq
+[P]{.fbr} 51.by*q j_. 47.by*q
+@b*l
+I A i o (1) , III h
+I A nafosahu duwn , Ean
+-- juhodahu
+VIII
+VIIIx Abotu*ila
+1
+1 Aljuhod
+1 Al*~aAt
+101 , 45
+102
+2ap , 20 , 20ap j_. 44 ; 802
+kalaAm 802
