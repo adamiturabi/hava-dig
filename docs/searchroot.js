@@ -368,4 +368,6 @@ root_index_set.add("بدل");
 root_index_set.add("بدن");
 root_index_set.add("بده");
 root_index_set.add("بدو");
+root_index_set.add("بذ");
+root_index_set.add("بذأ");
 root_index_set.add("بيدر");
