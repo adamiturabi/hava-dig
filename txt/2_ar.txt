@@ -8,7 +8,7 @@ laqiytu bihi >asadFA
 AloEayon biAlEayon
 biAll~`hi. biHayaAtiy
 bilaA (b lA)
-+ balaA$ (EwD blA $y)
++ balaAc (EwD blA cy)
 bima
 bimaA >an , bimaA >n~a
 [Ts]{.fbr} baAbaA
@@ -36,22 +36,22 @@ VI
 VIII b
 1
 3 , 1 , 42 , 3aY
-laA ba>osa fy * `lik
-laA ba>osa bi* `lik
+laA ba>osa fy C `lik
+laA ba>osa biC `lik
 laA ba>osa Ealayok
 banaAt bi}osK
 101 j_. 3
 25
 [Is]{.fbr} baAsaAbuwrT
-@b'$
+@b'c
 I A a (1) , III h
-[Ts]{.fbr} baA$
-[Ts]{.fbr} baA$ kaAtib
-[Ts]{.fbr} baA$aA j_. baA$aAwaAt
-[Ts]{.fbr} baA$iy buwzuwq
-[Ts]{.fbr} >uwn baA$iy
-[Ts]{.fbr} yuwzobaA$iy
-[Te]{.fbr} biykobaA$iy
+[Ts]{.fbr} baAc
+[Ts]{.fbr} baAc kaAtib
+[Ts]{.fbr} baAcaA j_. baAcaAwaAt
+[Ts]{.fbr} baAciy buwzuwq
+[Ts]{.fbr} >uwn baAciy
+[Ts]{.fbr} yuwzobaAciy
+[Te]{.fbr} biykobaAciy
 @b'T
 V
 -- Ean
@@ -171,7 +171,7 @@ huwa Abonu bajodap Alo>amor
 @bjr
 I ! a (4)
 3ap j_. 9
-*akara Eujarahu wbujarahu
+Cakara Eujarahu wbujarahu
 3 j_. 37 , 69 ; 3iy~ j_. 22iy~
 14 m_. 42 j_. 3
 @bjrm
@@ -241,7 +241,7 @@ X
 AlbaHor AlmuHiyT
 AlbaHor Almutawas~iT , baHor Alr~uwm
 1 AlZ~ulumaAt
-1 Al$~ayoTaAn
+1 Alc~ayoTaAn
 1 Aln~iyl
 AlbaHorayon
 1ap j_. 23
@@ -257,7 +257,7 @@ mubaHorin
 buHoraAn
 @bHz
 I A a h (1)
-@bH$
+@bHc
 I A (EwD bHv) h_
 @bHS
 + 1ap j_. 1 (EwD HaSabap)
@@ -303,13 +303,13 @@ I A a (1) h , h_
 -- h h_
 VI
 1
-@bx$
+@bxc
 + I A o (1) h_
 + 3 j_. 38
 + 20
-@bx$$
+@bxcc
 + I h
-[Ps]{.fbr} baxo$iy$ j_. baxaA$iy$
+[Ps]{.fbr} baxociyc j_. baxaAciyc
 @bxS
 I A a (1) h
 I ! a (4)
@@ -359,7 +359,7 @@ laA bud~a
 + 1iy~ , 3iy~ , 2iy~ (EwD biwud~y~)
 4
 22
-*ahabuwA >abaAdiyd wtabaAdiyd
+CahabuwA >abaAdiyd wtabaAdiyd
 >abad~u m_. bad~aA'u
 202
 1003
@@ -490,56 +490,56 @@ IV h_
 4iy~
 101 j_. 101"uwn , budaY , bud~FY
 badaAp j_. 4a"At
-*uw m_. *aAt 4a"At
+Cuw m_. CaAt 4a"At
 mabodaY j_. 44
-@b*
+@bC
 I A a (4 , 22 , 22ap , 27ap)
 I A o (1 , 25ap) h
 101 , 1 m_. 101ap , 1ap
-@b*'
+@bC'
 I A i (1) h , h_ , ElY
 I A o , ! a , U o (22 , 22ap)
 III h
 25 m_. 25ap
-@b*j
+@bCj
 4 j_. 34
-@b*H
+@bCH
 I A a (1) h_
 1 j_. 27
-@b*x
+@bCx
 I ! a (4) , V
 III h
 4
 28 , 101 , 41
-@b*r
+@bCr
 I A o (1) h_
 -- h_
 II , III h_
 1 j_. 23 , 27
-4.$*r 4
-5 , bayo*aAr , bayo*aArap
+4.cCr 4
+5 , bayoCaAr , bayoCaArap
 203
-tib*aAr , tib*aArap
+tibCaAr , tibCaArap
 201
-@b*rq
+@bCrq
 I h , h_
 101
-@b*E
+@bCE
 I A (1) , IV h , h_
-@b*Er
+@bCEr
 IV
-@b*q
-[P]{.fbr} ba>o*aq
-[P]{.fbr} 51.by*q j_. 47.by*q
-@b*l
+@bCq
+[P]{.fbr} ba>oCaq
+[P]{.fbr} 51.byCq j_. 47.byCq
+@bCl
 I A i o (1) , III h
 I A nafosahu duwn , Ean
 -- juhodahu
 VIII
-VIIIx Abotu*ila
+VIIIx AbotuCila
 1
 1 Aljuhod
-1 Al*~aAt
+1 AlC~aAt
 101 , 45
 102
 2ap , 20 , 20ap j_. 44 ; 802

@@ -21,6 +21,18 @@ Then we manually enter the Arabic text in a separate file. Arabic text may be en
 
 These text files are to be found in the `txt` subdirectory.
 
+### Transliteration
+
+We use the Buckwalter transliteration system with the following additions:
+
+```
+c = $ = ش
+C = * = ذ
+% = U+0653 (maddah above)
+^ = U+0654 (hamza above)
+/ = U+0655 (hamza below)
+```
+
 ### Arabic word codes
 
 In order to expedite the manual text input, we make use of word codes. Hamza orthography is automatically derived.

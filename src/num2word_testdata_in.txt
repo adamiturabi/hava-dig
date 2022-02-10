@@ -2,8 +2,8 @@ lil403ayoni, slm, lil<isolaAmayoni
 lil22i, slm, lils~alaAmi
 lilo403ayoni, slm, lilo<isolaAmayoni
 lilo22i, slm, lils~alaAmi
-Al1i, $ms, Al$~amosi
-Alo1i, $ms, Al$~amosi
+Al1i, cms, Alc~amosi
+Alo1i, cms, Alc~amosi
 Alo4u, qmr, Aloqamaru
 Al4u, qmr, Alqamaru
 14, b'w, >abo>aY

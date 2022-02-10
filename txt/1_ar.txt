@@ -39,7 +39,7 @@ I A i (1 , 27)
 -- b (1)
 @'bs
 I A i 1 , II h
-@'b$
+@'bc
 I A o (1) , II h_
 24ap
 @'bD
@@ -104,8 +104,8 @@ V biAlo<itob
 202 AlZ~ufor
 @'td
 23 j_. 21ap , 10
-@'t$
-[Te]{.fbr} |ta$ojiy j_. |ta$ojiy~ap
+@'tc
+[Te]{.fbr} |tacojiy j_. |tacojiy~ap
 @'tl
 I A i (1 , 36)
 @'tm
@@ -153,7 +153,7 @@ IV (403) h_
 -- h ElY
 V , VIII h
 -- , VIII b , min
-X bi$ayo'K ElY
+X bicayo'K ElY
 -- bifulaAn
 2 , 4 j_. 38
 3 , 10 j_. 38 , 27
@@ -267,7 +267,7 @@ I ! a (1) ElY
 >ax~u , + |xo
 >ax~u , <ix~u
 25ap
-@'x*
+@'xC
 I A o (1 , 62) h_ , b min
 A ElY xaATirihi
 A w>aEoTaY maE fulaAn
@@ -277,12 +277,12 @@ A b
 -- h_ Ean
 II h
 III (303) h b , ElY
-VIIIx {it~axa*a h_ , h
+VIIIx {it~axaCa h_ , h
 X
 1
 10 , 3ap
 101ap
-23ap j_. <ixaA*aAt
+23ap j_. <ixaACaAt
 203
 25 j_. 1aY
 25ap
@@ -380,14 +380,14 @@ V lahu min
 X h h_
 X h ElY
 >adaA'
-@'*
-<i*o , <i* *Aka
-<i*aA
-<i*FA , <i*an
-@'*r
-[S]{.fbr} |*aAr , >a*aAr
-[P]{.fbr} |*aroyuwn
-@'*n
+@'C
+<iCo , <iC CAka
+<iCaA
+<iCFA , <iCan
+@'Cr
+[S]{.fbr} |CaAr , >aCaAr
+[P]{.fbr} |Caroyuwn
+@'Cn
 I ! a (4) <ilY
 -- l (2) fy
 -- (2 , 4 , 22 , 22ap) b
@@ -396,19 +396,19 @@ IV (403) h h_ , b
 X h fy
 -- ElY
 -- min
-<i*on
-10 , 3 j_. 38 , = wu*n
+<iCon
+10 , 3 j_. 38 , = wuCn
 22
 101
-|*anu , 24iy~
+|Canu , 24iy~
 201 , 25
 20ap j_. 44
-@'*y
-I ! a (>a*FY , >a*aAp) b
+@'Cy
+I ! a (>aCFY , >aCaAp) b
 IV (403) h
 V min
->a*FY , >a*iy~ap , >a*aAp
->a*K , >a*iy~
+>aCFY , >aCiy~ap , >aCaAp
+>aCK , >aCiy~
 401
 @'rb
 I ! a (4) b , U o (22ap , 2) fy
@@ -454,7 +454,7 @@ I A i o , ! a (1 , 27)
 I A i (3)
 30
 -- , 25 j_. <ir~iysuwn , >ariysuwn ,\n >araArisu , 70 , >araArisap
-@'r$
+@'rc
 1
 II bayon
 -- h_
@@ -464,7 +464,7 @@ I A o (1)
 I U o (22ap)
 4ap j_. 4
 1iy~
-+ 1iy~ $awokiy~
++ 1iy~ cawokiy~
 + 1iy~ap
 + 1iy~ap AljumoEap
 25
@@ -522,7 +522,7 @@ I A i (27) , V
 26
 @'zd
 [P]{.fbr} |zaAdiraxot , >azodiraxot
-@'z*
+@'zC
 22
 @'zr
 I A i (1) h_
@@ -636,24 +636,24 @@ I A i (1) min l
 101ap j_. >awaAsK
 I ! a >asFY ElY
 >asFY , >asFA
-@'$
+@'c
 1
-@'$b
+@'cb
 I ! a (4) , V
 V , VIII
 5
 4
 24ap j_. 46
-@'$r
+@'cr
 I ! a (4)
 4
 I A i (1) h_
 -- i (1) , II h_
-= >a$~ar
+= >ac~ar
 3ap j_. 9 , 3
 20
 45 j_. 65 , 65.w--
-@'$n
+@'cn
 3ap
 35 , 34
 @'S
@@ -681,7 +681,7 @@ V fy
 -- min
 X h_
 1 j_. 27
-$ariyfu Alo>aSol
+cariyfu Alo>aSol
 >aSolu AlmaAl
 22ap
 1003
@@ -717,7 +717,7 @@ V
 >uf~K
 @'f
 <if~aAn , >af~aAn , <if~N , 7
-ElY 2 * `lik
+ElY 2 C `lik
 @'fd
 I ! a (4)
 @'fr
@@ -817,8 +817,8 @@ hum Ealay~a <ilobN waAHid
 [Ts]{.fbr} <ilojiy~ j_. <ilojiy~ap
 @'ld
 [Te]{.fbr} Ald~iwaAn
-@'l*
-{al~a*iy j_. {al~a*iyn + <iliy
+@'lC
+{al~aCiy j_. {al~aCiyn + <iliy
 {al~atiy j_. {ll~awaAtiy , {ll~aA'iy
 @'ls
 I A i (1) , III (303) h
@@ -877,7 +877,7 @@ X
 All~`h
 All~`hum~a
 23ap
-23ap Al$~iEor
+23ap Alc~iEor
 203
 24ap , 27ap , 27iy~ap , 35iy~ap
 <il_`hiy~
@@ -1115,7 +1115,7 @@ X h_
 |nifFA
 4ap
 10
-min *iy 10
+min Ciy 10
 26
 803 , 1003
 1003iy~
@@ -1295,7 +1295,7 @@ ma>owFY , ma>owaAp j_. ma|wK
 @'y
 >ay~N m_. >ay~ap
 >ay~u man
->ay~u $ayo'K
+>ay~u cayo'K
 @'y
 <iy~aA
 <iy~aAya , <iy~aAka , <iy~aAhu , <iy~aAkum , <iy~aAhum
@@ -1326,7 +1326,7 @@ I ! a (23) min
 II , IV (23) h min
 23
 101
-+ >ayo$ (EwD >ay~ $ayo'K)
++ >ayoc (EwD >ay~ cayo'K)
 @'yD
 I A i (1) h_
 -- <ilY

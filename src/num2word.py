@@ -1,7 +1,7 @@
 from translit import *
 
 def add_prefix(prefix_str, basestr):
-  sun_letters = { 't', 'v', 'd', '*', 'r', 'z', 's', '$', 'S', 'D', 'T', 'Z', 'l', 'n' }
+  sun_letters = { t, v, d, dh, r, z, s, sh, S, D, T, Z, l, n }
   def_art = (len(prefix_str) >= 2 and prefix_str[-1:] == 'l')  or (len(prefix_str) >= 3 and prefix_str[-2:] == 'lo') # or (len(prefix_str) >= 3 and prefix_str[-3:] == 'lil')
   if def_art and basestr[0] in sun_letters:
     if prefix_str[-1] == 'o':
