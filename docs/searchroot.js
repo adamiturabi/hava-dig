@@ -400,3 +400,5 @@ root_index_set.add("برجد");
 root_index_set.add("برجس");
 root_index_set.add("برجم");
 root_index_set.add("برح");
+root_index_set.add("برخ");
+root_index_set.add("برد");
