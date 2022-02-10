@@ -92,7 +92,7 @@ Roots are entered preceded by the `@` character on a new line by itself, and onl
 @bd'
 ```
 
-For foreign borrowings, Hava does not show a new root but we do if the root letters are different than the preceding root. Root letters for foreign words are triliteral.
+For foreign borrowings, Hava does not show a new root but we do if the root letters are different than the preceding root. Root letters for foreign words are usually triliteral, unless they conform to Arabic word patterns in which case they may have more than 3 letters.
 
 Sometimes Hava will add a new root unalphabetically. For example, `bydr` directly after `bdr`. In this case we won't enter a new root. Instead use the `.<new-root>` format if you need to use a numeric word code.
 
