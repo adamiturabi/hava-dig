@@ -78,8 +78,12 @@ def get_base_str(basenum, root):
     basestr = "'a1o2u3"
   elif basenum == 17:
     basestr = "ma1o2a3"
+    if r2 == r3:
+      basestr = "ma1a2~"
   elif basenum == 18:
     basestr = "ma1o2i3"
+    if r2 == r3:
+      basestr = "ma1i2~"
   elif basenum == 19:
     basestr = "ma1o2u3"
   elif basenum == 20:
