@@ -453,7 +453,10 @@ def num2word(numstr_in, root_in):
     if basestr[-1] == 'u':
       basestr = basestr[:-1]
     elif basestr[-1] == 'K':
-      basestr = basestr[:-1] + 'iy'
+      if (len(suffix_str) >= 2 and suffix_str[:2] == u+w) or (len(post_str) >= 2 and post_str[:2] == u+w):
+        basestr = basestr[:-1]
+      else:
+        basestr = basestr[:-1] + 'iy'
     elif basestr[-2:] == 'FY':
       basestr = basestr[:-2] + 'aA'
 
