@@ -253,7 +253,7 @@ def det_hamza_orth(cons_list, cons_list_base):
             this_cons.hmz = w+hmz_ab
           else:
             if this_cons.vowel == a+A and this_cons.post_cons_str[-1] == A:
-              if this_cons.doubled:
+              if this_cons.doubled or this_cons.suff:
                 pass
               else:
                 this_cons.hmz = A_md
@@ -294,7 +294,7 @@ def hamzate(base_str, suff_str="", pref_str=""):
   det_hamza_orth(cons_list, cons_list_base)
   outstr = build_str(cons_list)
   # For debugging:
-  #if (base_str == "duEaA'F"):
+  #if (base_str == "bada'"):
   #  print_cons_list(cons_list)
   #  print("outstr="+outstr)
   outstr = reduce_hamza_comb_chars(outstr)
@@ -391,6 +391,7 @@ def test():
     (("maloja'F", "", ""), "maloja'FA"),
     (("$ayo'F", "", ""), "$ayo'FA"),
     (("bado'ap", "", ""), "badoA^ap"),
+    (("bada'", "aAt", ""), "bada'aAt"),
     #(("", ""), ""),
   ]
 
