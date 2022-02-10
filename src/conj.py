@@ -126,80 +126,118 @@ def conj_tri_form2(root, voice):
       pres_verb =  y + u + r1 + a + r2 + ss + i + y;
   return (past_verb, pres_verb)
 
-def conj_tri_form3(root):
+def conj_tri_form3(root, voice):
   r1 = root[0]
   r2 = root[1]
   r3 = root[2]
-  past_verb = r1 + a + A + r2 + a + r3 + a
-  pres_verb = "yu" + r1 + "aA" + r2 + i + r3 + u
+  if voice == "passive":
+    past_verb = r1 + u + w + r2 + i + r3 + a
+    pres_verb = "yu" + r1 + "aA" + r2 + a + r3 + u
+  else:
+    past_verb = r1 + a + A + r2 + a + r3 + a
+    pres_verb = "yu" + r1 + "aA" + r2 + i + r3 + u
+
   if r3 == y or r3 == w:
     past_verb = r1 + a + A + r2 + a + Y
     pres_verb =  y + u + r1 + a + A + r2 + i + y;
+    if voice == "passive":
+      past_verb = r1 + u + w + r2 + i + y + a
   elif r2 == r3:
     past_verb = r1 + a + A + r2 + ss + a
     pres_verb =  y + u + r1 + a + A + r2 + ss + u
+    if voice == "passive":
+      past_verb = r1 + u + w + r2 + ss + a
   return (past_verb, pres_verb)
 
-def conj_tri_form4(root):
+def conj_tri_form4(root, voice):
   r1 = root[0]
   r2 = root[1]
   r3 = root[2]
-  past_verb = hmz + a + r1 + o + r2 + a + r3 + a
-  pres_verb = "yu" + r1 + o + r2 + i + r3 + u
+  if voice == "passive":
+    past_verb = hmz + u + r1 + o + r2 + i + r3 + a
+    pres_verb = "yu" + r1 + o + r2 + a + r3 + u
+  else:
+    past_verb = hmz + a + r1 + o + r2 + a + r3 + a
+    pres_verb = "yu" + r1 + o + r2 + i + r3 + u
+
   if r3 == y or r3 == w:
     past_verb = hmz + a + r1 + o + r2 + a + Y
     pres_verb = "yu" + r1 + o + r2 + i + y
+    if voice == "passive":
+      past_verb = hmz + u + r1 + o + r2 + i + y + a
   elif r2 == r3:
     if r1 == hmz:
       past_verb = hmz + a + A + r2 + ss + a
+      if voice == "passive":
+        past_verb = hmz + u + hmz + i + r2 + ss + a
     else:
       past_verb = hmz + a + r1 + a + r2 + ss + a
+      if voice == "passive":
+        past_verb = hmz + u + r1 + i + r2 + ss + a
     pres_verb = "yu" + r1 + i + r2 + ss + u
   return (past_verb, pres_verb)
 
-def conj_tri_form5(root):
+def conj_tri_form5(root, voice):
   r1 = root[0]
   r2 = root[1]
   r3 = root[2]
   past_verb = t + a + r1 + a + r2 + ss + a + r3 + a
   pres_verb = "yata" + r1 + a + r2 + ss + a + r3 + u
+  if voice == "passive":
+    past_verb = t + u + r1 + u + r2 + ss + i + r3 + a
   if r3 == y or r3 == w:
     past_verb = t + a + r1 + a + r2 + ss + a + Y
     pres_verb = "yata" + r1 + a + r2 + ss + a + Y
+    if voice == "passive":
+      past_verb = t + u + r1 + u + r2 + ss + i + y + a
   return (past_verb, pres_verb)
 
-def conj_tri_form6(root):
+def conj_tri_form6(root, voice):
   r1 = root[0]
   r2 = root[1]
   r3 = root[2]
   past_verb = t + a + r1 + a + A + r2 + a + r3 + a
   pres_verb = "yata" + r1 + "aA" + r2 + a + r3 + u
+  if voice == "passive":
+    past_verb = t + u + r1 + a + A + r2 + a + r3 + a
   if r3 == y or r3 == w:
     past_verb = t + a + r1 + a + A + r2 + a + Y
     pres_verb = "yata" + r1 + "aA" + r2 + a + Y
+    if voice == "passive":
+      past_verb = t + u + r1 + a + A + r2 + a + Y
   elif r2 == r3:
     past_verb = t + a + r1 + a + A + r2 + ss + a
     pres_verb = "yata" + r1 + "aA" + r2 + ss + u
+    if voice == "passive":
+      past_verb = t + u + r1 + a + A + r2 + ss + a
   return (past_verb, pres_verb)
 
-def conj_tri_form7(root):
+def conj_tri_form7(root, voice):
   r1 = root[0]
   r2 = root[1]
   r3 = root[2]
   past_verb = '{ino' + r1 + a + r2 + a + r3 + a
   pres_verb = "yano" + r1 + a + r2 + i + r3 + u
+  if voice == "passive":
+    past_verb = '{uno' + r1 + u + r2 + i + r3 + a
   if r3 == y or r3 == w:
     past_verb = '{ino' + r1 + a + r2 + a + Y
     pres_verb = "yano" + r1 + a + r2 + i + y
+    if voice == "passive":
+      past_verb = '{uno' + r1 + u + r2 + i + y + a
   elif r2 == y or r2 == w:
     past_verb = '{ino' + r1 + 'aA' + r3 + a
     pres_verb = "yano" + r1 + 'aA' + r3 + u
+    if voice == "passive":
+      past_verb = '{uno' + r1 + 'iy' + r3 + a
   elif r2 == r3:
     past_verb = '{ino' + r1 + a + r2 + ss + a
     pres_verb = "yano" + r1 + a + r2 + ss + u
+    if voice == "passive":
+      past_verb = '{uno' + r1 + i + r2 + ss + a
   return (past_verb, pres_verb)
 
-def conj_tri_form8(root):
+def conj_tri_form8(root, voice):
   r1 = root[0]
   r2 = root[1]
   r3 = root[2]
@@ -216,7 +254,7 @@ def conj_tri_form8(root):
     pres_verb = "ya" + r1 + 'ota' + r2 + ss + u
   return (past_verb, pres_verb)
 
-def conj_tri_form9(root):
+def conj_tri_form9(root, voice):
   r1 = root[0]
   r2 = root[1]
   r3 = root[2]
@@ -224,7 +262,7 @@ def conj_tri_form9(root):
   pres_verb = "ya" + r1 + 'o' + r2 + a + r3 + ss + u
   return (past_verb, pres_verb)
 
-def conj_tri_form10(root):
+def conj_tri_form10(root, voice):
   r1 = root[0]
   r2 = root[1]
   r3 = root[2]
@@ -247,21 +285,21 @@ def conj_tri(root, form, past_vowel, pres_vowel, voice):
   elif form =="II":
     return conj_tri_form2(root, voice)
   elif form =="III":
-    return conj_tri_form3(root)
+    return conj_tri_form3(root, voice)
   elif form =="IV":
-    return conj_tri_form4(root)
+    return conj_tri_form4(root, voice)
   elif form =="V":
-    return conj_tri_form5(root)
+    return conj_tri_form5(root, voice)
   elif form =="VI":
-    return conj_tri_form6(root)
+    return conj_tri_form6(root, voice)
   elif form =="VII":
-    return conj_tri_form7(root)
+    return conj_tri_form7(root, voice)
   elif form =="VIII":
-    return conj_tri_form8(root)
+    return conj_tri_form8(root, voice)
   elif form =="IX":
-    return conj_tri_form9(root)
+    return conj_tri_form9(root, voice)
   elif form =="X":
-    return conj_tri_form10(root)
+    return conj_tri_form10(root, voice)
   else:
     return ('', '')
 def conj_quad(root, form):
