@@ -36,7 +36,10 @@ For form I triliteral roots `A`, `!` , and `U` will output the preterite with th
 
 To indicate the vowel for the aorist (فعل مضارع) use `a`, `i`, and either `u` or `o`.
 
-Arabic numerals 1 through 70 will output nouns based on the coding devised by Salmone in his dictionary, with some additions.
+Arabic numerals 1 through 70 will output nouns based on the coding devised by Salmone in his dictionary, with some additions:
+
+![print version](https://raw.githubusercontent.com/adamiturabi/hava-dig/master/etc/codes.png)
+
 
 For example numeric code `1003` for `current-root=Eml` will output `AisotiEomaAl`
 
