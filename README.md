@@ -23,4 +23,28 @@ These text files are to be found in the `txt` subdirectory.
 
 ## Arabic word codes
 
-In order to expedite the manual text input, we make use of word codes. The word codes we are using are used by Salmone in his dictionary.
+In order to expedite the manual text input, we make use of word codes. Hamza orthography is automatically derived.
+
+Capital Roman numerals are for verb forms. Besides 'I' for a triliteral root, these Roman numerals will output the preterite (فعل ماضي) of the current root. 
+
+To suppress the preterite, append the numeral by `x`. For example, 
+
+`VIII` for root `fEl` will output `VIII AifotaEala`  
+`VIIIx` for root `fEl` will output `VIII`
+
+For form I triliteral roots `A`, `!` , and `U` will output the preterite with the vowels `a`, `i`, and `u` respectively.
+
+To indicate the vowel for the aorist (فعل مضارع) use `a`, `i`, and either `u` or `o`.
+
+Arabic numerals 1 through 70 will output nouns based on the coding devised by Salmone in his dictionary, with some additions.
+
+For example numeric code `1003` for `current-root=Eml` will output `AisotiEomaAl`
+
+Prefixes and suffixes may be added to the numeric code. Suffixes, if they are integral to the word (like ة) are appended directly to the numeric code. If not integral (like dual and plural suffixes and attached pronouns), they are separated by a `"` double-quote character. This is for correct hamza orthography. 
+
+For example, for `current root=bd'` the numeric code `1ap` will output `bado>ap`
+
+For the definite article prefix, sun and moon letters are automatically derived. For example `Alo1` for root `$ms` will output `Al$~amos`.
+
+To override the current root for any verb or noun append the new root to the numeric code separated by '.'. For example, if the current root is `bdr`, then `I.bydr` will output `I bayodara`
+
