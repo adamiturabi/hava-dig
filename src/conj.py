@@ -230,7 +230,12 @@ def conj_quad(root, form):
     return r1 + a + r2 + o + r3 + a + r4 + a
   elif form == 'II':
     return t + a + r1 + a + r2 + o + r3 + a + r4 + a
+  elif form == 'III':
+    return A + i + r1 + o + r2 + a + n + o + r3 + a + r4 + a
+  elif form == 'IV':
+    return A + i + r1 + o + r2 + a + r3 + a + r4 + ss + a
   else:
+    assert False
     return ''
 def conj(root, form, vowel="a", tense="pret"):
   pret = form

@@ -261,49 +261,67 @@ def get_base_str(basenum, root):
   elif basenum == 204:
     basestr = t + a + r1 + o + r2 + i + r3 + a + p
   elif basenum == 301:
-    basestr = m + u + r1 + a + A + r2 + i + r3
-    if r3 == w or r3 == y:
-      basestr = m + u + r1 + a + A + r2 + K
-    elif r2 == r3:
-      basestr = m + u + r1 + a + A + r2 + ss
+    if len(root) == 4:
+      basestr = m + u + r1 + o + r2 + a + n + o + r3 + i + r4
+    else:
+      basestr = m + u + r1 + a + A + r2 + i + r3
+      if r3 == w or r3 == y:
+        basestr = m + u + r1 + a + A + r2 + K
+      elif r2 == r3:
+        basestr = m + u + r1 + a + A + r2 + ss
   elif basenum == 302:
-    basestr = m + u + r1 + a + A + r2 + a + r3
-    if r3 == w or r3 == y:
-      basestr = m + u + r1 + a + A + r2 + F + Y
-    elif r2 == r3:
-      basestr = m + u + r1 + a + A + r2 + ss
+    if len(root) == 4:
+      basestr = m + u + r1 + o + r2 + a + n + o + r3 + a + r4
+    else:
+      basestr = m + u + r1 + a + A + r2 + a + r3
+      if r3 == w or r3 == y:
+        basestr = m + u + r1 + a + A + r2 + F + Y
+      elif r2 == r3:
+        basestr = m + u + r1 + a + A + r2 + ss
   elif basenum == 303:
-    basestr = m + u + r1 + a + A + r2 + a + r3 + a + p
-    if r2 == r3:
-      basestr = m + u + r1 + a + A + r2 + ss + a + p
-    elif r3 == w or r3 == y:
-      basestr = m + u + r1 + a + A + r2 + a + A + p
+    if len(root) == 4:
+      basestr = A + i + r1 + o + r2 + i + n + o + r3 + a + A + r4
+    else:
+      basestr = m + u + r1 + a + A + r2 + a + r3 + a + p
+      if r2 == r3:
+        basestr = m + u + r1 + a + A + r2 + ss + a + p
+      elif r3 == w or r3 == y:
+        basestr = m + u + r1 + a + A + r2 + a + A + p
   elif basenum == 401:
-    basestr = m + u + r1 + o + r2 + i + r3
-    if r3 == w or r3 == y:
-      basestr = m + u + r1 + o + r2 + K
-    elif r2 == r3:
-      basestr = m + u + r1 + i + r2 + ss
-    elif r2 == w or r2 == y:
-      basestr = m + u + r1 + i + y + r3
+    if len(root) == 4:
+      basestr = m + u + r1 + o + r2 + a + r3 + i + r4 + ss
+    else:
+      basestr = m + u + r1 + o + r2 + i + r3
+      if r3 == w or r3 == y:
+        basestr = m + u + r1 + o + r2 + K
+      elif r2 == r3:
+        basestr = m + u + r1 + i + r2 + ss
+      elif r2 == w or r2 == y:
+        basestr = m + u + r1 + i + y + r3
   elif basenum == 402:
-    basestr = m + u + r1 + o + r2 + a + r3
-    if r3 == w or r3 == y:
-      basestr = m + u + r1 + o + r2 + F + Y
-    elif r2 == r3:
-      basestr = m + u + r1 + a + r2 + ss
-    elif r2 == w or r2 == y:
-      basestr = m + u + r1 + a + A + r3
+    if len(root) == 4:
+      basestr = m + u + r1 + o + r2 + a + r3 + a + r4 + ss
+    else:
+      basestr = m + u + r1 + o + r2 + a + r3
+      if r3 == w or r3 == y:
+        basestr = m + u + r1 + o + r2 + F + Y
+      elif r2 == r3:
+        basestr = m + u + r1 + a + r2 + ss
+      elif r2 == w or r2 == y:
+        basestr = m + u + r1 + a + A + r3
   elif basenum == 403:
-    basestr = hmz + i + r1 + o + r2 + a + A + r3
-    if r1 == hmz and r3 == w or r3 == y:
-      basestr = hmz + i + y + r2 + a + A + hmz
-    elif r3 == w or r3 == y:
-      basestr = hmz + i + r1 + o + r2 + a + A + hmz
-    elif r1 == hmz:
-      basestr = hmz + i + y + r2 + a + A + r3
-    elif r2 == w or r2 == y:
-      basestr = hmz + i + r1 + a + A + r3 + p
+    if len(root) == 4:
+      basestr = A + i + r1 + o + r2 + i + r3 + o + r4 + a + A + r4
+    else:
+      basestr = hmz + i + r1 + o + r2 + a + A + r3
+      if r1 == hmz and r3 == w or r3 == y:
+        basestr = hmz + i + y + r2 + a + A + hmz
+      elif r3 == w or r3 == y:
+        basestr = hmz + i + r1 + o + r2 + a + A + hmz
+      elif r1 == hmz:
+        basestr = hmz + i + y + r2 + a + A + r3
+      elif r2 == w or r2 == y:
+        basestr = hmz + i + r1 + a + A + r3 + p
   elif basenum == 501:
     basestr = 'muta' + r1 + a + r2 + ss + i + r3
     if r3 == w or r3 == y:
