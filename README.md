@@ -37,14 +37,18 @@ C = * = ذ
 
 In order to expedite the manual text input, we make use of word codes. Hamza orthography is automatically derived.
 
-Capital Roman numerals are for verb forms. Besides `I` for a triliteral root, these Roman numerals will output the preterite (فعل ماضي) of the current root. 
+Capital Roman numerals are for verb forms. Besides `I` for a triliteral root in active voice, these Roman numerals will output the preterite (فعل ماضي) of the current root. 
 
 To suppress the preterite, append the numeral by `x`. For example, 
 
 `VIII` for root `fEl` will output `VIII AifotaEala`  
 `VIIIx` for root `fEl` will output `VIII`
 
-For form I triliteral roots `A`, `!` , and `U` will output the preterite with the vowels `a`, `i`, and `u` respectively.
+To get the passive voice append the numeral by `p`. For example,
+
+`VIIIp` for root `bCl` will output `VIII AubotuCila`  
+
+For form I triliteral roots `A`, `!` , and `U` will output the active voice preterite with the vowels `a`, `i`, and `u` respectively.
 
 To indicate the vowel for the aorist (فعل مضارع) use `a`, `i`, and either `u` or `o`.
 
@@ -71,6 +75,10 @@ For the definite article prefix (prefix that ends with `l`), sun and moon letter
 `ll1` for root `$ms` will output `ll$~amos`  
 
 To override the current root for any verb or noun append the new root to the numeric code separated by `.`. For example, if the current root is `bdr`, then `I.bydr` will output `I bayodara`
+
+In overriding the current root, you may use hyphens for the radicals you don't want to override. For example:
+
+With root `bdw` numeric code `22.--'` will output `badaA'`
 
 ### Foreign borrowings
 

@@ -68,6 +68,7 @@ class Parser:
         suppress_conj = False
         override_root = ''
         form = word
+        is_passive = False
         if '.' in word:
           dot_index = word.find('.')
           override_root = word[dot_index+1:]
@@ -76,6 +77,10 @@ class Parser:
         elif word[-1] == 'x':
           suppress_conj = True
           out_str += word[:-1]
+        elif word[-1] == 'p':
+          is_passive = True
+          form = word[:-1]
+          out_str += word[:-1]
         else:
           out_str += word
 
@@ -83,9 +88,12 @@ class Parser:
         if override_root != '':
           root_to_use = override_root
 
-        do_conj = not suppress_conj and not (word == 'I' and len(root_to_use) <= 3)
+        do_conj = not suppress_conj and not (word == 'I' and len(root_to_use) <= 3 and not is_passive)
         if do_conj:
-          enverb = conj.conj(root_to_use, form, 'a', 'a')
+          voice = "active"
+          if is_passive:
+            voice = "passive"
+          enverb = conj.conj(root_to_use, form, 'a', 'a', voice)
           hamzated = hamzater.hamzate(enverb)
           arverb = translit_to_ar.translit_to_ar(hamzated)
           out_str += ' ' + arverb

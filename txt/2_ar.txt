@@ -427,7 +427,7 @@ II h_
 IV , VIII h_
 IV
 -- bi24.fln
-IVx >ubodiEa bihi
+IVp bihi
 X h_
 2 j_. 38
 2ap j_. 7
@@ -536,7 +536,7 @@ I A i o (1) , III h
 I A nafosahu duwn , Ean
 -- juhodahu
 VIII
-VIIIx AbotuCila
+VIIIp
 1
 1 Aljuhod
 1 AlC~aAt

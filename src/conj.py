@@ -243,15 +243,23 @@ def conj_tri_form8(root, voice):
   r3 = root[2]
   past_verb = '{i' + r1 + 'ota' + r2 + a + r3 + a
   pres_verb = "ya" + r1 + 'ota' + r2 + i + r3 + u
+  if voice == "passive":
+    past_verb = '{u' + r1 + 'otu' + r2 + i + r3 + a
   if r3 == y or r3 == w:
     past_verb = '{i' + r1 + 'ota' + r2 + a + Y
     pres_verb = "ya" + r1 + 'ota' + r2 + i + y
+    if voice == "passive":
+      past_verb = '{u' + r1 + 'otu' + r2 + i + y + a
   elif r2 == y or r2 == w:
     past_verb = '{i' + r1 + 'otaA' + r3 + a
     pres_verb = "ya" + r1 + 'otaA' + r3 + u
+    if voice == "passive":
+      past_verb = '{u' + r1 + 'otiy' + r3 + a
   elif r2 == r3:
     past_verb = '{i' + r1 + 'ota' + r2 + ss + a
     pres_verb = "ya" + r1 + 'ota' + r2 + ss + u
+    if voice == "passive":
+      past_verb = '{u' + r1 + 'oti' + r2 + ss + a
   return (past_verb, pres_verb)
 
 def conj_tri_form9(root, voice):
@@ -268,15 +276,23 @@ def conj_tri_form10(root, voice):
   r3 = root[2]
   past_verb = '{isota' + r1 + o + r2 + a + r3 + a
   pres_verb = "yasota" + r1 + o + r2 + i + r3 + u
+  if voice == "passive":
+    past_verb = '{usotu' + r1 + o + r2 + i + r3 + a
   if r3 == y or r3 == w:
     past_verb = '{isota' + r1 + o + r2 + a + Y
     pres_verb = "yasota" + r1 + o + r2 + i + y
+    if voice == "passive":
+      past_verb = '{usotu' + r1 + o + r2 + i + y + a
   elif r2 == y or r2 == w:
     past_verb = '{isota' + r1 + 'aA' + r3 + a
     pres_verb = "yasota" + r1 + 'iy' + r3 + u
+    if voice == "passive":
+      past_verb = '{usotu' + r1 + i + y + r3 + a
   elif r2 == r3:
     past_verb = '{isota' + r1 + a + r2 + ss + a
     pres_verb = "yasota" + r1 + i + r2 + ss + u
+    if voice == "passive":
+      past_verb = '{usotu' + r1 + i + r2 + ss + a
   return (past_verb, pres_verb)
 
 def conj_tri(root, form, past_vowel, pres_vowel, voice):
