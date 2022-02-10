@@ -84,7 +84,7 @@ V h
 >abu (EwD Abw) j_. 38.--'
 >abuw , + buw
 Al|b
->abati , yaA >abati , yaA >abatu , yaA >abataAh!
+>abati , yaA >abati , yaA >abatu , yaA >abataAh
 >abuw AlyaqaZaAn
 -- Aln~awom
 >abuw Alhawol
@@ -1161,7 +1161,7 @@ II , V l
 @'hr
 4ap j_. 4 , >aharaAt
 @'hl
-I A i o (1, 27)
+I A i o (1 , 27)
 I ! a (4) b
 I >uhila
 II , IV (403) h l

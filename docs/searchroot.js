@@ -361,3 +361,8 @@ root_index_set.add("بدأ");
 root_index_set.add("بدح");
 root_index_set.add("بدخ");
 root_index_set.add("بدر");
+root_index_set.add("بدرق");
+root_index_set.add("بدع");
+root_index_set.add("بدغ");
+root_index_set.add("بدل");
+root_index_set.add("بيدر");

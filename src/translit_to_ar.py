@@ -56,5 +56,6 @@ def translit_to_ar(instr):
     if x in translit_map:
       outstr += translit_map[x]
     else:
+      assert x in { chr(int('0x25cc', 16)) , '.', ' ', chr(int('0x00a0', 16)) }, x+" "+hex(ord(x))
       outstr += x
   return outstr

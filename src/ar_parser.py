@@ -189,6 +189,7 @@ class Parser:
           en_out_str = ''
         else:
           en_out_str = '<div class="col" lang="en" dir="ltr">'+en_line+'</div>'
+
         if en_out_str != '':
           outstr = '<div class="row py-2 justify-content-around">'+ar_out_str
           #outstr = '<div class="row py-2 justify-content-around"><div class="col-auto">'+ar_out_str+'</div>'
