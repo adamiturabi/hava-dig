@@ -25,7 +25,7 @@ These text files are to be found in the `txt` subdirectory.
 
 In order to expedite the manual text input, we make use of word codes. Hamza orthography is automatically derived.
 
-Capital Roman numerals are for verb forms. Besides 'I' for a triliteral root, these Roman numerals will output the preterite (فعل ماضي) of the current root. 
+Capital Roman numerals are for verb forms. Besides `I` for a triliteral root, these Roman numerals will output the preterite (فعل ماضي) of the current root. 
 
 To suppress the preterite, append the numeral by `x`. For example, 
 
@@ -52,7 +52,7 @@ For the definite article prefix (prefix that ends with `l`), sun and moon letter
 `Alo1` for root `$ms` will output `Al$~amos`  
 `ll1` for root `$ms` will output `ll$~amos`  
 
-To override the current root for any verb or noun append the new root to the numeric code separated by '.'. For example, if the current root is `bdr`, then `I.bydr` will output `I bayodara`
+To override the current root for any verb or noun append the new root to the numeric code separated by `.`. For example, if the current root is `bdr`, then `I.bydr` will output `I bayodara`
 
 ### Foreign borrowings
 
