@@ -50,7 +50,9 @@ To indicate the vowel for the aorist (فعل مضارع) use `a`, `i`, and eithe
 
 Arabic numerals 1 through 70 will output nouns based on the coding devised by Salmone in his dictionary, with some additions:
 
-![print version](https://raw.githubusercontent.com/adamiturabi/hava-dig/master/etc/codes.png)
+![codes 1-70](https://raw.githubusercontent.com/adamiturabi/hava-dig/master/etc/codes1-70.png)
+
+![codes 100+](https://raw.githubusercontent.com/adamiturabi/hava-dig/master/etc/codes100+.png)
 
 For example numeric code `1003` for `current-root=Eml` will output `AisotiEomaAl`
 
