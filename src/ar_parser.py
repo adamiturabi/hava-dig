@@ -59,20 +59,33 @@ class Parser:
     for word in words:
       if word[0] == '@':
         self.curr_root = word[1:]
-        out_str = 'qwerty'+translit_to_ar.translit_to_ar(self.curr_root)
+        out_str = 'qwerty'+translit_to_ar.translit_to_ar(self.curr_root) #FIXME
       #elif word[0:2] == '##':
       #  out_str += '<span class="foreignborrowing">' + word[2:] + '</span>'
       elif word[0] == '[':
         out_str += self.process_span(word)
       elif word[0] in { 'I', 'V', 'X' }:
-        if word[-1] == 'x':
+        suppress_conj = False
+        override_root = ''
+        form = word
+        if '.' in word:
+          dot_index = word.find('.')
+          override_root = word[dot_index+1:]
+          form = word[:dot_index]
+          out_str += form
+        elif word[-1] == 'x':
+          suppress_conj = True
           out_str += word[:-1]
         else:
           out_str += word
-        do_conj = word[-1] != 'x' and not (word == 'I' and len(self.curr_root) <= 3)
+
+        root_to_use = self.curr_root
+        if override_root != '':
+          root_to_use = override_root
+
+        do_conj = not suppress_conj and not (word == 'I' and len(root_to_use) <= 3)
         if do_conj:
-          form = word
-          enverb = conj.conj(self.curr_root, form, 'a', 'a')
+          enverb = conj.conj(root_to_use, form, 'a', 'a')
           hamzated = hamzater.hamzate(enverb)
           arverb = translit_to_ar.translit_to_ar(hamzated)
           out_str += ' ' + arverb
@@ -161,7 +174,7 @@ class Parser:
         ar_line = fin_ar.readline()
         ar_out_str = self.parse_line(ar_line)
         en_line = ''
-        if ar_out_str[:6] == 'qwerty':
+        if ar_out_str[:6] == 'qwerty': # FIXME
           this_root = ar_out_str[6:]
           this_root = this_root.replace('ء', 'أ')
           if this_root not in roots_set:

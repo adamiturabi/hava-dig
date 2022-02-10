@@ -42,7 +42,10 @@ For example numeric code `1003` for `current-root=Eml` will output `AisotiEomaAl
 
 Prefixes and suffixes may be added to the numeric code. Suffixes, if they are integral to the word (like ة) are appended directly to the numeric code. If not integral (like dual and plural suffixes and attached pronouns), they are separated by a `"` double-quote character. This is for correct hamza orthography. 
 
-For example, for `current root=bd'` the numeric code `1ap` will output `bado>ap`
+For example:
+
+for `current root=bd'` the numeric code `1ap` will output `bado>ap`  
+for `current root=bd'` the numeric code `4"aAt` will output `bada'aAt`  
 
 For the definite article prefix, sun and moon letters are automatically derived. For example `Alo1` for root `$ms` will output `Al$~amos`.
 

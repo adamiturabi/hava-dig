@@ -380,4 +380,3 @@ root_index_set.add("بذع");
 root_index_set.add("بذعر");
 root_index_set.add("بذق");
 root_index_set.add("بذل");
-root_index_set.add("بيدر");
