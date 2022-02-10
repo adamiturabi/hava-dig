@@ -47,7 +47,10 @@ For example:
 for `current root=bd'` the numeric code `1ap` will output `bado>ap`  
 for `current root=bd'` the numeric code `4"aAt` will output `bada'aAt`  
 
-For the definite article prefix, sun and moon letters are automatically derived. For example `Alo1` for root `$ms` will output `Al$~amos`.
+For the definite article prefix (prefix that ends with `l`), sun and moon letters are automatically derived. For example 
+
+`Alo1` for root `$ms` will output `Al$~amos`  
+`ll1` for root `$ms` will output `ll$~amos`  
 
 To override the current root for any verb or noun append the new root to the numeric code separated by '.'. For example, if the current root is `bdr`, then `I.bydr` will output `I bayodara`
 
