@@ -396,3 +396,7 @@ root_index_set.add("برت");
 root_index_set.add("برث");
 root_index_set.add("برثن");
 root_index_set.add("برج");
+root_index_set.add("برجد");
+root_index_set.add("برجس");
+root_index_set.add("برجم");
+root_index_set.add("برح");
