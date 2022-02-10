@@ -128,6 +128,8 @@ def get_base_str(basenum, root):
     basestr = "1aA2uw3"
   elif basenum == 41:
     basestr = "1awaA2i3"
+    if r3 == w or r3 == y:
+      basestr = "1awaA2K"
     diptote = True
   elif basenum == 42:
     basestr = "1a2o3aA'"
