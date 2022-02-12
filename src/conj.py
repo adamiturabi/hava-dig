@@ -318,22 +318,28 @@ def conj_tri(root, form, past_vowel, pres_vowel, voice):
     return conj_tri_form10(root, voice)
   else:
     return ('', '')
-def conj_quad(root, form):
+def conj_quad(root, form, voice):
   r1 = root[0]
   r2 = root[1]
   r3 = root[2]
   r4 = root[3]
+  outstr = ''
   if form == 'I':
-    return r1 + a + r2 + o + r3 + a + r4 + a
+    outstr = r1 + a + r2 + o + r3 + a + r4 + a
+    if voice == "passive":
+      outstr = r1 + u + r2 + o + r3 + i + r4 + a
   elif form == 'II':
-    return t + a + r1 + a + r2 + o + r3 + a + r4 + a
+    outstr = t + a + r1 + a + r2 + o + r3 + a + r4 + a
+    if voice == "passive":
+      outstr = t + u + r1 + u + r2 + o + r3 + i + r4 + a
   elif form == 'III':
-    return A + i + r1 + o + r2 + a + n + o + r3 + a + r4 + a
+    outstr = A + i + r1 + o + r2 + a + n + o + r3 + a + r4 + a
   elif form == 'IV':
-    return A + i + r1 + o + r2 + a + r3 + a + r4 + ss + a
+    outstr = A + i + r1 + o + r2 + a + r3 + a + r4 + ss + a
   else:
     assert False
     return ''
+  return outstr
 def conj(root, form, vowel="a", tense="pret", voice="active"):
   pret = form
   if len(root) == 2:
@@ -354,7 +360,7 @@ def conj(root, form, vowel="a", tense="pret", voice="active"):
         arvowel = u
       verb = chr(int('0x25cc', 16)) + arvowel
   if len(root) == 4:
-    return conj_quad(root, form)
+    return conj_quad(root, form, voice)
   return verb.replace('{', 'A')
 
 
