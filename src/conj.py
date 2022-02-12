@@ -342,6 +342,7 @@ def conj_quad(root, form, voice):
   return outstr
 def conj(root, form, vowel="a", tense="pret", voice="active"):
   pret = form
+  verb = ''
   if len(root) == 2:
     root = root + root[1]
   if len(root) == 3:
@@ -360,7 +361,7 @@ def conj(root, form, vowel="a", tense="pret", voice="active"):
         arvowel = u
       verb = chr(int('0x25cc', 16)) + arvowel
   if len(root) == 4:
-    return conj_quad(root, form, voice)
+    verb = conj_quad(root, form, voice)
   return verb.replace('{', 'A')
 
 
