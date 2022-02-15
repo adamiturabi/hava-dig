@@ -69,7 +69,7 @@ function searchRoot() {
   let normalized_root = normalize(searched_root);
   //let root_found = document.getElementById('index_'+normalized_root);
   let root_found = root_index_set.has(normalized_root);
-  if (root_found == null) {
+  if (!root_found) {
     document.getElementById("outputsearched").innerHTML = 'Submitted root '+normalized_root + ' not found. Either it doesn\'t exist or it hasn\'t been entered yet. You may try to search for roots nearby, or substitute the weak radicals for others (if any), or browse the root entries from the index page.'
   } else {
     document.getElementById("outputsearched").innerHTML = ''
