@@ -398,11 +398,13 @@ V ElY
 25 j_. 43
 @bdr
 I A o (27) h
+--
 I A h , <ilY
 III (303 , 23) h
 -- <ilY , fy
 IV
-VIII
+VIII h
+VIII <ilY
 Aibotadarato EayonaAhu
 1 j_. 27
 AlbadaraY
