@@ -104,7 +104,7 @@ To  divulge,  a.th.  To  scatter  (the  dust  :  beasts).
 To  communicate  a  secret  to  a.o.  To  open  one's  heart  to. 
 To  confide  secrets  to  e.o.
 To  be  divulged.  To  be  scattered.
-To  ask  from  a.  o.  to  reveal a  secret. 
+To  ask  from  a.o.  to  reveal a  secret. 
 State.  Great  sorrow.  Scatter.
 Matter  divulged,  disclosure.
 Published,  divulged.
@@ -126,7 +126,7 @@ To  sweat.
 Sycophant,  flatterer,  fawner.
 To  lance  (an  abscess).
 To  fatten  (cattle;  pasture-land).
-To  strike  a.  o.  with  (a  stick).  To  make  mischief  to  a.o. 
+To  strike  a.o.  with  (a  stick).  To  make  mischief  to  a.o. 
 To  be  lanced.  To  be  struck.
 Pimple  on  the  eye.
 To  quiet,  to  dandle  (a  child).
@@ -149,44 +149,44 @@ Misfortunes.
 To  cause (water)  to  flow,  to  gush. 
 To  spring,  to  gush.
 Abundant  (spring).
-To  cut  a.  th.  with  a sword. 
+To  cut  a.th.  with  a sword. 
 To  eat  to  surfeit,  to cloy. 
 Pelican.  Stork.
 To  be  in  good circumstances.  To  be  glad,  merry. 
 To  be  respected.
-To  honour  a.  o.  To  applaud, to  commend  a.o.
+To  honour  a.o.  To  applaud, to  commend  a.o.
 Wonder.
 Yes,  certainly.  Enough,  sufficient.
 Honoured.  Respected.
 To  be  silent  out  of fear  or stupidity. To stare. To shrink.  To  delay. 
 Numerous  party.  +Simpletons,  fools. 
-To  inculcate  a.  th.  (in  the mind  of).  To  rivet,  to  clinch  (a  nail). 
+To  inculcate  a.th.  (in  the mind  of).  To  rivet,  to  clinch  (a  nail). 
 To  be  inculcated. 
 To  be  hoarse.
-To  render  a.  o.  hoarse  (air).
+To  render  a.o.  hoarse  (air).
 Hoarseness.  Rough,  harsh  voice.
 Hoarse.  Fat.
 To  remain  firm  in.  To enjoy  (glory).
-+To  give  a.  th.  generously. +To  render  a.  th.  plentiful,  abundant. 
++To  give  a.th.  generously. +To  render  a.th.  plentiful,  abundant. 
 To  go  in  the  middle  of  a house. 
 To  spend  o's  life,  in  grandeur  and  glory. 
 Company. +Comfortable  life, comfort. 
 Middle-part,  centre.
 +Considerable  (wealth).
 To  be  pure,  unalloyed.
-To  disclose  a  secret  to  a.  o.
+To  disclose  a  secret  to  a.o.
 To  show  a  jordial,  true love  to  d.  0. 
 Pure,  uniningled.
 A  true  born  Arab.
 Stout  and  short.
 To  scrape  (the  earth).
-To  be  in  quest  of,  to  search a.  th. 
+To  be  in  quest  of,  to  search a.th. 
 To  contend,  to  enter  into  discussion  with. 
-To  investigate, to  scrutinize  a.  th. 
+To  investigate, to  scrutinize  a.th. 
 Research.  Examination.  Mine. 
 Scope  for  search,  for investigation. 
 Dispute,  discussion. 
-To  scatter,  to  separate.  To  find  out  a.  th. 
+To  scatter,  to  separate.  To  find  out  a.th. 
 To  be  squandered,  wasted.
 Wastefulness.  Lavishness.
 Lavisher.  Squanderer. 
@@ -194,7 +194,7 @@ To  be  confused,  seized with  fear.  To  be  affected  with  an unquenchable  
 To  till  (the  earth).
 To  slit,  to  cut  open  the  ear  of a  (she-camel). 
 To  be  salty  (water).  To  voyage upon  the  sea.  To  be  swampy  (land) 
-To  endeavour  to  examine a.  th.  thoroughly,  to  go  deep  into. 
+To  endeavour  to  examine a.th.  thoroughly,  to  go  deep  into. 
 To  expand.  To  widen,  to stretch  forth. 
 Sea.  Any  great river:  brine.  A  generous  man.  Man of  extensive  knowledge.  Wide  stepping horse. +Course  (  of  the  year, week). 
 The  Ocean.
@@ -231,7 +231,7 @@ Camels  of  Bactriana.
 Happy,  lucky,  fortunate.
 To  waddle.  To  walk  in a  stately  gait. +To  become  proud. 
 Elegant  bearing.
-To  scatter  a.  th.
+To  scatter  a.th.
 To  steam  (pot).
 To  have  a  foul  breath.
 To  perfume  with  incense. +To emit  vapours. 
@@ -247,10 +247,10 @@ Censer,  thurible.
 Perfuming  with  incense,  thurifer.
 To  put  out  (the  eye  of a.o.). 
 To  cause  damage to  a.o. To  put  out  a.o.'s  eye. 
-To  wrong  a.  o.  in  his  rights.
-To  do  mischief  o.  to  a.,  to wrong  o.  a. 
+To  wrong  a.o.  in  his  rights.
+To  do  mischief  o.  to  a.,  to wrong  o.a. 
 Deficient.  Low  (price).  Tax.
-To  bore  a.  th.
+To  bore  a.th.
 Hole,  eyelet.
 Bodkin.
 To  give  a  gratuity  to.
@@ -261,7 +261,7 @@ To  look  steadfastly.  To  have the  eyelids  inverted.
 Having  fleshy  eyelids.
 To  slaughter  (a  sheep).
 To  commit  suicide  from grief  or  passion. 
-To  sink  a  well. +To  reprehend  a.  o.  publicly. 
+To  sink  a  well. +To  reprehend  a.o.  publicly. 
 To  give  friendly  advice  to.
 To recognize  (the  right  of). 
 +Public  reproof. Confusion, shame. 
