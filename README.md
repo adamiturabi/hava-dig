@@ -11,6 +11,34 @@ Work in progress output: https://adamiturabi.github.io/hava-dig/
 1. Install Python3 as `/usr/bin/python3`
 2. From a terminal in the root dir: `./run.sh`
 
+## Differences from Hava's original text
+
+There are the following differences (mostly in typesetting) from Hava's original text.
+
+### Addition of Roman numerals for verb forms
+
+We add Roman numerals (I, II, III, IV, etc.) in the beginning of each verb form.
+
+### Middle vowel for the imperfect verb indicated using Arabic vowel diacritics
+
+We indicate the middle vowel for the imperfect verb indicated using Arabic vowel diacritics instead of the Latin characters: a, i, o. Example:
+
+Original:
+<span lang="ar" dir="rtl">بَثَرَ i ، بَثِرَ a</span>
+
+Modified:
+<span lang="ar" dir="rtl">بَثَرَ ◌ِ ، بَثِرَ ◌َ</span>
+
+### Masdars in parenthesis
+
+Verbs' masdars in the original text are in the accusative in the original separated by و. Instead, we enclose them in parentheses without any case, and separated by Arabic comma ،. Example:
+
+Original:
+<span lang="ar" dir="rtl">بَثَرَ i ، بَثِرَ a بَثْرًا وبَثَرًا وبُثُورًا</span>
+
+Modified:
+<span lang="ar" dir="rtl">بَثَرَ ◌ِ ، بَثِرَ ◌َ (بَثْر ، بَثَر ، بُثُور)</span>
+
 ## Methodology
 
 An OCR digital text of Hava's dictonary is available from archive.com. However, only the English text has been digitized reliably. Evidently, the OCR did not recognize the Arabic text and output it as garbled Roman characters. Also, due to the hybrid left-to-right/right-to-left direction of the columns and pages in the printed volume, the OCR'ed English text needs some internal page reordering.
@@ -96,3 +124,20 @@ For foreign borrowings, Hava does not show a new root but we do if the root lett
 
 Sometimes Hava will add a new root unalphabetically. For example, `bydr` directly after `bdr`. In this case we won't enter a new root. Instead use the `.<new-root>` format if you need to use a numeric word code.
 
+### Colloquialisms
+
+Hava marks colloquialisms with two characters: a four-pointed star, and a square. Use the characters `+` and `=` respectively in the raw text input and the processing scripts will substitute them with similar unicode characters.
+
+### Italic text in English
+
+Use the HTML tags `<i>some text</i>` around text that you want to italicize.
+
+### Arabic inline text in the English definition
+
+If there is some Arabic inline text in the English definition then enclose it thus:
+
+```
+To  say  to  a.o.:  (<span lang="ar" dir="rtl">بِأَبِي أَنْتَ</span>)  I  will ransom  thee  with  my  father. 
+```
+
+See the root `'by` for the above example.

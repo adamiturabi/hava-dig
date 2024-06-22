@@ -295,6 +295,7 @@ root_index_set.add("أين");
 root_index_set.add("أيه");
 root_index_set.add("ب");
 root_index_set.add("بأبأ");
+root_index_set.add("بأج");
 root_index_set.add("بأر");
 root_index_set.add("بأس");
 root_index_set.add("بأش");
