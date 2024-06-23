@@ -433,4 +433,8 @@ root_index_set.add("برغي");
 root_index_set.add("برفر");
 root_index_set.add("برق");
 root_index_set.add("برقش");
+root_index_set.add("برقط");
+root_index_set.add("برقع");
+root_index_set.add("برقل");
+root_index_set.add("برك");
 root_index_set.add("بيدر");
