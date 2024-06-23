@@ -16,7 +16,7 @@ Pope,  the  Holy  Father.
 Papal.
 2nd  month  of  the  Coptic  year. October. 
 To  say  father.
-To  say  to  a.o.:  (<span lang="ar" dir="rtl">بِأَبِي أَنْتَ</span>)  I  will ransom  thee  with  my  father. 
+To  say  to  a.o.:  ([bi>abiy >anota]{.buckwalter})  I  will ransom  thee  with  my  father. 
 Root,  origin,  middle  of  a.th.
 Apple  of  the  eye.
 Kind,  way.  +The  best  head  of a  flock. +Duty   upon  importation, town-due. 
@@ -418,7 +418,7 @@ Desert.  desert  of  nomads.
 Nomads,  bedouins.
 Nomadism.  Desert.
 Bedouin.  Nomad.
-<i>N.  of  ag.</i> from <span lang="ar" dir="rtl">بدا ◌ُ</span> .  Clear,  evident,  manifest. 
+<i>N.  of  ag.</i> from [bdA ◌u]{.buckwalter} .  Clear,  evident,  manifest. 
 Caprice,  fancy,  freak.
 Fanciful,  whimsical, freakish. 
 Encampment  in  the  desert. 

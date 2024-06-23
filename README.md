@@ -137,7 +137,7 @@ Use the HTML tags `<i>some text</i>` around text that you want to italicize.
 If there is some Arabic inline text in the English definition then enclose it thus:
 
 ```
-To  say  to  a.o.:  (<span lang="ar" dir="rtl">بِأَبِي أَنْتَ</span>)  I  will ransom  thee  with  my  father. 
+To  say  to  a.o.:  ([bi>abiy >anota]{.buckwalter})  I  will ransom  thee  with  my  father. 
 ```
 
-See the root `'by` for the above example.
+See the root `b'b'` for the above example.

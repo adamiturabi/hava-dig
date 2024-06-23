@@ -153,15 +153,45 @@ class Parser:
     alef = 'ا'
     return out_str.replace(alef_wasla, alef)
   
+  def process_en_span(self, span_data):
+    print(span_data)
+    span_txt = span_data[1:span_data.find(']')]
+    print(span_txt)
+    span_code = span_data[(span_data.rfind('{')+2):span_data.rfind('}')]
+    ret_txt = ''
+    if span_code == 'buckwalter':
+      from translit_to_ar import translit_to_ar
+      ret_txt += '<span lang="ar" dir="rtl">'
+      ret_txt += translit_to_ar(span_txt)
+      ret_txt += '</span>'
+    else:
+      assert(False)
+    return ret_txt
+
   def process_en_line(self, en_line):
     out_str = ''
-    for x in en_line:
-      if x == '+':
+    index = 0
+    while index < len(en_line):
+    #for x in en_line:
+      x = en_line[index]
+      if x == '[': #[some text]{.classcode}
+        span_data = ''
+        found_close_bracket = False
+        for index2 in range(index, len(en_line)):
+          span_data += en_line[index2]
+          if en_line[index2] == ']':
+            found_close_bracket = True
+          elif found_close_bracket and en_line[index2] == '}':
+            index = index2
+            break
+        out_str += self.process_en_span(span_data)
+      elif x == '+':
         out_str += self.special_chars["4star"]
       elif x == '=':
         out_str += self.special_chars["square"]
       else:
         out_str += x
+      index += 1
     return out_str
 
   def parse_file(self, letter_index, ar_text_filename, en_text_filename, htmlout_filename, roots_set):
